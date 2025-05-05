@@ -1,0 +1,38 @@
+<style>
+
+    #boxFixaSummer [data-plnv-component="cart"] [data-plnv-component="card"] [data-plnv-organism="price-old"] [data-plnv-atom="price"] {
+            display:flex;
+          }
+
+          [data-plnv-atom=price]+[data-plnv-atom=price] b {
+                text-decoration: none;
+            }
+	
+	</style>
+
+
+	
+	<script>
+
+    
+	$(document).ready(function () {
+
+        
+        
+        $('#boxFixaSummer [data-plnv-atom] span')[0].remove();
+        $("#boxFixaSummer [data-plnv-atom] b")[0].insertAdjacentHTML('afterend', `<span>€/kWh<br>per i primi 3 mesi</span>`);
+        
+        $('#boxFixaSummer [data-plnv-atom] span')[1].remove();
+        $("#boxFixaSummer [data-plnv-atom] b")[1].insertAdjacentHTML('afterend', `<span>€/kWh<br>dal 4° mese</span>`);
+        
+        $('#boxFixaSummer [data-plnv-atom] span')[3].remove();
+        $("#boxFixaSummer [data-plnv-atom] b")[3].insertAdjacentHTML('afterend', `<span>€/Smc<br>per i primi 3 mesi</span>`);
+
+        $('#boxFixaSummer [data-plnv-atom] span')[4].remove();
+        $("#boxFixaSummer [data-plnv-atom] b")[4].insertAdjacentHTML('afterend', `<span>€/kWh<br>dal 4° mese</span>`);
+
+	 
+	
+	
+	});
+	</script>

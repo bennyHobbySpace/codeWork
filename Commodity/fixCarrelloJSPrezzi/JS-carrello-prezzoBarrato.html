@@ -1,0 +1,306 @@
+<style>
+	#boxPrezzoBarrato.container-html-box-my{
+	   padding: 0;
+	}
+	
+	</style>
+	
+	<script>
+	$(document).ready(function () {
+	  var divCarrelloMono = document.querySelector('.riga-forniture-dual-bi-mono');
+	  divCarrelloMono.remove();
+	  var divCarrelloBio = document.querySelector('.riga-forniture-dual-bi-bioraria');
+	  divCarrelloBio.remove();
+	  $(".justify-content-end")[0].insertAdjacentHTML('afterend', `
+	  <style>
+		  .fare-info {
+			white-space: break-spaces;
+		  }
+		  .cart-card-opt-rapporto div:first-child:after {
+		  content: "€/kWh*";
+		  font-size: 14px;
+		  padding-left: 4px;
+		  color: #767676;
+		  }
+		  .card-fornitura-carrello-opt-gas .cart-card-opt-rapporto div:first-child:after {
+		  content: "€/Smc*";
+		  font-size: 14px;
+		  padding-left: 4px;
+		  color: #767676;
+		  }
+		  .riga-forniture-dual-bi-mono .cart-card-opt-rapporto div:nth-child(2):after {
+		  content: "€/kWh**";
+		  font-size: 12px;
+		  padding-left: 4px;
+		  color: #767676;
+		}
+		  .riga-forniture-dual-bi-mono .card-fornitura-carrello-opt-gas .cart-card-opt-rapporto div:nth-child(2):after {
+		  content: "€/Smc**";
+		  font-size: 12px;
+		  padding-left: 4px;
+		  color: #767676;
+		}
+		  .riga-forniture-dual-bi-bioraria .cart-card-opt-rapporto div:nth-child(2):after {
+		  content: "€/kWh**";
+		  font-size: 12px;
+		  padding-left: 4px;
+		  color: #767676;
+		}
+		  .riga-forniture-dual-bi-bioraria .card-fornitura-carrello-opt-gas .cart-card-opt-rapporto div:nth-child(2):after {
+		  content: "€/Smc**";
+		  font-size: 12px;
+		  padding-left: 4px;
+		  color: #767676;
+		}
+	</style>
+	  <div class="row cards-forniture-dual riga-forniture-dual-bi-bioraria d-none">
+		<div class="col">
+		<div class="card-fornitura-carrello">
+			<div class="
+				card-fornitura-carrello-body
+				fornitura-selezionata
+				d-flex
+				card-fornitura-toggle-luce
+			">
+			<div class="icona-card-fornitura">
+				<i class="fas fa-check no-content" onclick="toggleFornitura(event)"><img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/check-solid.svg" class="cart-icon check">
+				<img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/plus-solid.svg" class="cart-icon plus"></i>
+			</div>
+			<div class="p20-egl card-carrello-nome-fornitura" onclick="toggleFornitura(event)">
+				<b>LUCE</b>
+			</div>
+			<div class="
+				card-fornitura-carrello-dettaglio
+				flex-column flex-md-row
+				fornitura-luce-bioraria
+				
+				">
+				<div class="card-fornitura-carrello-dettaglio-opzioni">
+				<div class="card-fornitura-carrello-opt-f1">
+					<div class="d-flex d-md-block justify-content-between">
+					<div class="cart-card-opt-titolo">
+						<div class="p18-egl d-flex align-items-center">
+						<b>Luce F1</b>
+						<i tabindex="-1" class="fas fa-exclamation no-content" data-trigger="focus" data-toggle="tooltip" data-placement="right" title="" data-original-title="08:00 - 19:00"><img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/exclamation-solid.svg" class="listing-icon"></i>
+						</div>
+					</div>
+
+					<!--  f1 con sconto addebito diretto disattivo -->
+					<div class="cart-card-opt-rapporto d-none">
+						<div class="h4-egl"><b>0,1149</b></div>
+						<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1642</b></div>
+                        <div class="sr-only"> invece di 0,1642 euro al chilowattora</div>
+					</div>
+					
+
+					<!--  f1 con sconto addebito diretto attivo -->
+					<div class="cart-card-opt-rapporto rapporto-scontato">
+						<div class="h4-egl"><b>0,1067</b></div>
+						<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1560</b></div>
+						<div class="sr-only"> invece di 0,1560 euro al chilowattora</div>
+					</div>
+					</div>
+				</div>
+				</div>
+				<div class="card-fornitura-carrello-dettaglio-opzioni">
+				<div class="card-fornitura-carrello-opt-f2 py-1 py-md-0">
+					<div class="d-flex d-md-block justify-content-between">
+					<div class="cart-card-opt-titolo">
+						<div class="p18-egl d-flex align-items-center">
+						<b>Luce F2-F3</b>
+						<i tabindex="-1" class="fas fa-exclamation no-content" data-trigger="focus" data-toggle="tooltip" data-placement="right" title="" data-original-title="19:00 - 08:00<br />weekend e festività"><img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/exclamation-solid.svg" class="listing-icon"></i>
+						</div>
+					</div>
+
+					<!--  f2-f3 con sconto addebito diretto disattivo -->
+					<div class="cart-card-opt-rapporto d-none">
+						<div class="h4-egl"><b>0,1091</b></div>
+						<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1559</b></div>
+						<div class="sr-only"> invece di 0,1559 euro al chilowattora</div>
+					</div>
+
+					<!--  f2-f3 con sconto addebito diretto attivo -->
+					<div class="cart-card-opt-rapporto rapporto-scontato">
+						<div class="h4-egl"><b>0,1013</b></div>
+						<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1481</b></div>
+						<div class="sr-only"> invece di 0,1481 euro al chilowattora</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+			<div class="card-fornitura-carrello-footer">
+			<div class="cap12-egl">
+				Costi di commercializzazione e vendita
+			</div>
+			<div class="h4-egl">12</div>
+			</div>
+		</div>
+		</div>
+		<div class="col-md-4">
+		<div class="card-fornitura-carrello">
+			<div class="card-fornitura-carrello-body d-flex card-fornitura-toggle-gas fornitura-selezionata">
+			<div class="icona-card-fornitura">
+				<i class="fas fa-check no-content" onclick="toggleFornitura(event)"><img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/check-solid.svg" class="cart-icon check">
+				<img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/plus-solid.svg" class="cart-icon plus"></i>
+			</div>
+			<div class="p20-egl card-carrello-nome-fornitura" onclick="toggleFornitura(event)">
+				<b>GAS</b>
+			</div>
+			<div class="card-fornitura-carrello-dettaglio">
+				<div class="card-fornitura-carrello-dettaglio-opzioni">
+				<div class="card-fornitura-carrello-opt-gas">
+					<div class="d-flex d-md-block justify-content-between">
+					<div class="cart-card-opt-titolo">
+						<div class="p18-egl d-flex align-items-center">
+						<b>Gas</b>
+						
+						</div>
+					</div>
+
+					<!--  gas con sconto addebito diretto disattivo -->
+					<div class="cart-card-opt-rapporto d-none">
+						<div class="h4-egl"><b>0,4263</b></div>
+						<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,6090</b></div>
+						<div class="sr-only"> invece di 0,6090 euro al metrocubo</div>
+					</div>
+
+					<!--  gas con sconto addebito diretto attivo -->
+					<div class="cart-card-opt-rapporto rapporto-scontato">
+						<div class="h4-egl"><b>0,3959</b></div>
+						<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,5786</b></div>
+						<div class="sr-only"> invece di 0,5786 euro al metrocubo</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+			<div class="card-fornitura-carrello-footer">
+			<div class="cap12-egl">
+				Costi di commercializzazione e vendita
+			</div>
+			<div class="h4-egl">12</div>
+			</div>
+		</div>
+		</div>
+	</div>`);
+	
+	$(".riga-forniture-dual-bi-bioraria")[0].insertAdjacentHTML('afterend', `<div class="row cards-forniture-dual riga-forniture-dual-bi-mono">
+	  <div class="col">
+		<div class="card-fornitura-carrello">
+		  <div class="card-fornitura-carrello-body fornitura-selezionata d-flex card-fornitura-toggle-luce">
+			<div class="icona-card-fornitura">
+			  <i class="fas fa-check no-content" onclick="toggleFornitura(event)"><img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/check-solid.svg" class="cart-icon check">
+			  <img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/plus-solid.svg" class="cart-icon plus"></i>
+			</div>
+			<div class="p20-egl card-carrello-nome-fornitura" onclick="toggleFornitura(event)">
+			  <b>LUCE</b>
+			</div>
+			<div class="card-fornitura-carrello-dettaglio flex-column flex-md-row fornitura-luce-trioraria ">
+			  <div class="card-fornitura-carrello-dettaglio-opzioni">
+				<div class="card-fornitura-carrello-opt-f1">
+				  <div class="d-flex d-md-block justify-content-between">
+					<div class="cart-card-opt-titolo">
+					  <div class="p18-egl d-flex align-items-center">
+						<b>Luce 24h</b>
+						<i tabindex="-1" class="fas fa-exclamation no-content" data-trigger="focus" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tutti i giorni"><img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/exclamation-solid.svg" class="listing-icon"></i>
+					  </div>
+					</div>
+
+					<!-- prezzo con sconto addebito diretto disattivo -->
+					<div class="cart-card-opt-rapporto d-none">
+					  <div class="h4-egl"><b>0,1113</b></div>
+                      <div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1590</b></div>
+					  <div class="sr-only"> invece di 0,1590 euro al chilowattora</div>
+					  
+					</div>
+
+					<!-- prezzo con sconto addebito diretto attivo -->
+					 <div class="cart-card-opt-rapporto rapporto-scontato">
+					  <div class="h4-egl"><b>0,1034</b></div>
+					  <div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1511</b></div>
+					  <div class="sr-only"> invece di 0,1511 euro al chilowattora</div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="card-fornitura-carrello-footer">
+			<div class="cap12-egl">
+			  Costi di commercializzazione e vendita
+			</div>
+			<div class="h4-egl">12</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-md-6">
+		<div class="card-fornitura-carrello">
+		  <div class="card-fornitura-carrello-body d-flex card-fornitura-toggle-gas fornitura-selezionata">
+			<div class="icona-card-fornitura">
+			  <i class="fas fa-check no-content" onclick="toggleFornitura(event)"><img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/check-solid.svg" class="cart-icon check">
+			  <img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/plus-solid.svg" class="cart-icon plus"></i>
+			</div>
+			<div class="p20-egl card-carrello-nome-fornitura" onclick="toggleFornitura(event)">
+			  <b>GAS</b>
+			</div>
+			<div class="card-fornitura-carrello-dettaglio">
+			  <div class="card-fornitura-carrello-dettaglio-opzioni">
+				<div class="card-fornitura-carrello-opt-gas">
+				  <div class="d-flex d-md-block justify-content-between">
+					<div class="cart-card-opt-titolo">
+					  <div class="p18-egl d-flex align-items-center">
+						<b>Gas</b>
+						
+					  </div>
+					</div>
+
+					<!-- gas con sconto addebito diretto disattivo -->
+					<div class="cart-card-opt-rapporto d-none">
+					  <div class="h4-egl"><b>0,4263</b></div>
+					  <div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,6090</b></div>
+					  <div class="sr-only"> invece di 0,6090 euro al metrocubo</div>
+					</div>
+
+					<!-- gas con sconto addebito diretto attivo -->
+					<div class="cart-card-opt-rapporto rapporto-scontato">
+					  <div class="h4-egl"><b>0,3959</b></div>
+					  <div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,5786</b></div>
+					  <div class="sr-only"> invece di 0,5786 euro al metrocubo</div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="card-fornitura-carrello-footer">
+			<div class="cap12-egl">
+			  Costi di commercializzazione e vendita
+			</div>
+			<div class="h4-egl">12</div>
+		  </div>
+		</div>
+	  </div>
+	</div>`);
+	
+	
+	var notaSottoCarrello = $(".egl-carrello-dual").find(".row")[4];
+	$(notaSottoCarrello).find(".col-12").remove();
+	notaSottoCarrello.insertAdjacentHTML('afterend', `
+				  <div class="col-12">
+	<div class="cap12-egl">
+					  Se hai bisogno di un'attivazione luce per box, soffitte e cantine scopri la nostra offerta <a href="/offerta/casa/gas-e-luce/flexi-pertinenze-luce" target="_blank" rel="noopener noreferrer">Flexi Pertinenze</a>.
+					</div><br>
+					<div class="cap12-egl">
+					  *Prezzo scontato valido fino al 10/04 per chi passa a Plenitude da un altro fornitore tramite i canali abilitati (vedi Faq dedicata)
+					</div>
+				  </div>
+				  <div class="cap12-egl" style="padding-left: 15px;">
+					  **Corrispettivo base della Fixa Time applicato dal 11/03 al 10/04
+					</div>
+				</div>
+	`);
+	});
+	</script>
