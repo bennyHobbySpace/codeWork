@@ -1,0 +1,202 @@
+<style>
+    [data-pln-component='modal-standard'][data-pln-version='1.0'] {
+        padding: 0;
+    }
+
+    [data-pln-component='modal-standard'][data-pln-version='1.0']>[data-pln-organism="modal"]>.content>.body {
+        text-align: center;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] {
+        text-align: left;
+    }
+
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .h2 {
+        margin-bottom: 10px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] p {
+        margin-bottom: 0;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] ul.modalCardImg-ul {
+        margin-bottom: 30px;
+        list-style-type: none;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] ul.modalCardImg-ul li {
+        padding-left: 30px;
+        position: relative;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] ul.modalCardImg-ul li:after {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content {
+        display: flex;
+        flex-flow: row;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content {
+            flex-direction: column;
+        }
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content img {
+        display: block;
+        width: 50%;
+        height: 100%;
+        max-width: 460px;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content img {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content img {
+            max-width: 300px;
+        }
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul {
+        width: 50%;
+        padding-left: 16px;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul h3 {
+        font-size: 16px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li {
+        display: flex;
+        margin-bottom: 16px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li span {
+        font-size: 32px !important;
+        font-weight: 600;
+        position: relative;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li span:after {
+        content: '';
+        display: inline-block;
+        background-color: #ffcd00;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        z-index: -1;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li div {
+        padding-left: 30px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li div h4 {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-note {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 10px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .secondary {
+        margin: 30px auto 0 !important;
+    }
+</style>
+
+<!-- modale IMG -->
+<div data-pln-organism="modal" data-pln-version="1.0" data-pln-template="emptyHeader" id="modalPromotion"
+    class="default" style="z-index: 10000;">
+    <div class="content">
+        <div class="header">
+            <button type="button" class="close" aria-label="FV modal" data-pln-action-modal-close="#modalPromotion">
+                <img loading="lazy"
+                    src="/etc.clientlibs/plenitude-common/clientlibs/clientlib-site/resources/assets/03-icons-close-bold.svg"
+                    alt="Chiudi modale" aria-hidden="true">
+            </button>
+        </div>
+        <div class="body">
+            <div data-pln-organism="modal-cardImg-item" data-pln-version="1.0" data-pln-template="default" class="">
+                <h2 class="h2">Scopri i servizi Extra del fotovoltaico</h2>
+                <p>Acquista uno o più servizi Extra per rendere ancora più completo ed efficiente il tuo nuovo impianto fotovoltaico. Puoi sceglierli e aggiungerli su qualsiasi offerta tra Start, Plus e Prime.
+                </p>
+                <ul class="modalCardImg-ul">
+                    <li>Passa al fotovoltaico di Plenitude acquistando un impianto a scelta entro il 19/12/2025</li>
+                    <li>Ottieni in regalo, a seguito dell’installazione dell’impianto fotovoltaico, una copertura di 3
+                        anni,
+                        senza costi a tuo carico né tacito rinnovo</li>
+                    <li>Ricevi un bonifico automatico ogni 6 mesi* in caso di minor irraggiamento stimato in base ai
+                        dati
+                        storici mensili della tua area.</li>
+                </ul>
+                <div class="modalCardImg-content">
+                    <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/ipad.png" alt="ipad" aria-hidden="true">
+                    <ul style="padding-left: 0px;">
+                        <h3><b>Quali sono gli Extra più richiesti?</b></h3>
+                        <li><span>1</span>
+                            <div>
+                                <h4>Inverter ibrido</h4>
+                                <p>Gestisce contemporaneamente la produzione di energia dell’impianto e l’accumulo in batterie.</p>
+                            </div>
+                        </li>
+                        <li><span>2</span>
+                            <div>
+                                <h4>Sistema di backup</h4>
+                                <p>Consente di accumulare energia e fornirla in caso di blackout, garantendo continuità elettrica alla rete.</p>
+                            </div>
+                        </li>
+                        <li><span>3</span>
+                            <div>
+                                <h4>Ottimizzatori di tensione</h4>
+                                <p>Migliorano l’efficienza dell’impianto, riducendo perdite da ombre e disallineamenti.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modalCardImg-note">
+                    
+                    <p>E, in più, puoi avere anche:</p>
+                    <ul style="padding-left: 15px;">
+                        <li style="list-style-type: disc;">rete frangineve</li>
+                        <li style="list-style-type: disc;">rete anti volatili</li>
+                        <li style="list-style-type: disc;">opere per installazione in sicurezza.</li>
+                    </ul>
+                </div>
+
+                <a style="margin:0 auto; text-align: center;" data-pln-atom="button-ext" data-pln-version="1.2"
+                    class="secondary default " href="#" data-pln-action-modal-close="#modalPromotion">
+                    <span>Chiudi</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>

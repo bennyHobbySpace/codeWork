@@ -1,0 +1,221 @@
+<style>
+    [data-pln-component='modal-standard'][data-pln-version='1.0'] {
+        padding: 0;
+    }
+
+    [data-pln-component='modal-standard'][data-pln-version='1.0']>[data-pln-organism="modal"]>.content>.body {
+        text-align: center;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] {
+        text-align: left;
+    }
+
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .h2 {
+        margin-bottom: 10px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] p {
+        margin-bottom: 0;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] ul.modalCardImg-ul {
+        margin-bottom: 30px;
+        list-style-type: none;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] ul.modalCardImg-ul li {
+        padding-left: 30px;
+        position: relative;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] ul.modalCardImg-ul li:after {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content {
+        display: flex;
+        flex-flow: row;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content {
+            flex-direction: column;
+        }
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content img {
+        display: block;
+        width: 50%;
+        height: 100%;
+        max-width: 460px;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content img {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content img {
+            max-width: 300px;
+        }
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul {
+        width: 50%;
+        padding-left: 16px;
+    }
+
+    @media only screen and (max-width: 1023px) {
+        [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul h3 {
+        font-size: 16px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li {
+        display: flex;
+        margin-bottom: 16px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li span {
+        font-size: 32px !important;
+        font-weight: 600;
+        position: relative;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li span:after {
+        content: '';
+        display: inline-block;
+        background-color: #ffcd00;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        z-index: -1;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li div {
+        padding-left: 30px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li div h4 {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-note {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 10px;
+    }
+
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .secondary {
+        margin: 30px auto 0 !important;
+    }
+</style>
+
+<!-- modale IMG -->
+<div data-pln-organism="modal" data-pln-version="1.0" data-pln-template="emptyHeader" id="modalSoleProtetto"
+    class="default" style="z-index: 10000;">
+    <div class="content">
+        <div class="header">
+            <button type="button" class="close" aria-label="FV modal" data-pln-action-modal-close="#modalSoleProtetto">
+                <img loading="lazy"
+                    src="/etc.clientlibs/plenitude-common/clientlibs/clientlib-site/resources/assets/03-icons-close-bold.svg"
+                    alt="Chiudi modale" aria-hidden="true">
+            </button>
+        </div>
+        <div class="body">
+            <div data-pln-organism="modal-cardImg-item" data-pln-version="1.0" data-pln-template="default" class="">
+                <h2 class="h2">Soleggiato o rimborsato con la polizza Zurich Sole Protetto</h2>
+                <p>
+                    Solo se scegli l’offerta fotovoltaico Plus o Prime, in omaggio per te Zurich Sole Protetto, la prima
+                    polizza che ti rimborsa se non produci l’energia prevista a causa di nuvole e brutto tempo.
+                    L’innovativa soluzione assicurativa, completamente digitale e unica sul mercato italiano, è pensata
+                    <b>da Zurich in esclusiva per Plenitude</b>.
+                </p>
+                <ul class="modalCardImg-ul">
+                    <li>Passa al fotovoltaico di Plenitude acquistando un impianto a scelta entro il <b>19/12/2025</b>
+                    </li>
+                    <li>Ottieni in regalo, a seguito dell’installazione dell’impianto fotovoltaico, <b>una copertura di
+                            3
+                            anni</b>,
+                        senza costi a tuo carico né tacito rinnovo</li>
+                    <li>Ricevi un bonifico automatico ogni 6 mesi* in caso di minor irraggiamento stimato in base ai
+                        dati
+                        storici mensili della tua area.</li>
+                </ul>
+                <div class="modalCardImg-content">
+                    <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/ipad.png" alt="ipad"
+                        aria-hidden="true">
+                    <ul style="padding-left: 0px;">
+                        <h3><b>Come funziona?</b></h3>
+                        <li><span>1</span>
+                            <div>
+                                <h4>Scopri quanto sole è previsto.</h4>
+                                <p>Consulta l'andamento dell'irraggiamento solare atteso nella tua zona sul sito
+                                    dedicato. La stima è fornita da un ente certificato terzo "Oracolo", che calcola il
+                                    sole previsto in base ai dati metereologici raccolti dal gennaio 2005.</p>
+                            </div>
+                        </li>
+                        <li><span>2</span>
+                            <div>
+                                <h4>Monitora la tua situazione.</h4>
+                                <p>
+                                    Controlla in tempo reale, sul sito dedicato, l'irraggiamento effettivo dei casa tua
+                                    e il discostamento dalla previsione**.
+                                </p>
+                            </div>
+                        </li>
+                        <li><span>3</span>
+                            <div>
+                                <h4>Ricevi il rimborso.</h4>
+                                <p>
+                                    Se l'irraggiamento solare effettivo del tuo impianto è più basso di quello previsto,
+                                    ottieni un bonifico automatico ogni 6 mesi, a partire da 1€, sul tuo conto corrente.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modalCardImg-note">
+                    <p>*Sono esclusi dalla copertura indennizzi derivanti da minore irraggiamento sia su estensioni
+                        dell'impianto fotovoltaico sia su unità già installate in precedenza che non fanno parte
+                        dell'impianto per cui è omaggiata la polizza.<br>
+                        **La polizza e l'accesso all'area personale sarà attivo il mese successivo dell'allaccio
+                        dell'impianto alla rete elettrica.</p>
+                    <!-- <p>E, in più, puoi avere anche:</p>
+                    <ul style="padding-left: 15px;">
+                        <li style="list-style-type: disc;">rete frangineve</li>
+                        <li style="list-style-type: disc;">rete anti volatili</li>
+                        <li style="list-style-type: disc;">opere per installazione in sicurezza.</li>
+                    </ul> -->
+                </div>
+
+                <a style="margin:0 auto; text-align: center;" data-pln-atom="button-ext" data-pln-version="1.2"
+                    class="secondary default " href="#" data-pln-action-modal-close="#modalSoleProtetto">
+                    <span>Chiudi</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
