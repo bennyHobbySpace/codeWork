@@ -1,3 +1,5 @@
+# Informazioni 
+ 
 per collegare un repo a GitHub (supponiamo che la cartella da portare su github si chiami jobFolder):
 
 accertati di aver creato il branch main.
