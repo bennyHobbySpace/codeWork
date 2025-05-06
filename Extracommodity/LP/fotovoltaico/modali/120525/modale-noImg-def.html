@@ -1,4 +1,6 @@
 <style>
+    /* stili , html e script per modale Servizi Extra */
+    /* tutto questo codice va in html-box con id uguale a quello in html -modale IMG- in basso */
     [data-pln-component='modal-standard'][data-pln-version='1.0'] {
         padding: 0;
     }
@@ -45,6 +47,7 @@
     [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content {
         display: flex;
         flex-flow: row;
+        padding-top: 32px;
     }
 
     @media only screen and (max-width: 1023px) {
@@ -73,13 +76,12 @@
     }
 
     [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul {
-        width: 50%;
+        width: 100%;
         padding-left: 16px;
     }
 
     @media only screen and (max-width: 1023px) {
         [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul {
-            width: 100%;
             margin-top: 30px;
         }
     }
@@ -121,10 +123,22 @@
         font-size: 16px;
     }
 
-    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-note {
-        font-size: 14px;
-        line-height: 18px;
-        margin-top: 10px;
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-list li {
+       position: relative;
+       padding-left: 12px;
+       margin-bottom: 0 !important;
+    }
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-list li:after {
+        content: '';
+        display: inline-block;
+        background-color: #333;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: -1;
     }
 
     [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .secondary {
@@ -133,11 +147,11 @@
 </style>
 
 <!-- modale IMG -->
-<div data-pln-organism="modal" data-pln-version="1.0" data-pln-template="emptyHeader" id="modalSoleProtetto"
+<div data-pln-organism="modal" data-pln-version="1.0" data-pln-template="emptyHeader" id="modalServiziExtra"
     class="default" style="z-index: 10000;">
     <div class="content">
         <div class="header">
-            <button type="button" class="close" aria-label="FV modal" data-pln-action-modal-close="#modalSoleProtetto">
+            <button type="button" class="close" aria-label="FV modal" data-pln-action-modal-close="#modalServiziExtra">
                 <img loading="lazy"
                     src="/etc.clientlibs/plenitude-common/clientlibs/clientlib-site/resources/assets/03-icons-close-bold.svg"
                     alt="Chiudi modale" aria-hidden="true">
@@ -145,73 +159,45 @@
         </div>
         <div class="body">
             <div data-pln-organism="modal-cardImg-item" data-pln-version="1.0" data-pln-template="default" class="">
-                <h2 class="h2">Soleggiato o rimborsato con la polizza Zurich Sole Protetto</h2>
-                <p>
-                    Solo se scegli l’offerta fotovoltaico Plus o Prime, in omaggio per te Zurich Sole Protetto, la prima
-                    polizza che ti rimborsa se non produci l’energia prevista a causa di nuvole e brutto tempo.
-                    L’innovativa soluzione assicurativa, completamente digitale e unica sul mercato italiano, è pensata
-                    <b>da Zurich in esclusiva per Plenitude</b>.
+                <h2 class="h2">Scopri le soluzioni integrative per il tuo impianto</h2>
+                <p>Pensate per venire incontro a ogni tua esigenza, puoi acquistarle e aggiungerle su qualsiasi offerta fotovoltaico.
                 </p>
-                <ul class="modalCardImg-ul">
-                    <li>Passa al fotovoltaico di Plenitude acquistando un impianto a scelta entro il <b>19/12/2025</b>
-                    </li>
-                    <li>Ottieni in regalo, a seguito dell’installazione dell’impianto fotovoltaico, <b>una copertura di
-                            3
-                            anni</b>,
-                        senza costi a tuo carico né tacito rinnovo</li>
-                    <li>Ricevi un bonifico automatico ogni 6 mesi* in caso di minor irraggiamento stimato in base ai
-                        dati
-                        storici mensili della tua area.</li>
-                </ul>
                 <div class="modalCardImg-content">
-                    <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/ipad.png" alt="ipad"
-                        aria-hidden="true">
+                    
                     <ul style="padding-left: 0px;">
-                        <h3><b>Come funziona?</b></h3>
                         <li><span>1</span>
                             <div>
-                                <h4>Scopri quanto sole è previsto.</h4>
-                                <p>Consulta l'andamento dell'irraggiamento solare atteso nella tua zona sul sito
-                                    dedicato. La stima è fornita da un ente certificato terzo "Oracolo", che calcola il
-                                    sole previsto in base ai dati metereologici raccolti dal gennaio 2005.</p>
+                                <h4>Soluzioni di protezione e sicurezza</h4>
+                                <ul class="modalCardImg-list">
+                                    <li>Rete frangineve</li>
+                                    <li>Rete antivolatili</li>
+                                    <li>Opere per installazione in sicurezza</li>
+                                </ul>
                             </div>
                         </li>
                         <li><span>2</span>
                             <div>
-                                <h4>Monitora la tua situazione.</h4>
-                                <p>
-                                    Controlla in tempo reale, sul sito dedicato, l'irraggiamento effettivo dei casa tua
-                                    e il discostamento dalla previsione**.
-                                </p>
+                                <h4>Ottimizzazione e gestione dell’energia</h4>
+                                <ul class="modalCardImg-list">
+                                    <li>Ottimizzatori di potenza: migliorano l’efficienza dell’impianto, riducendo perdite da ombre e disallineamenti</li>
+                                    <li>Sistema di backup: consente di accumulare energia e fornirla in caso di blackout, garantendo continuità elettrica alla rete</li>
+                                </ul>
                             </div>
                         </li>
                         <li><span>3</span>
-                            <div>
-                                <h4>Ricevi il rimborso.</h4>
-                                <p>
-                                    Se l'irraggiamento solare effettivo del tuo impianto è più basso di quello previsto,
-                                    ottieni un bonifico automatico ogni 6 mesi, a partire da 1€, sul tuo conto corrente.
-                                </p>
+                            <div class="modalCardImg-list">
+                                <h4>Accessori e complementi per l’installazione</h4>
+                                <ul>
+                                    <li>Opere accessorie Small: piccole opere accessorie</li>
+                                    <li>Opere accessorie Large: grandi opere accessorie</li>
+                                </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="modalCardImg-note">
-                    <p>*Sono esclusi dalla copertura indennizzi derivanti da minore irraggiamento sia su estensioni
-                        dell'impianto fotovoltaico sia su unità già installate in precedenza che non fanno parte
-                        dell'impianto per cui è omaggiata la polizza.<br>
-                        **La polizza e l'accesso all'area personale sarà attivo il mese successivo dell'allaccio
-                        dell'impianto alla rete elettrica.</p>
-                    <!-- <p>E, in più, puoi avere anche:</p>
-                    <ul style="padding-left: 15px;">
-                        <li style="list-style-type: disc;">rete frangineve</li>
-                        <li style="list-style-type: disc;">rete anti volatili</li>
-                        <li style="list-style-type: disc;">opere per installazione in sicurezza.</li>
-                    </ul> -->
-                </div>
 
                 <a style="margin:0 auto; text-align: center;" data-pln-atom="button-ext" data-pln-version="1.2"
-                    class="secondary default " href="#" data-pln-action-modal-close="#modalSoleProtetto">
+                    class="secondary default " href="#" data-pln-action-modal-close="#modalServiziExtra">
                     <span>Chiudi</span>
                 </a>
 
@@ -223,9 +209,9 @@
 
 <script>
     // script per apertura e chiusura Modale con IMG in pagina fotovoltaico con accumulo
-    var modaleTablet = document.querySelector('[data-pln-organism="modal"][data-pln-version="1.0"]#modalSoleProtetto');
+    var modaleTablet = document.querySelector('[data-pln-component="html-box"][data-pln-version="1.0"] #modalServiziExtra');
 
-    document.querySelector('.cart > .cart-box > ul li span button').addEventListener('click', function() {
+    document.querySelector('[data-pln-component="band-small"][data-pln-version="1.1"] > .wrapper > [data-pln-atom="button"]').addEventListener('click', function() {
         if (modaleTablet) { // Verifica che l'elemento esista
             modaleTablet.style.display = "block";
         } else {
@@ -233,7 +219,7 @@
         }
     });
 
-    document.querySelector('[data-pln-organism="modal"][data-pln-version="1.0"]#modalSoleProtetto .content .header button').addEventListener('click', function() {
+    document.querySelector('[data-pln-component="html-box"][data-pln-version="1.0"] #modalServiziExtra .content .header button').addEventListener('click', function() {
         if (modaleTablet) { // Verifica che l'elemento esista
             modaleTablet.style.display = "none";
             console.log('ok X')
