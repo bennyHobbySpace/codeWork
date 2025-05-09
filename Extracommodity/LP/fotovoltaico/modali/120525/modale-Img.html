@@ -224,19 +224,19 @@
 
 <script>
     // script per apertura e chiusura Modale con IMG in pagina fotovoltaico con accumulo
-    var modaleTablet = document.querySelector('[data-pln-organism="modal"][data-pln-version="1.0"]#modalSoleProtetto');
+    var modaleTabletSole = document.querySelector('[data-pln-component="html-box"][data-pln-version="1.0"] #modalSoleProtetto');
 
     document.querySelector('.cart > .cart-box > ul li span button').addEventListener('click', function() {
-        if (modaleTablet) { // Verifica che l'elemento esista
-            modaleTablet.style.display = "block";
+        if (modaleTabletSole) { // Verifica che l'elemento esista
+            modaleTabletSole.style.display = "block";
         } else {
-            console.error("Elemento modaleTablet non trovato.");
+            console.error("Elemento modaleTabletSole non trovato.");
         }
     });
 
     document.querySelector('[data-pln-organism="modal"][data-pln-version="1.0"]#modalSoleProtetto .content .header button').addEventListener('click', function() {
-        if (modaleTablet) { // Verifica che l'elemento esista
-            modaleTablet.style.display = "none";
+        if (modaleTabletSole) { // Verifica che l'elemento esista
+            modaleTabletSole.style.display = "none";
             console.log('ok X')
         } else {
             console.error("Elemento X non trovato.");
@@ -244,8 +244,8 @@
     });
 
     document.querySelector('[data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .secondary').addEventListener('click', function() {
-        if (modaleTablet) { // Verifica che l'elemento esista
-            modaleTablet.style.display = "none";
+        if (modaleTabletSole) { // Verifica che l'elemento esista
+            modaleTabletSole.style.display = "none";
         } else {
             console.error("Elemento X non trovato.");
         }

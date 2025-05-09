@@ -101,10 +101,10 @@
         position: relative;
     }
 
-    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li span:after {
+    /* [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li span:after {
         content: '';
         display: inline-block;
-        background-color: #ffcd00;
+        background-color: #008051;
         width: 32px;
         height: 32px;
         border-radius: 50%;
@@ -112,10 +112,16 @@
         top: 5px;
         left: 0;
         z-index: -1;
+    } */
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li span.bullet:after {
+        display: none;
     }
 
     [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li div {
         padding-left: 30px;
+    }
+    [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li div.divBullet {
+        padding-left: 10px;
     }
 
     [data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .modalCardImg-content ul li div h4 {
@@ -160,36 +166,53 @@
         <div class="body">
             <div data-pln-organism="modal-cardImg-item" data-pln-version="1.0" data-pln-template="default" class="">
                 <h2 class="h2">Scopri le soluzioni integrative per il tuo impianto</h2>
-                <p>Pensate per venire incontro a ogni tua esigenza, puoi acquistarle e aggiungerle su qualsiasi offerta fotovoltaico.
+                <p>Progettate per rispondere a ogni tua esigenza, puoi acquistarle e integrarle a qualsiasi offerta fotovoltaico.
                 </p>
                 <div class="modalCardImg-content">
                     
                     <ul style="padding-left: 0px;">
-                        <li><span>1</span>
-                            <div>
+                        <li><span class="bullet">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <g id="Other / Bullet">
+                                    <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                                    <path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z" fill="white"></path>
+                                </g> </svg>
+                        </span>
+                            <div class="divBullet">
                                 <h4>Soluzioni di protezione e sicurezza</h4>
                                 <ul class="modalCardImg-list">
                                     <li>Rete frangineve</li>
                                     <li>Rete antivolatili</li>
-                                    <li>Opere per installazione in sicurezza</li>
+                                    <li>Opere per installazione in sicurezza che consentono l'accesso al tetto anche durante le operazioni di manutenzione e pulizia</li>
                                 </ul>
                             </div>
                         </li>
-                        <li><span>2</span>
-                            <div>
-                                <h4>Ottimizzazione e gestione dell’energia</h4>
+                        <li><span class="bullet">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <g id="Other / Bullet">
+                                    <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                                    <path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z" fill="white"></path>
+                                </g> </svg>
+                        </span>
+                            <div class="divBullet">
+                                <h4>Ottimizzazione e gestione dell'energia</h4>
                                 <ul class="modalCardImg-list">
-                                    <li>Ottimizzatori di potenza: migliorano l’efficienza dell’impianto, riducendo perdite da ombre e disallineamenti</li>
-                                    <li>Sistema di backup: consente di accumulare energia e fornirla in caso di blackout, garantendo continuità elettrica alla rete</li>
+                                    <li>Ottimizzatori di potenza: migliorano l'efficienza dell'impianto, riducendo perdite da ombre e disallineamenti</li>
+                                    <li>Sistema di backup per consentire di accumulare energia e fornirla in caso di blackout, garantendo continuità elettrica alla rete</li>
                                 </ul>
                             </div>
                         </li>
-                        <li><span>3</span>
-                            <div class="modalCardImg-list">
-                                <h4>Accessori e complementi per l’installazione</h4>
-                                <ul>
-                                    <li>Opere accessorie Small: piccole opere accessorie</li>
-                                    <li>Opere accessorie Large: grandi opere accessorie</li>
+                        <li><span class="bullet">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <g id="Other / Bullet">
+                                    <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                                    <path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z" fill="white"></path>
+                                </g> </svg>
+                        </span>
+                            <div class="class="divBullet"">
+                                <h4>Accessori e complementi per l'installazione</h4>
+                                <ul class="modalCardImg-list">
+                                    <li>Opere accessorie per completare la tua installazione</li>
                                 </ul>
                             </div>
                         </li>
@@ -228,9 +251,10 @@
         }
     });
 
-    document.querySelector('[data-pln-organism="modal-cardImg-item"][data-pln-version="1.0"] .secondary').addEventListener('click', function() {
+    document.querySelector('[data-pln-component="html-box"][data-pln-version="1.0"] #modalServiziExtra .content .body a').addEventListener('click', function() {
         if (modaleTablet) { // Verifica che l'elemento esista
             modaleTablet.style.display = "none";
+            console.log('ok button modale')
         } else {
             console.error("Elemento X non trovato.");
         }
