@@ -44,7 +44,7 @@
 
 <!-- riga 3)  -->
 <!-- qui si trova tutto html di pagina prodotto caldaia alberata -->
- <div class="root responsivegrid" id="ABTestCaldaiaApr25">
+<div class="root responsivegrid" id="ABTestCaldaiaApr25">
 
 
   <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
@@ -476,7 +476,7 @@
 
           <div data-pln-component="card-sales" data-pln-version="2.0" data-pln-template="default"
             class="gap-top-2 gap-bottom-2">
-            <div class="wrapper">
+            <div class="wrapper" >
 
 
 
@@ -2847,6 +2847,23 @@ color: black;
 
           <div data-pln-component="html-box" data-pln-version="1.0">
             <style>
+              [data-pln-component=card-sales][data-pln-version="2.0"]>.wrapper {
+                  display: flex;
+              }
+              @media only screen and (max-width: 1023px) {
+                [data-pln-component=card-sales][data-pln-version="2.0"]>.wrapper {
+                    display: flex;
+                    flex-flow:column;
+                }
+              }
+              [data-pln-component=card-sales][data-pln-version="2.0"]>.wrapper [data-pln-organism=card-sales-item]{
+                width: 32%;
+              }
+              @media only screen and (max-width: 1023px) {
+                [data-pln-component=card-sales][data-pln-version="2.0"]>.wrapper [data-pln-organism=card-sales-item]{
+                  width: 100%;
+                }
+              }
               [data-pln-organism="card-sales-item"][data-pln-version="1.0"]>div.content p b {
                 font-weight: bold
               }
