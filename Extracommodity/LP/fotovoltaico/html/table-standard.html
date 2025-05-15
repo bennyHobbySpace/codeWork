@@ -1,0 +1,297 @@
+<style>
+    [data-pln-component="table-comparison"][data-pln-version="1.0"]>div:first-child {
+        overflow: hidden;
+        width: 100%;
+        box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.3);
+        border-radius: 16px;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"]>div:first-child table {
+        overflow: hidden;
+        border-radius: 16px;
+        border-collapse: collapse;
+        box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.3);
+        min-width: 100%;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"]>div:first-child table tr th,
+    [data-pln-component="table-comparison"][data-pln-version="1.0"]>div:first-child table tr td {
+        padding: 16px 24px;
+        text-align: left;
+    }
+
+    @media only screen and (max-width: 1023px) {
+
+        [data-pln-component="table-comparison"][data-pln-version="1.0"]>div:first-child table tr th,
+        [data-pln-component="table-comparison"][data-pln-version="1.0"]>div:first-child table tr td {
+            min-width: 235px;
+        }
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"]>div:first-child table tr th {
+        font-weight: bold;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='default'] tr {
+        border-bottom: 1px solid #008051;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='default'] tr:last-child {
+        border-bottom: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='default'] tr td,
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='default'] tr th {
+        border-right: 1px solid #008051;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='default'] tr td:last-child,
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='default'] tr th:last-child {
+        border-right: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='head'] tr {
+        border-bottom: 1px solid #008051;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='head'] tr:first-child {
+        border-bottom: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='head'] tr:last-child {
+        border-bottom: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='head'] tr th {
+        background-color: #f1f5f4;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='head'] tr td,
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='head'] tr th {
+        border-right: 1px solid #008051;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='head'] tr td:last-child,
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='head'] tr th:last-child {
+        border-right: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='stripes'] tr td,
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='stripes'] tr th {
+        border-right: 1px solid #008051;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='stripes'] tr td:last-child,
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='stripes'] tr th:last-child {
+        border-right: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='stripes'] tr:nth-child(odd) {
+        background-color: #f1f5f4;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='stripes2'] tr {
+        border-bottom: 1px solid #008051;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='stripes2'] tr:last-child {
+        border-bottom: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='stripes2'] tr:nth-child(odd) {
+        background-color: #f1f5f4;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns'] tr {
+        border-bottom: 1px solid #008051;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns'] tr:last-child {
+        border-bottom: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns'] tr th:nth-child(even),
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns'] tr td:nth-child(even) {
+        background-color: #f1f5f4;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns2'] tr td,
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns2'] tr th {
+        border-right: 1px solid #008051;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns2'] tr td:last-child,
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns2'] tr th:last-child {
+        border-right: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns2'] tr th:nth-child(even),
+    [data-pln-component="table-comparison"][data-pln-version="1.0"][data-pln-template='columns2'] tr td:nth-child(even) {
+        background-color: #f1f5f4;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"] ::-webkit-scrollbar {
+        display: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"] .pln-scroll {
+        margin: 32px 0 0;
+        text-align: center;
+        display: none;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"] .pln-scroll>input {
+        width: 100%;
+        -webkit-appearance: none;
+        height: 3px;
+        border-radius: 21px;
+        background: #009e62 30;
+        outline: none;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"] .pln-scroll>input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 80px;
+        height: 20px;
+        border-radius: 21px;
+        opacity: 1;
+        cursor: pointer;
+        background-image: url('https://corporate.eniplenitude.com/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/site-corporate-new-carousel-chart-cursore.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"] .pln-scroll>input::-moz-range-thumb {
+        width: 80px;
+        height: 20px;
+        background-image: url('https://corporate.eniplenitude.com/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/site-corporate-new-carousel-chart-cursore.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center center;
+        cursor: pointer;
+    }
+</style>
+
+<div data-pln-component="table-comparison" data-pln-version="1.0" data-pln-template="default" id="tableId">
+    <div class="wrapper">
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th scope="col">Offerta Start</th>
+                        <th scope="col">Offerta Plus</th>
+                        <th scope="col">Offerta Prime</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Impianto protetto</th>
+                        <td>5 anni</td>
+                        <td>5 anni</td>
+                        <td>10 anni</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sole Protetto</th>
+                        <td>No</td>
+                        <td>3 anni</td>
+                        <td>3 anni</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prezzo dell'impianto da 3kw</th>
+                        <td>5.290€</td>
+                        <td>5.990€</td>
+                        <td>7.990€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pln-scroll" data-pln-slider="tableId" data-pln-active="true" style="display: none;"><input type="range"
+                min="0" max="0" style="visibility: hidden;"></div>
+    </div>
+</div>
+
+
+
+<script>
+    (function ($) {
+        $(function () {
+
+            $.widget('sf.plnSlider', {
+
+                _create() {
+                    this.target = $('#' + $(this.element).attr('data-pln-slider')).find('>div')[0]
+                    this.slider = $(this.element).find('input')
+
+                    this._init()
+                    this._initEvents()
+                },
+
+                _initEvents() {
+                    const observer = new ResizeObserver((mutationList) => {
+                        this._handleVisibilityScroll()
+                    });
+                    observer.observe(this.target);
+                },
+
+                _init() {
+                    console.log('ok funziona')
+                    if ($(this.target).length != 0) {
+                        let newChart_Band = true
+                        let newChart_Input = false
+
+                        $('#sc-new-carousel-chart-input').on('click', function () {
+                            newChart_Input = true
+                            newChart_Band = false
+                        })
+
+                        $(this.target).on('click', function () {
+                            newChart_Band = true
+                            newChart_Input = false
+                        })
+
+                        this._handleVisibilityScroll()
+
+                        // Scroll input
+                        $(this.slider).on('input change', () => {
+                            $(this.target).scrollLeft($(this.slider).val())
+                        })
+
+                    }
+                },
+
+                _handleVisibilityScroll() {
+                    let containerWidth = $(this.target).width()
+                    let sliderContainer = $(this.target).find('table')
+                    let contentWidth = $(sliderContainer).width()
+
+                    // Aggiungi un margine aggiuntivo al massimo dell'input range
+                    let maxInputRange = contentWidth - containerWidth // Puoi regolare il valore del margine secondo le tue esigenze
+                    $(this.slider).attr('max', Math.ceil(maxInputRange))
+
+                    if (contentWidth <= containerWidth) {
+                        $(this.slider).parent().hide();
+                        $(this.slider).css('visibility', 'hidden')
+                    } else {
+                        $(this.slider).parent().show();
+                        $(this.slider).css('visibility', 'visible')
+                    }
+                },
+
+            })
+
+            let n = 3
+            let interval = setInterval(() => {
+                if (--n < 1) {
+                    clearInterval(interval)
+                }
+                $('[data-pln-slider]').not('[data-pln-active="true"]').attr('data-pln-active', 'true').plnSlider()
+            }, 1000)
+
+        })
+    })(jQuery);
+</script>
+
+
