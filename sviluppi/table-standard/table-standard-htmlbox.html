@@ -1,0 +1,62 @@
+<style>
+    /* tutto questo codice va in htmlBox con un suo id = tabellaSoleProtetto uguale a quello qui sotto */
+    /* stile correttivo table-standard */
+[data-pln-component="table-comparison"][data-pln-version="1.0"] {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+[data-pln-component=table-comparison][data-pln-version="1.0"] .pln-scroll {
+    display: none !important;
+}
+@media only screen and (max-width: 1023px) {
+	[data-pln-component="table-comparison"][data-pln-version="1.0"] {
+		padding-right:15px;
+		padding-left:15px;
+	}
+
+	[data-pln-component=table-comparison][data-pln-version="1.0"]>div:first-child table tr td, 
+	[data-pln-component=table-comparison][data-pln-version="1.0"]>div:first-child table tr th {
+    		padding: 1pc 10px;
+	}
+}
+</style>
+
+<div data-pln-component="table-comparison" data-pln-version="1.0" data-pln-template="default" id="tabellaSoleProtetto">
+
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th scope="col">Offerta Start</th>
+                        <th scope="col">Offerta Plus</th>
+                        <th scope="col">Offerta Prime</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Impianto protetto</th>
+                        <td>5 anni</td>
+                        <td>5 anni</td>
+                        <td>10 anni</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sole Protetto</th>
+                        <td>No</td>
+                        <td>3 anni</td>
+                        <td>3 anni</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prezzo dell'impianto da 3kw</th>
+                        <td>5.290€</td>
+                        <td>5.990€</td>
+                        <td>7.990€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pln-scroll" data-pln-slider="tabellaSoleProtetto" style="display: none;"><input type="range"
+                min="0" max="0" style="visibility: hidden;"></div>
+
+</div>
+
+
+
