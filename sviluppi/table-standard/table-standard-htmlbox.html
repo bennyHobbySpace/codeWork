@@ -8,6 +8,12 @@
 [data-pln-component=table-comparison][data-pln-version="1.0"] .pln-scroll {
     display: none !important;
 }
+@media only screen and (min-width: 768px) {
+    [data-pln-component=table-comparison][data-pln-version="1.0"]>div:first-child table tr td,
+    [data-pln-component=table-comparison][data-pln-version="1.0"]>div:first-child table tr th {
+        min-width: auto;
+    }
+}
 @media only screen and (max-width: 1023px) {
 	[data-pln-component="table-comparison"][data-pln-version="1.0"] {
 		padding-right:15px;
