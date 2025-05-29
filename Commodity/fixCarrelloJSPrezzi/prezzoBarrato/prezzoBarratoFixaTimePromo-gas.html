@@ -1,0 +1,91 @@
+<style>
+	#boxPrezzoBarrato.container-html-box-my{
+	   padding: 0;
+	}
+	
+	</style>
+	
+	<script>
+	$(document).ready(function () {
+	  var divCarrelloGas = document.querySelector('.cards-forniture-dual');
+	  divCarrelloGas.remove();
+
+	  // seleziona il primo carrello in pagina
+	  $(".justify-content-end")[0].insertAdjacentHTML('afterend', `
+	  <style>
+        .cart-card-opt-rapporto div:first-child:after {
+            display:none;
+        }
+        .riga-forniture-dual-bi-bioraria .cart-card-opt-rapporto div:nth-child(2):after {
+            display: none;
+        }
+        .riga-forniture-dual-bi-mono .cart-card-opt-rapporto div:nth-child(2):after {
+            display: none;
+        }
+	</style>
+	 <div class="row cards-forniture-dual">
+							<div class="col">
+								<div class="card-fornitura-carrello">
+									<div class="
+											card-fornitura-carrello-body
+											fornitura-selezionata
+											d-flex
+											card-fornitura-toggle-gas
+										">
+										<div class="p20-egl card-carrello-nome-fornitura">
+											<b>GAS</b>
+										</div>
+										<div class="
+												card-fornitura-carrello-dettaglio
+												flex-column flex-md-row
+												fornitura-luce-mono
+												luce-mono-oraria
+											">
+											<div class="card-fornitura-carrello-dettaglio-opzioni">
+												<div class="card-fornitura-carrello-opt-gas">
+													<div class="d-flex justify-content-between">
+														<div class="cart-card-opt-titolo">
+															<div class="p18-egl d-flex align-items-center">
+																<b>Gas</b>
+																
+															</div>
+														</div>
+														<!--  gas con sconto addebito diretto disattivo -->
+														<div class="cart-card-opt-rapporto d-none">
+															<div class="h4-egl"><b>0,4090</b><span style="font-size:14px;color:#767676;"> €/Smc</span></div>
+															<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,5090</b><span style="font-size:14px;color:#767676;"> €/Smc</span></div>
+														</div>
+														<!--  gas con sconto addebito diretto attivo -->
+														<div class="cart-card-opt-rapporto rapporto-scontato">
+															<div class="h4-egl"><b>0,3886</b><span style="font-size:14px;color:#767676;"> €/Smc</span></div>
+															<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,4836</b><span style="font-size:14px;color:#767676;"> €/Smc</span></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-fornitura-carrello-footer">
+										<div class="cap12-egl">Costi di commercializzazione e
+											vendita</div>
+										<div class="h4-egl">12</div>
+									</div>
+								</div>
+							</div>
+						</div>`);
+	
+	
+	var notaSottoCarrelloGas = $(".listing-content-to-show").find(".row")[2];
+	$(notaSottoCarrelloGas).find(".col-12").remove();
+	notaSottoCarrelloGas.insertAdjacentHTML('afterend', `
+						<div class="cap12-egl">
+							<div class="col-12">
+								<div class="cap12-egl">
+									*Corrispettivi scontati del 30% solo per i primi tre mesi a chi passa a Plenitude da altro fornitore. <br>
+									**Corrispettivi base non scontati che si applicano dal quarto al dodicesimo mese. Per chi passa a Plenitude da altro fornitore..
+								</div>
+							</div>
+						</div>
+	`);
+	});
+	</script>
