@@ -1,0 +1,36 @@
+<style>
+#containerFixPrice2.container-html-box-my{
+   padding: 0;
+}
+.card-fornitura-carrello-footer div:last-child::after {
+        content: "€/anno" !important;
+    }
+</style>
+<script>
+ 
+  window.addEventListener('DOMContentLoaded', moltiplicaCostiPer12);
+function moltiplicaCostiPer12() {
+ 
+  const footers = document.querySelectorAll('.card-fornitura-carrello-footer');
+  footers.forEach(footer => {
+ 
+    const costoDiv = footer.querySelector('.h4-egl');
+ 
+    if (costoDiv) {
+ 
+      const valoreOriginale = parseFloat(costoDiv.textContent.trim().replace(',', '.'));
+ 
+      if (!isNaN(valoreOriginale)) {
+ 
+        const valoreMoltiplicato = (valoreOriginale * 12).toFixed(2).replace('.', ',');
+ 
+        costoDiv.textContent = valoreMoltiplicato;
+ 
+      }
+ 
+    }
+ 
+  });
+ 
+}
+</script>
