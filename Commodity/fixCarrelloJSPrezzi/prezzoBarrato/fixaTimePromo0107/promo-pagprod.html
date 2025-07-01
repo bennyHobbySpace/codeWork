@@ -1,20 +1,23 @@
 <style>
-    #boxPrezzoBarrato.container-html-box-my{
-       padding: 0;
-    }
-   
-    </style>
-   
-    <script>
-    $(document).ready(function () {
-      var divCarrelloMono = document.querySelector('.riga-forniture-dual-bi-mono');
-      divCarrelloMono.remove();
-      var divCarrelloBio = document.querySelector('.riga-forniture-dual-bi-bioraria');
-      divCarrelloBio.remove();
-      $(".justify-content-end")[0].insertAdjacentHTML('afterend', `
+	#boxPrezzoBarrato.container-html-box-my {
+		padding: 0;
+	}
+</style>
+
+<script>
+	$(document).ready(function () {
+		var divCarrelloMono = document.querySelector('.riga-forniture-dual-bi-mono');
+		divCarrelloMono.remove();
+		var divCarrelloBio = document.querySelector('.riga-forniture-dual-bi-bioraria');
+		divCarrelloBio.remove();
+		$(".justify-content-end")[0].insertAdjacentHTML('afterend', `
       <style>
           .fare-info {
             white-space: break-spaces;
+          }
+		/* stile correttivo che elimina €/mese e in html aggiunge €/anno */
+          .card-fornitura-carrello-footer div:last-child::after {
+            display:none;
           }
           .cart-card-opt-rapporto div:first-child:after {
           content: "€/kWh*";
@@ -134,7 +137,7 @@
             <div class="cap12-egl">
                 Costi di commercializzazione e vendita
             </div>
-            <div class="h4-egl">144</div>
+            <div class="h4-egl">144<span style="font-size:14px; color:#767676; line-height:1.5; font-weight:normal;">€/anno</span></div>
             </div>
         </div>
         </div>
@@ -181,13 +184,13 @@
             <div class="cap12-egl">
                 Costi di commercializzazione e vendita
             </div>
-            <div class="h4-egl">144</div>
+            <div class="h4-egl">144<span style="font-size:14px; color:#767676; line-height:1.5; font-weight:normal;">€/anno</span></div>
             </div>
         </div>
         </div>
     </div>`);
-   
-    $(".riga-forniture-dual-bi-bioraria")[0].insertAdjacentHTML('afterend', `<div class="row cards-forniture-dual riga-forniture-dual-bi-mono">
+
+		$(".riga-forniture-dual-bi-bioraria")[0].insertAdjacentHTML('afterend', `<div class="row cards-forniture-dual riga-forniture-dual-bi-mono">
       <div class="col">
         <div class="card-fornitura-carrello">
           <div class="card-fornitura-carrello-body fornitura-selezionata d-flex card-fornitura-toggle-luce">
@@ -232,7 +235,7 @@
             <div class="cap12-egl">
               Costi di commercializzazione e vendita
             </div>
-            <div class="h4-egl">144</div>
+            <div class="h4-egl">144<span style="font-size:14px; color:#767676; line-height:1.5; font-weight:normal;">€/anno</span></div>
           </div>
         </div>
       </div>
@@ -279,26 +282,26 @@
             <div class="cap12-egl">
               Costi di commercializzazione e vendita
             </div>
-            <div class="h4-egl">144</div>
+            <div class="h4-egl">144<span style="font-size:14px; color:#767676; line-height:1.5; font-weight:normal;">€/anno</span></div>
           </div>
         </div>
       </div>
     </div>`);
-   
-   
-    // var notaSottoCarrello = $(".egl-carrello-dual").find(".row")[4];
-    // $(notaSottoCarrello).find(".col-12").remove();
-    // notaSottoCarrello.insertAdjacentHTML('afterend', `
-    //               <div class="col-12">
-    // <div class="cap12-egl">
-    //                   *<b>Risparmio calcolato rispetto ai corrispettivi fissi a consumo dell'offerta Fixa Time</b>. 
-    //                   I corrispettivi fissi a consumo luce e/o gas pesano rispettivamente il 42% e il 44% della spesa.
-    //                 </div>
-                
-    //               <div class="cap12-egl" style="padding-top: 15px;">
-    //                  **Corrispettivi dell'offerta Fixa Time applicato dal 13/05 al 10/06.
-    //                 </div>
-    //             </div>
-    // `);
-    });
-    </script>
+
+
+		// var notaSottoCarrello = $(".egl-carrello-dual").find(".row")[4];
+		// $(notaSottoCarrello).find(".col-12").remove();
+		// notaSottoCarrello.insertAdjacentHTML('afterend', `
+		//               <div class="col-12">
+		// <div class="cap12-egl">
+		//                   *<b>Risparmio calcolato rispetto ai corrispettivi fissi a consumo dell'offerta Fixa Time</b>. 
+		//                   I corrispettivi fissi a consumo luce e/o gas pesano rispettivamente il 42% e il 44% della spesa.
+		//                 </div>
+
+		//               <div class="cap12-egl" style="padding-top: 15px;">
+		//                  **Corrispettivi dell'offerta Fixa Time applicato dal 13/05 al 10/06.
+		//                 </div>
+		//             </div>
+		// `);
+	});
+</script>
