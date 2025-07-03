@@ -1,11 +1,20 @@
 <style>
+    @media only screen and (max-width: 1023px) {
+        [data-pln-component="table-comparison"][data-pln-version="1.0"] {
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+    }
     [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr {
         border-bottom: transparent;
     }
 
-    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr:first-of-type,
-    tr:last-of-type {
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr:first-of-type {
         background-color: #f1f5f4;
+    }
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr:last-of-type {
+        background-color: #008051;
+        color: #fff;;
     }
 
     [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr th {
@@ -30,51 +39,54 @@
 
 <div data-pln-component="">
     <div class="wrapper">
-        <h3 style="padding-bottom: 8px;margin-bottom: 0px;font-weight: 600;">Confronta le nostre offerte per l’impianto da 3
-            kWp</h3>
-        <p style="padding-bottom: 32px; margin-bottom: 0px;">Oltre ai <b>7 pannelli microcristallini</b> FuturaSun e ai
-            servizi sempre inclusi in tutte le offerte, solo con Plus o Prime puoi avere componenti premium e, in omaggio,
-            <b>coperture assicurative</b> in più rispetto a Start. <b>Confronta ora le nostre offerte da 3 kWp.</b></p>
-        <div data-pln-component="table-comparison" data-pln-version="1.0" data-pln-template="default" id="tableId"
-            class="table-standard-fv">
-            <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th></th>
-                            <th scope="col">Start</th>
-                            <th scope="col">Plus</th>
-                            <th scope="col">Prime</th>
-                        </tr>
-                        <tr>
-                            <th scope="row">Inverter</th>
-                            <td><img src="https://eniplenitude.scene7.com/is/image/enigaseluce/tigo" alt=""></td>
-                            <td><img src="https://eniplenitude.scene7.com/is/image/enigaseluce/goodwe" alt=""></td>
-                            <td><img src="https://eniplenitude.scene7.com/is/image/enigaseluce/sma" alt=""></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Zurich Impianto Protetto<sup>4</sup></th>
-                            <td>5 anni</td>
-                            <td>5 anni</td>
-                            <td>10 anni</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Zurich Sole Protetto<sup>8</sup></th>
-                            <td>No</td>
-                            <td>3 anni</td>
-                            <td>3 anni</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Prezzo impianto 3kWp</th>
-                            <td>5.290 €</td>
-                            <td>5.990 €</td>
-                            <td>7.990 €</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="pln-scroll" data-pln-slider="tableId" data-pln-active="true" style="display: none;"><input
-                    type="range" min="0" max="0" style="visibility: hidden;"></div>
+        <h3 style="padding-bottom: 8px; margin-bottom:0;">Confronta le nostre offerte per l’impianto da 3 kWp</h3>
+    <p style="padding-bottom: 32px; margin-bottom:0;">Oltre ai <b>servizi sempre inclusi</b> con tutte le offerte, solo con Plus o Prime puoi avere componenti premium e, in omaggio, <b>coperture assicurative in più</b> rispetto a Start.<br> Confronta ora.</p>
+    <div data-pln-component="table-comparison" data-pln-version="1.0" data-pln-template="stripes"
+        id="tableId" class="table-standard-fv">
+
+        <div>
+            <table>
+                <tr>
+                    <th scope="row">Impianto</th>
+                    <td colspan="3" scope="col" style="border-right:1px solid #f3f3f3;">Potenza 3kWp, 7 pannelli monocristallini Futurasun</td>
+                </tr>
+                <tr>
+                    <th scope="row">Offerte</th>
+                    <th scope="col">Start</th>
+                    <th scope="col">Plus</th>
+                    <th scope="col">Prime</th>
+                </tr>
+                <tr>
+                    <th scope="row">Inverter a batteria</th>
+                    <td><img src="/content/dam/plenitude-it/images/icons/partner/tigo.png" alt=""></td>
+                    <td><img src="/content/dam/plenitude-it/images/icons/partner/goodwe.png" alt=""></td>
+                    <td><img src="/content/dam/plenitude-it/images/icons/partner/sma.png" alt=""></td>
+                </tr>
+                <tr>
+                    <th scope="row">Zurich Impianto Protetto<sup>4</sup></th>
+                    <td>5 anni</td>
+                    <td>5 anni</td>
+                    <td>10 anni</td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">Zurich Sole Protetto<sup>8</sup></th>
+                    <td>No</td>
+                    <td>3 anni</td>
+                    <td>3 anni</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="border-right:1px solid #fff !important;">Prezzo</th>
+                    <td style="border-right:1px solid #fff !important;">5.290 €</td>
+                    <td style="border-right:1px solid #fff !important;">5.990 €</td>
+                    <td>7.990 €</td>
+                </tr>
+            </table>
         </div>
+
+        <div class="pln-scroll" :data-pln-slider="componentId">
+            <input type="range" min="0" value="0" />
+        </div>
+    </div>
     </div>
 </div>
