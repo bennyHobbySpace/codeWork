@@ -1,0 +1,161 @@
+<style>
+	.container-html-box-my {
+		padding: 0px 0;
+		background: #f4f4f4;
+	}
+	@media (max-width: 1024px) {
+		[aem-component=chart][aem-version="1.0"] {
+			padding: 60px 15px;
+		}
+	}
+</style>
+  
+  <div aem-component="chart" aem-version="1.0" class="container">
+		<!-- titolo -->
+		<div class="title-stroke">
+		  
+			<h2 class="title">
+			  Ecco come potrà essere l'andamento del tuo prezzo all'ingrosso PUN o PSV
+			</h2>
+			<p class="sub-title">
+			  L'andamento dei mercati energetici <strong>è influenzato da tanti attori, fattori e scenari</strong> che determinano <strong>la variabilità 
+				dei prezzi di luce e gas</strong>. Per renderti più consapevole sulla dinamica dei prezzi all'ingrosso, ti riportiamo l'andamento storico dei 
+				valori e l'ultimo valore mensile ufficiale.
+			</p>
+		</div>
+	
+		<!-- grafico 1 -->
+		<div class="chart-box container">
+			<div class="legenda row">
+				<div class="legenda-title col-lg-6 col-md-12">
+					<h3 class="title">
+						Luce - Indice PUN
+					</h3>
+					<p class="sub-title">
+					  il Corrispettivo luce Index, aggiornato mensilmente e pari, per ciascun mese di fornitura, alla media del PUN (Prezzo Unico 
+					  Nazionale dell'energia elettrica) determinato dal gestore dei mercati energetici.
+					</p>
+				</div>
+				<div class="legenda-prize-content  col-lg-3 col-md-6 col-xs-12">
+					<div class="legenda-prize green">
+					  <p><span><strong>0,134</strong></span> €/kWh</p>
+					  <p>
+						Prezzo effettivo incluso il contributo al consumo -  Giugno 2025
+					  </p>
+					</div>
+				</div>
+				<div class="legenda-prize-content col-lg-3 col-md-6 col-xs-12">
+					<div class="legenda-prize green">
+					  <p><span><strong>0,122</strong></span> €/kWh</p>
+					  <p>
+						Prezzo medio dell'indice PUN degli ultimi 12 mesi
+					  </p>
+					</div>
+				</div>
+			</div>
+			<picture class="chart-picture">
+				<source
+				  media="(min-width: 1440px) and (min-resolution: 150dpi)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-pun-luce-desktop_2x.png"
+				/>
+				<source
+				  media="(min-width: 1440px)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-pun-luce-desktop_2x.png"
+				/>
+				<source
+				  media="(min-width: 1024px) and (min-resolution: 150dpi)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-pun-luce-desktop_2x.png"
+				/>
+				<source
+				  media="(min-width: 1024px)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-pun-luce-desktop_2x.png"
+				/>
+				<source
+				  media="(min-width: 768px) and (min-resolution: 150dpi)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-pun-luce-tablet_2x.png"
+				/>
+				<source
+				  media="(min-width: 768px)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-pun-luce-tablet_2x.png"
+				/>
+				<source
+				  media="(min-resolution: 150dpi)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-pun-luce-mobile_2x.png"
+				/>
+				<source
+				  media="(min-width: 320px)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-pun-luce-mobile_2x.png"
+				/>
+				<img class="chart-img" src="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-pun-luce-tablet_2x.png" alt="Grafico che mostra le variazioni mensili dell'indice PUN, il prezzo di riferimento dell'energia elettrica all'ingrosso in Italia. Questo indice viene calcolato come una media ponderata dei prezzi delle transazioni giornaliere di energia elettrica." />
+			</picture>
+		</div>
+		<!-- grafico 2 -->
+		<div class="chart-box container">
+			<div class="legenda row">
+				<div class="legenda-title col-lg-6 col-md-12">
+					<h3 class="title">
+					  Gas - Indice PSV
+					</h3>
+					<p class="sub-title">
+					  il Corrispettivo gas Index, pari all'indice PSV (PSV Day Ahead Heren Mid) che corrisponde al prezzo del gas naturale all'ingrosso 
+					  al PSV (Punto di Scambio Virtuale). L'indice è calcolato mensilmente come media dei prezzi Bid e Offer da ICIS Heren.
+					</p>
+				</div>
+				<div class="legenda-prize-content  col-lg-3 col-md-6 col-xs-12">
+					<div class="legenda-prize yellow">
+					  <p><span><strong>0,569</strong></span> €/Smc</p>
+					  <p>
+						Prezzo effettivo incluso il contributo al consumo - Giugno 2025
+					  </p>
+					</div>
+				</div>
+				<div class="legenda-prize-content col-lg-3 col-md-6 col-xs-12">
+					<div class="legenda-prize yellow">
+					  <p><span><strong>0,453</strong></span> €/Smc</p>
+					  <p>
+						Prezzo medio dell'indice PSV degli ultimi 12 mesi
+					  </p>
+					</div>
+				</div>
+			</div>
+			<picture class="chart-picture">
+				<source
+				  media="(min-width: 1440px) and (min-resolution: 150dpi)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-psv-gas-desktop_2x.png"
+				/>
+				<source
+				  media="(min-width: 1440px)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-psv-gas-desktop_2x.png"
+				/>
+				<source
+				  media="(min-width: 1024px) and (min-resolution: 150dpi)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-psv-gas-desktop_2x.png"
+				/>
+				<source
+				  media="(min-width: 1024px)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-psv-gas-desktop_2x.png"
+				/>
+				<source
+				  media="(min-width: 768px) and (min-resolution: 150dpi)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-psv-gas-tablet_2x.png"
+				/>
+				<source
+				  media="(min-width: 768px)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-psv-gas-tablet_2x.png"
+				/>
+				<source
+				  media="(min-resolution: 150dpi)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-psv-gas-mobile_2x.png"
+				/>
+				<source
+				  media="(min-width: 320px)"
+				  srcset="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-psv-gas-mobile_2x.png"
+				/>
+				<img class="chart-img" src="/content/dam/enigaseluce/immagini/residenziale/offerte-residenziali/trend-casa/indici-pun-psv/grafici-new-pun-psv/grafico-psv-gas-tablet_2x.png" alt="Grafico che mostra le variazioni mensili dell'indice PSV, il prezzo del gas naturale all'ingrosso in Italia, determinato dalle transazioni effettuate nel Punto di Scambio Virtuale, la piattaforma dove avviene la compravendita di gas."/>
+			</picture>    
+		</div>
+		<p class="cap12-egl" style="padding-top: 15px;">I valori sopra indicati corrispondono a quelli assunti dagli indici PUN e PSV nei mesi precedenti.<br>
+		  Il valore che tali indici assumeranno dipende invece dall'andamento dei prezzi nei mercati energetici che ad oggi non è possibile prevedere.<br>
+		  </p>
+	
+	</div>

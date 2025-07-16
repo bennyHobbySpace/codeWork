@@ -1,0 +1,202 @@
+<style>
+	#boxPrezzoBarrato.container-html-box-my{
+	   padding: 0;
+	}
+	
+	</style>
+	
+	<script>
+	$(document).ready(function () {
+	  var divCarrelloMonoLuce = document.querySelector('.riga-forniture-dual-bi-mono');
+	  divCarrelloMonoLuce.remove();
+	  var divCarrelloBioLuce = document.querySelector('.riga-forniture-dual-bi-bioraria');
+	  divCarrelloBioLuce.remove();
+
+	  // seleziona il primo carrello in pagina
+	  $(".justify-content-end")[0].insertAdjacentHTML('afterend', `
+	  <style>
+		  .fare-info {
+			white-space: break-spaces;
+		  }
+		  .cart-card-opt-rapporto div:first-child:after {
+		  content: "€/kWh*";
+		  font-size: 14px;
+		  padding-left: 4px;
+		  color: #767676;
+		  }
+		  .card-fornitura-carrello-opt-gas .cart-card-opt-rapporto div:first-child:after {
+		  content: "€/Smc*";
+		  font-size: 14px;
+		  padding-left: 4px;
+		  color: #767676;
+		  }
+		  .riga-forniture-dual-bi-mono .cart-card-opt-rapporto div:nth-child(2):after {
+		  content: "€/kWh**";
+		  font-size: 12px;
+		  padding-left: 4px;
+		  color: #767676;
+		}
+		  .riga-forniture-dual-bi-mono .card-fornitura-carrello-opt-gas .cart-card-opt-rapporto div:nth-child(2):after {
+		  content: "€/Smc**";
+		  font-size: 12px;
+		  padding-left: 4px;
+		  color: #767676;
+		}
+		  .riga-forniture-dual-bi-bioraria .cart-card-opt-rapporto div:nth-child(2):after {
+		  content: "€/kWh**";
+		  font-size: 12px;
+		  padding-left: 4px;
+		  color: #767676;
+		}
+		  .riga-forniture-dual-bi-bioraria .card-fornitura-carrello-opt-gas .cart-card-opt-rapporto div:nth-child(2):after {
+		  content: "€/Smc**";
+		  font-size: 12px;
+		  padding-left: 4px;
+		  color: #767676;
+		}
+        .cart-card-opt-rapporto div:first-child:after {
+            display:none;
+        }
+        .riga-forniture-dual-bi-bioraria .cart-card-opt-rapporto div:nth-child(2):after {
+            display: none;
+        }
+        .riga-forniture-dual-bi-mono .cart-card-opt-rapporto div:nth-child(2):after {
+            display: none;
+        }
+	</style>
+	  <div class="row cards-forniture-dual riga-forniture-dual-bi-bioraria d-none">
+							<div class="col">
+								<div class="card-fornitura-carrello">
+									<div class="
+											card-fornitura-carrello-body
+											fornitura-selezionata
+											d-flex
+											card-fornitura-toggle-luce
+										">
+										
+										<div class="p20-egl card-carrello-nome-fornitura">
+											<b>LUCE</b>
+										</div>
+										<div class="
+												card-fornitura-carrello-dettaglio
+												flex-column flex-md-row
+												fornitura-luce-bioraria
+												fornitura-luce-mono
+											">
+											<div class="card-fornitura-carrello-dettaglio-opzioni">
+												<div class="card-fornitura-carrello-opt-f1">
+													<div class="d-flex d-md-block justify-content-between">
+														<div class="cart-card-opt-titolo">
+															<div class="p18-egl d-flex align-items-center">
+																<b>Luce F1</b> <i tabindex="-1" class="fas fa-exclamation no-content" data-trigger="focus" data-toggle="tooltip" data-placement="right" title="" data-original-title="08:00 - 19:00">
+																	<img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/exclamation-solid.svg" class="listing-icon">
+																</i>
+															</div>
+														</div>
+														<div class="cart-card-opt-rapporto d-none">
+															<!-- F1 domiciliazione disattiva --> 
+															<div class="h4-egl"><b>0,1094</b><span style="font-size:14px;color:#767676;"> €/kWh*</span></div>
+															<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1367</b><span style="font-size:14px;color:#767676;"> €/kWh**</span></div>
+							                            </div>
+							                            <div class="cart-card-opt-rapporto rapporto-scontato">
+															<!-- F1 domiciliazione attiva -->	
+														  	<div class="h4-egl"><b>0,1039</b><span style="font-size:14px;color:#767676;"> €/kWh*</span></div>
+															<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1299</b><span style="font-size:14px;color:#767676;"> €/kWh**</span></div>
+							                              
+							                            </div>
+													</div>
+												</div>
+											</div>
+											<div class="card-fornitura-carrello-dettaglio-opzioni">
+												<div class="card-fornitura-carrello-opt-f2 py-1 py-md-0">
+													<div class="d-flex d-md-block justify-content-between">
+														<div class="cart-card-opt-titolo">
+															<div class="p18-egl d-flex align-items-center">
+																<b>Luce F2-F3</b> <i tabindex="-1" class="fas fa-exclamation no-content" data-trigger="focus" data-toggle="tooltip" data-placement="right" title="" data-original-title="19:00 - 08:00<br />weekend e festività">
+																	<img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/exclamation-solid.svg" class="listing-icon">
+																	</i>
+															</div>
+														</div>
+														<div class="cart-card-opt-rapporto d-none">
+															<!-- F2 F3 domiciliazione disattiva -->
+															<div class="h4-egl"><b>0,1062</b><span style="font-size:14px;color:#767676;"> €/kWh*</span></div>
+															<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1328</b><span style="font-size:14px;color:#767676;"> €/kWh**</span></div>
+							                              
+							                            </div>
+							                            <div class="cart-card-opt-rapporto rapporto-scontato">
+															<!-- F2 F3 domiciliazione attiva -->
+														  <div class="h4-egl"><b>0,1009</b><span style="font-size:14px;color:#767676;"> €/kWh*</span></div>
+															<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1262</b><span style="font-size:14px;color:#767676;"> €/kWh**</span></div>
+							        
+							                            </div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-fornitura-carrello-footer">
+										<div class="cap12-egl">Costi di commercializzazione e
+											vendita</div>
+										<div class="h4-egl">144</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>`);
+	
+	$(".riga-forniture-dual-bi-bioraria")[0].insertAdjacentHTML('afterend', `<div class="row cards-forniture-dual riga-forniture-dual-bi-mono">
+							<div class="col">
+								<div class="card-fornitura-carrello">
+									<div class="card-fornitura-carrello-body fornitura-selezionata d-flex card-fornitura-toggle-luce">
+										
+										<div class="p20-egl card-carrello-nome-fornitura">
+											<b>LUCE</b>
+										</div>
+										<div class="card-fornitura-carrello-dettaglio flex-column flex-md-row fornitura-luce-trioraria luce-mono-oraria">
+											<div class="card-fornitura-carrello-dettaglio-opzioni">
+												<div class="card-fornitura-carrello-opt-f1">
+													<div class="d-flex d-md-block justify-content-between">
+														<div class="cart-card-opt-titolo">
+															<div class="p18-egl d-flex align-items-center">
+																<b>Luce 24h</b> <i tabindex="-1" class="fas fa-exclamation no-content" data-trigger="focus" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tutti i giorni">
+																	<img loading="lazy" src="/etc.clientlibs/enigaseluce/clientlibs/clientlib-site/resources/assets/svg-icons/exclamation-solid.svg" class="listing-icon">	
+																</i>
+															</div>
+														</div>
+														<div class="cart-card-opt-rapporto d-none">
+							                              
+															<!-- luce mono domiciliazione disattiva -->
+														  <div class="h4-egl"><b>0,1074</b><span style="font-size:14px;color:#767676;"> €/kWh*</span></div>
+															<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1342</b><span style="font-size:14px;color:#767676;"> €/kWh**</span></div>
+							        
+							                              
+							                            </div>
+							                            <div class="cart-card-opt-rapporto rapporto-scontato">
+							                              
+															<!-- luce mono mesi domiciliazione attiva -->
+														  <div class="h4-egl"><b>0,1020</b><span style="font-size:14px;color:#767676;"> €/kWh*</span></div>
+															<div class="h5-egl" style="color: #333; padding-left: 15px;"><b style="text-decoration: line-through;" aria-hidden="true">0,1275</b><span style="font-size:14px;color:#767676;"> €/kWh**</span></div>
+							        
+							                              
+							                            </div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-fornitura-carrello-footer">
+										<div class="cap12-egl">Costi di commercializzazione e
+											vendita</div>
+										<div class="h4-egl">144</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>`);
+	
+	// codice che cambia il valore del costo di comm e vendita
+	// var notaSottoCarrelloLuce = $(".listing-content-to-show").find(".row")[1];
+	// var notaSottoCarrelloLuceFooter = $(notaSottoCarrelloLuce).find(".card-fornitura-carrello-footer .h4-egl");
+	// notaSottoCarrelloLuceFooter[0].innerHTML = 144
+	});
+	</script>

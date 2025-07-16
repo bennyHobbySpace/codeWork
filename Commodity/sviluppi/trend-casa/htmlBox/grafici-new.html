@@ -1,0 +1,230 @@
+<style>
+    /* stile htmlbox grafico TrendCasa */
+
+    /* grafico */
+    [aem-component="chart"][aem-version="1.0"] .chart-box {
+        margin-top: 60px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    @media (max-width:1024px) {
+        [aem-component="chart"][aem-version="1.0"] .chart-box {
+            margin-top: 40px;
+        }
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box:last-child {
+        margin-top: 30px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box .legenda-title .title {
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: bold;
+        color: #000;
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box .legenda-title .sub-title {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #333;
+        padding: 15px 0;
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box .legenda .legenda-prize-content {
+        padding: 0 15px;
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box .legenda .legenda-prize {
+        border-radius: 4px;
+        padding: 15px;
+        min-height: 95px;
+    }
+
+    @media (max-width:768px) {
+        [aem-component="chart"][aem-version="1.0"] .chart-box .legenda .legenda-prize:first-child {
+            margin-bottom: 15px;
+        }
+    }
+
+    @media (max-width:768px) {
+        [aem-component="chart"][aem-version="1.0"] .chart-box .legenda .legenda-prize-content:last-child {
+            display: none;
+        }
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box .legenda .legenda-prize p:first-child {
+        font-size: 10px;
+        margin: 0;
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box .legenda .legenda-prize p:first-child span {
+        font-size: 20px;
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box .legenda .legenda-prize p:last-child {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box .legenda .legenda-prize.green {
+        border: 1px solid #009e62;
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-box .legenda .legenda-prize.yellow {
+        border: 1px solid #ffcd00;
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-picture {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+    }
+
+    @media (max-width:768px) {
+        [aem-component="chart"][aem-version="1.0"] .chart-picture {
+            margin-top: 0px;
+        }
+    }
+
+    [aem-component="chart"][aem-version="1.0"] .chart-picture .chart-img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<div aem-component="chart" aem-version="1.0">
+    <div class="wrapper">
+        <!-- titolo -->
+        <div>
+            <h2>
+                Ecco come potrà essere l'andamento del tuo prezzo all'ingrosso PUN o PSV
+            </h2>
+            <p>
+                L'andamento dei mercati energetici <strong>è influenzato da tanti attori, fattori e scenari</strong> che
+                determinano <strong>la variabilità
+                    dei prezzi di luce e gas</strong>. Per renderti più consapevole sulla dinamica dei prezzi
+                all'ingrosso, ti riportiamo l'andamento storico dei
+                valori e l'ultimo valore mensile ufficiale.
+            </p>
+        </div>
+
+        <!-- grafico 1 -->
+        <div class="chart-box container">
+            <div class="legenda row">
+                <div class="legenda-title col-lg-6 col-md-12">
+                    <h3 class="title">
+                        Luce - Indice PUN
+                    </h3>
+                    <p class="sub-title">
+                        il Corrispettivo luce Index, aggiornato mensilmente e pari, per ciascun mese di fornitura, alla
+                        media del PUN (Prezzo Unico
+                        Nazionale dell'energia elettrica) determinato dal gestore dei mercati energetici.
+                    </p>
+                </div>
+                <div class="legenda-prize-content  col-lg-3 col-md-6 col-xs-12">
+                    <div class="legenda-prize green">
+                        <p><span><strong>0,139</strong></span> €/kWh</p>
+                        <p>
+                            Prezzo effettivo incluso il contributo al consumo - Settembre 2024
+                        </p>
+                    </div>
+                </div>
+                <div class="legenda-prize-content col-lg-3 col-md-6 col-xs-12">
+                    <div class="legenda-prize green">
+                        <p><span><strong>0,108</strong></span> €/kWh</p>
+                        <p>
+                            Prezzo medio dell'indice PUN degli ultimi 12 mesi
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <picture class="chart-picture">
+                <source media="(min-width: 1440px) and (min-resolution: 150dpi)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-pun-luce-desktop_2x.png" />
+                <source media="(min-width: 1440px)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-pun-luce-desktop_2x.png" />
+                <source media="(min-width: 1024px) and (min-resolution: 150dpi)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-pun-luce-desktop_2x.png" />
+                <source media="(min-width: 1024px)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-pun-luce-desktop_2x.png" />
+                <source media="(min-width: 768px) and (min-resolution: 150dpi)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-pun-luce-tablet_2x.png" />
+                <source media="(min-width: 768px)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-pun-luce-tablet_2x.png" />
+                <source media="(min-resolution: 150dpi)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-pun-luce-mobile_2x.png" />
+                <source media="(min-width: 320px)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-pun-luce-mobile_2x.png" />
+                <img class="chart-img"
+                    src="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-pun-luce-tablet_2x.png"
+                    alt="Grafico che mostra le variazioni mensili dell'indice PUN, il prezzo di riferimento dell'energia elettrica all'ingrosso in Italia. Questo indice viene calcolato come una media ponderata dei prezzi delle transazioni giornaliere di energia elettrica." />
+            </picture>
+        </div>
+        <!-- grafico 2 -->
+        <div class="chart-box container">
+            <div class="legenda row">
+                <div class="legenda-title col-lg-6 col-md-12">
+                    <h3 class="title">
+                        Gas - Indice PSV
+                    </h3>
+                    <p class="sub-title">
+                        il Corrispettivo gas Index, pari all'indice PSV (PSV Day Ahead Heren Mid) che corrisponde al
+                        prezzo del gas naturale all'ingrosso
+                        al PSV (Punto di Scambio Virtuale). L'indice è calcolato mensilmente come media dei prezzi Bid e
+                        Offer da ICIS Heren.
+                    </p>
+                </div>
+                <div class="legenda-prize-content  col-lg-3 col-md-6 col-xs-12">
+                    <div class="legenda-prize yellow">
+                        <p><span><strong>0,550</strong></span> €/Smc</p>
+                        <p>
+                            Prezzo effettivo incluso il contributo al consumo - Settembre 2024
+                        </p>
+                    </div>
+                </div>
+                <div class="legenda-prize-content col-lg-3 col-md-6 col-xs-12">
+                    <div class="legenda-prize yellow">
+                        <p><span><strong>0,380</strong></span> €/Smc</p>
+                        <p>
+                            Prezzo medio dell'indice PSV degli ultimi 12 mesi
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <picture class="chart-picture">
+                <source media="(min-width: 1440px) and (min-resolution: 150dpi)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-psv-gas-desktop_2x.png" />
+                <source media="(min-width: 1440px)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-psv-gas-desktop_2x.png" />
+                <source media="(min-width: 1024px) and (min-resolution: 150dpi)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-psv-gas-desktop_2x.png" />
+                <source media="(min-width: 1024px)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-psv-gas-desktop_2x.png" />
+                <source media="(min-width: 768px) and (min-resolution: 150dpi)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-psv-gas-tablet_2x.png" />
+                <source media="(min-width: 768px)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-psv-gas-tablet_2x.png" />
+                <source media="(min-resolution: 150dpi)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-psv-gas-mobile_2x.png" />
+                <source media="(min-width: 320px)"
+                    srcset="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-psv-gas-mobile_2x.png" />
+                <img class="chart-img"
+                    src="/content/dam/plenitude-it/immagini/offerte-residenziali/trend-casa/grafici-pun-psv/grafico-psv-gas-tablet_2x.png"
+                    alt="Grafico che mostra le variazioni mensili dell'indice PSV, il prezzo del gas naturale all'ingrosso in Italia, determinato dalle transazioni effettuate nel Punto di Scambio Virtuale, la piattaforma dove avviene la compravendita di gas." />
+            </picture>
+        </div>
+        <p style="font-size:12px; padding-top: 15px;">I valori sopra indicati corrispondono a quelli assunti dagli
+            indici PUN e PSV nei mesi precedenti.<br>
+            Il valore che tali indici assumeranno dipende invece dall'andamento dei prezzi nei mercati energetici che ad
+            oggi non è possibile prevedere.<br>
+        </p>
+    </div>
+</div>
