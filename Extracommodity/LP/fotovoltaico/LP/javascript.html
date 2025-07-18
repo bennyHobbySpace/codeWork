@@ -1,0 +1,73 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    class PagFV {
+        constructor() {
+            this.scrollFunction();
+        }
+
+        scrollFunction() {
+            window.addEventListener("scroll", () => {
+                const scrollH = window.scrollY;
+                console.log('scrollH', scrollH);
+                const windowWidth = window.innerWidth;
+
+                // Desktop > 1200
+                if (windowWidth > 1200) {
+                    const cart = document.querySelector('.cart');
+                    if (scrollH > 1850) {
+                        cart?.classList.add('position');
+                    } else {
+                        cart?.classList.remove('position');
+                    }
+
+                    // Uncomment if needed
+                    // if (scrollH > 2670) {
+                    //     cart?.classList.add('position2');
+                    // } else {
+                    //     cart?.classList.remove('position2');
+                    // }
+                }
+
+                // Tablet: 768 < width < 1200
+                if (windowWidth < 1200 && windowWidth > 767) {
+                    const ctaSticky = document.querySelector('.CTA-sticky-FV');
+                    if (scrollH > 450) {
+                        ctaSticky?.classList.add('show');
+                    } else {
+                        ctaSticky?.classList.remove('show');
+                    }
+
+                    if (scrollH > 5300) {
+                        ctaSticky?.classList.add('PBottom');
+                    } else {
+                        ctaSticky?.classList.remove('PBottom');
+                    }
+                }
+
+                // Mobile: width < 768
+                if (windowWidth < 768) {
+                    const ctaSticky = document.querySelector('.CTA-sticky-FV');
+                    if (scrollH > 1100) {
+                        ctaSticky?.classList.add('show');
+                    } else {
+                        ctaSticky?.classList.remove('show');
+                    }
+
+                    if (scrollH > 9800) {
+                        ctaSticky?.classList.add('PBottom-mobile');
+                    } else {
+                        ctaSticky?.classList.remove('PBottom-mobile');
+                    }
+                }
+            });
+        }
+    }
+
+    // Inizializza il widget su ogni elemento con attributi specifici
+    document.querySelectorAll('[pln-component="pag-FV"][pln-version="1.0"]:not([data-pln-active="true"])')
+        .forEach(el => {
+            el.setAttribute("data-pln-active", "true");
+            new PagFV();
+        });
+});
+</script>
