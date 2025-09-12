@@ -1,0 +1,240 @@
+[sf-component="sf-table-esselunga"] h2 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 60px;
+        position: relative;
+        
+    }
+    [sf-component="sf-table-esselunga"] h2::after {
+        content: "";
+        display: block;
+        background-color: #fdd300;
+        width: 68px;
+        height: 6px;
+        top: 30px;
+        position: relative;
+        left: 0;
+    }
+
+     @media (max-width: 1024px) {
+        [sf-component="sf-table-esselunga"] h2 {
+            font-size: 30px;
+            line-height: 38px;
+        }
+     }
+
+        [sf-component="sf-table-esselunga"] .points-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        [sf-component="sf-table-esselunga"] .points-table thead th {
+            padding: 15px 15px 30px 15px; 
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            position: relative;
+        }
+        [sf-component="sf-table-esselunga"] .points-table thead th.first-title::after{
+            content:"";
+            display: block;
+            height: 4px;
+            position: absolute;
+            bottom: 0px;
+            left:0;
+            background-color: #fdd300;
+            width: 92%;
+        }
+        [sf-component="sf-table-esselunga"] .points-table thead th.second-title::after{
+            content:"";
+            display: block;
+            height: 4px;
+            position: absolute;
+            bottom: 0px;
+            left:0;
+            background-color: #fdd300;
+            width: 100%;
+        }
+
+        [sf-component="sf-table-esselunga"] .points-table tbody tr {
+           position: relative;
+           z-index: 0;
+        }
+        [sf-component="sf-table-esselunga"] .points-table tbody tr.boxedWhite{
+            height: 100px;
+        }
+        [sf-component="sf-table-esselunga"] .points-table tbody tr.boxedGrey{
+            height: 100px;
+        }
+        [sf-component="sf-table-esselunga"] .points-table tbody tr.boxedWhite::after {
+            content: "";
+            display: block;
+            background-color: #fff;
+            box-shadow: 0 5px 20px 0 rgba(120, 120, 120, 0.15); 
+            height: 100%; 
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left:0;
+            z-index: -1;
+            border-radius: 20px;
+        }
+        [sf-component="sf-table-esselunga"] .points-table tbody tr.boxedGrey::after {
+            content: "";
+            display: block;
+            background-color: #f7f7f7;
+            height: 100%; 
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left:0;
+            z-index: -1;
+            border-radius: 20px;
+        }
+
+        [sf-component="sf-table-esselunga"] .points-table tbody td {
+            padding: 20px 15px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        [sf-component="sf-table-esselunga"] .service-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        @media (max-width: 1024px) {
+            [sf-component="sf-table-esselunga"] .service-cell {
+                height: 80px;
+            }
+        }
+
+        [sf-component="sf-table-esselunga"] .points-cell {
+            position: relative;
+        }
+        [sf-component="sf-table-esselunga"] .points-cell span:first-child{
+            font-size: 14px;
+            font-weight: 400;
+            color: #767676;
+            position: absolute;
+            top: 10px;
+            left: calc(50% - 20px);
+        }
+        [sf-component="sf-table-esselunga"] .points-cell span.points-cell-bold{
+            font-size: 40px;
+            font-weight: 700;
+            color: #333;
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 45px);
+
+        }
+    
+        [data-pln-porting] span.icon-plus {
+            transform: none !important;
+        }
+        [sf-component="sf-table-esselunga"] .icon-plus::before {
+            content: "";
+            content: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M37.3978 2.60059C36.5971 1.7998 35.2988 1.7998 34.4981 2.60059L20.0004 17.0989L5.50269 2.60059C4.70194 1.79981 3.40367 1.79981 2.60292 2.60059C1.80217 3.40138 1.80217 4.69971 2.60292 5.50049L17.1006 19.9988L2.60056 34.4995C1.79981 35.3003 1.79981 36.5986 2.60056 37.3994C3.40131 38.2002 4.69958 38.2002 5.50033 37.3994L20.0004 22.8987L34.5004 37.3994C35.3012 38.2002 36.5994 38.2002 37.4002 37.3994C38.2009 36.5986 38.201 35.3003 37.4002 34.4995L22.9002 19.9988L37.3978 5.50049C38.1986 4.69971 38.1986 3.40138 37.3978 2.60059Z" fill="%23333333"/></svg>');
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 10px;
+            transform: none;
+        }
+        
+        [sf-component="sf-table-esselunga"] .span-luce_gas{
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        [sf-component="sf-table-esselunga"] .blackLabel{
+            width: 230px; 
+            border-bottom-left-radius: 20px; 
+            border-bottom-right-radius: 20px; 
+            color: #fff; 
+            background-color: #333; 
+            padding: 0 !important;
+            position: relative;
+        }
+        
+        [sf-component="sf-table-esselunga"] .blackLabel::after{
+            content:"";
+            display: block;
+            width: 230px;
+            height: 380px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 30px;
+            border: 1px solid #333;
+        }
+        
+        [sf-component="sf-table-esselunga"] .table-note {
+            padding: 10px;
+        }
+        
+        /* Versione mobile */
+        [sf-component="sf-table-esselunga"] .mobile-version {
+            display: none;
+        }
+        
+        [sf-component="sf-table-esselunga"] .disclaimer {
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 1024px) {
+            
+            [sf-component="sf-table-esselunga"] .desk-version {
+                display: none;
+            }
+            
+            [sf-component="sf-table-esselunga"] .mobile-version {
+                display: block;
+                width: 100%;
+            }
+            
+            [sf-component="sf-table-esselunga"] .mobile-table {
+                width: 100%;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                overflow: visible !important;
+            }
+            
+            [sf-component="sf-table-esselunga"].mobile-table tbody td {
+                padding: 20px;
+            }
+            [sf-component="sf-table-esselunga"] .mobile-table tbody td.point-cell-mobile {
+                background-color: #eaeaea;
+                border-radius: 30px;
+            }
+            [sf-component="sf-table-esselunga"] .mobile-table tbody td.point-cell-mobile .card-wrap{
+                padding: 20px;
+            }
+            [sf-component="sf-table-esselunga"] .mobile-table tbody td.point-cell-mobile span.blackLine {
+                background-color: #333;
+                width: 40px;
+                height: 3px;
+                display: block;
+                margin-bottom: 15px;
+            }
+            [sf-component="sf-table-esselunga"] .mobile-table tbody td.point-cell-mobile p{
+                font-size: 16px;
+                font-weight: 700;
+            }
+            [sf-component="sf-table-esselunga"] .mobile-table tbody td.point-cell-mobile p.point-line{
+                font-size: 24px;
+                font-weight: 700;
+            }
+            [sf-component="sf-table-esselunga"] .mobile-table tbody td.point-cell-mobile p.point-line span{
+                font-size: 16px;
+                font-weight: 400;
+                color: #767676;
+            }
+            [sf-component="sf-table-esselunga"] .mobile-table tbody tr {
+                display: flex;
+                flex-flow: column;
+                box-shadow: 0 5px 20px 0 rgba(120, 120, 120, 0.15); 
+            }
+        }
