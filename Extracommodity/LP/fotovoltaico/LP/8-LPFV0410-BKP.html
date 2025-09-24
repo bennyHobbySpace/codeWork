@@ -381,7 +381,8 @@
 
     /* table-comparison */
     [pln-component="table-comparison"][pln-version="1.0"] {
-        margin-top: -460px;
+        /* margin-top: -460px; */
+        margin-top: -550px;
         padding: 30px 0;
     }
 
@@ -901,22 +902,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img class="logo" src="/content/dam/plenitude-it/immagini/header/logo-header/logo-plenitude-header.svg"
                     loading="lazy" alt="Logo Eni Plenitude" width="124px" height="auto">
                 <div style="font-weight: 600;">IMPIANTO FOTOVOLTAICO</div>
-                <h2>Scegli l’energia del sole a partire da 5.290€.</h2>
+                <h2>Scegli il fotovoltaico. Lo sconto è ora, i vantaggi tutto l'anno.</h2>
                 <h3>
-                    Scegli il <b>fotovoltaico da 60,30€/mese</b> in 120 mesi* e hai in <b>omaggio 5 anni di polizza Zurich Impianto Protetto</b>, contro i danni da furto, grandine e maltempo**.
+                    Ottieni uno <b>sconto fino a 600€</b>* sul tuo impianto fotovoltaico con installazione inclusa. Richiedilo entro il 03/10.*.
                 </h3>
                 <h4>
-                        *Prezzo del bene Start Tuo 3kWp 5.290€, totale dovuto <b>7.620,56€</b> TAN fisso 6,35% <b>TAEG 7,75%</b>.<br>
-                        **Operazioni a premio valide fino al 19/12/2025. Con l'offerta Start e Plus hai Zurich Impianto Protetto per 5 anni, Regolamento <a
-                        href="https://eniplenitude.com/content/dam/plenitude-it/documenti/pdf/extracommodity/Regolamento_OAP_MultirichiZurich5anni.pdf"
-                        target="_blank" rel="noopener noreferrer">qui</a>; con l'offerta Prime hai Zurich Impianto Protetto per 10 anni, Regolamento <a
-                        href="/content/dam/plenitude-it/documenti/pdf/extracommodity/Regolamento_OAP_PolizzaMultirischio10_Zurich_21.01.pdf"
-                        target="_blank" rel="noopener noreferrer">qui</a>.
-
-                    </h4>
+                  *Promo valida dall'08/09 al 03/10. Coupon sconto utilizzabile fino al 10/10. Lo sconto, non cumulabile con altre promo, è pari a 400€ per l’offerta Plus e 600€ per l’offerta Prime. La promo non si applica all’offerta Start.
+                </h4>
             </div>
             <picture class="picture">
-                <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/803x476_LP_FV_10_2024.jpg"
+                <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/Visore_FV_LP_BTS.jpg"
                     alt="pannelli fotovoltaici" aria-hidden="true">
                 <!-- <img src="/content/dam/enigaseluce/immagini/icone/fotovoltaico/gen24/pannelli-tetto.jpg" alt="pannelli fotovoltaici" aria-hidden="true"> -->
             </picture>
@@ -936,7 +931,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     fill="white"></path>
                             </g>
                             <span>
-                                Impianto <strong>senza accumulo Start</strong> 3 kWp
+                                Impianto <strong>senza accumulo Plus</strong> 3 kWp con <b>installazione</b>
                             </span>
                     </li>
                     <li>
@@ -961,7 +956,30 @@ document.addEventListener("DOMContentLoaded", function () {
                                     d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z"
                                     fill="white"></path>
                             </g>
-                            <span>Progetto, <strong>installazione</strong> e avvio</span>
+                            <span><strong>Polizza multirischi<sup>1</sup></strong> contro i danni diretti e indiretti da furto,
+                                grandine ed eventi
+                                atmosferici.
+                                <a style="margin:0 auto; text-align: center; display: inline-block; font-size: 16px;" data-pln-atom="link" data-pln-version="1.2"
+                                    class="" href="#" data-pln-action-modal-open="#Polizza" target="_self">
+                                    <span style="font-size: 16px;">Scopri di più</span>
+                                </a>
+                            </span>
+                    </li>
+                    <li>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                        <g id="Other / Bullet">
+                          <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                            <path id="Path" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z"
+                                    fill="white"></path>
+                        </g>
+                        <span><strong>Polizza Sole Protetto<sup>2</sup></strong> che ti rimborsa se c’è meno sole del previsto.
+                                <a style="margin:0 auto; text-align: center; display: inline-block; font-size: 16px;" data-pln-atom="link" data-pln-version="1.2"
+                                    class="" href="#" data-pln-action-modal-open="#modalSoleProtetto" target="_self">
+                                    <span style="font-size: 16px;">Scopri di più</span>
+                                </a>
+                            </span>
                     </li>
                     <li>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -972,13 +990,8 @@ document.addEventListener("DOMContentLoaded", function () {
                                     d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z"
                                     fill="white"></path>
                             </g>
-                            <span><strong>Polizza multirischi</strong><sup>1</sup> contro i danni diretti e indiretti da furto,
-                                grandine ed eventi
-                                atmosferici.
-                                <a style="margin:0 auto; text-align: center; display: inline-block; font-size: 16px;" data-pln-atom="link" data-pln-version="1.2"
-                                    class="" href="#" data-pln-action-modal-open="#Polizza" target="_self">
-                                    <span style="font-size: 16px;">Scopri di più</span>
-                                </a>
+                            <span>
+                                <strong>Voucher sconto da 400€<sup>3</sup></strong> da richiedere fino al 03/10 e da utilizzare entro il 10/10.
                             </span>
                     </li>
                 </ul>
@@ -987,7 +1000,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/One_Solution.svg"
                             alt="icona rate" aria-hidden="true">
                         <div class="sr-only">pagamento unica soluzione</div>
-                        <p><strong>5.290€</strong><br>
+                        <p><del>5.990€</del> <strong>5.590€</strong><br>
                             per pagamenti in un'unica soluzione.<br>
                             IVA Inclusa</p>
                     </div>
@@ -995,9 +1008,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/Loan.svg"
                             alt="icona risparmio" aria-hidden="true">
                         <div class="sr-only">pagamento a rate</div>
-                        <p><strong>60,30€ al mese per</strong><br>
+                        <p><strong>63,80€ al mese per</strong><br>
                              120 mesi.
-                            <strong>TAEG 7,75%</strong> TAN fisso 6,35% tot. <strong>7.620,56€<sup>2</sup></strong>
+                            <strong>TAEG 7,72%</strong> TAN fisso 6,38% tot. <strong>8.041,31€<sup>4</sup></strong>
                         </p>
                     </div>
                 </div>
@@ -1030,7 +1043,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="table-comparison-titles">
                     <h2>La nostra offerta per l'impianto fotovoltaico</h2>
                     <h3>
-                        <strong>Scegli il tipo di impianto</strong> in base a quando desideri consumare l'energia autoprodotta. Per conoscere dettagli e prezzi anche delle offerte con batteria di accumulo clicca su “Voglio essere contattato”.
+                        <strong>Scegli il tipo di impianto</strong> in base a <strong>quanta energia vuoi autoprodurre</strong> e a quando desideri consumarla.
+                         Per conoscere dettagli e prezzi anche delle offerte con batteria di accumulo clicca su “Voglio essere contattato”.
                     </h3>
                 </div>
                 <div class="table-card-items">
@@ -1048,7 +1062,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     loading="lazy" alt="icona lampo">
                                 <div>
                                     <div class="value">25%</div>
-                                    <div class="text">di autonomia energetica<sup>3</sup></div>
+                                    <div class="text">di autonomia energetica<sup>5</sup></div>
                                 </div>
                             </div>
                             <div class="content">
@@ -1068,7 +1082,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <div class="text">
                                     <strong>Detrazioni e incentivi</strong><br> 
                                     Puoi recuperare il <strong>50% della spesa in 10 anni con le detrazioni</strong> oppure, se risiedi in un comune fino a 50mila abitanti
-                                     e aderisci a una Comunità Energetica, ottieni un <strong>contributo a fondo perduto fino al 40%</strong><sup>4</sup>.
+                                     e aderisci a una Comunità Energetica, ottieni un <strong>contributo a fondo perduto fino al 40%</strong><sup>6</sup>.
                                 </div>
                             </div>
                             <img class="divider"
@@ -1080,8 +1094,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     style="width: 15px; height: 15px; margin-right: 5px;">
                                 <div class="text">
                                     <strong>Rimborso su energia inutilizzata</strong><br>
-                                    Cedi alla rete l'energia autoprodotta che non usi e ricevi un contributo GSE<sup>5</sup> su una parte dei costi in bolletta grazie 
-                                    al meccanismo del Ritiro Dedicato.
+                                    Attivando il Ritiro Dedicato (RID) <strong>vendi al GSE<sup>7</sup> l'energia in eccesso</strong> a un determinato prezzo per kWh e recuperi un'ulteriore parte di costi.
                                 </div>
                             </div>
                         </div>
@@ -1103,7 +1116,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     loading="lazy" alt="icona lampo">
                                 <div>
                                     <div class="value">81%</div>
-                                    <div class="text">di autonomia energetica<sup>3</sup></div>
+                                    <div class="text">di autonomia energetica<sup>5</sup></div>
                                 </div>
                             </div>
                             <div class="content">
@@ -1125,7 +1138,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <div class="text">
                                     <strong>Detrazioni e incentivi</strong><br> 
                                     Puoi recuperare il <strong>50% della spesa in 10 anni con le detrazioni</strong> oppure, se risiedi in un comune fino a 50mila 
-                                    abitanti e aderisci a una Comunità Energetica, ottieni un <strong>contributo a fondo perduto fino al 40%</strong><sup>4</sup>.
+                                    abitanti e aderisci a una Comunità Energetica, ottieni un <strong>contributo a fondo perduto fino al 40%</strong><sup>6</sup>.
                                 </div>
                             </div>
                             <img class="divider"
@@ -1138,8 +1151,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     style="width: 15px; height: 15px; margin-right: 5px;">
                                 <div class="text">
                                     <strong>Rimborso su energia inutilizzata</strong><br>
-                                    Cedi ancora più energia alla rete, quella autoprodotta e quella accumulata con la batteria, 
-                                    e hai un contributo GSE<sup>5</sup> su una parte dei costi in bolletta grazie al meccanismo del Ritiro Dedicato.
+                                    Attivando il Ritiro Dedicato (RID) <strong>vendi al GSE<sup>7</sup> l'energia in eccesso</strong>, quella autoprodotta e quella accumulata con la <strong>batteria</strong>, a un determinato prezzo per kWh e recuperi un'ulteriore parte di costi.
                                 </div>
                             </div>
                         </div>
@@ -1159,7 +1171,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <h4>Senza batteria di accumulo</h4>
                             <p>
                                 Puoi <strong>risparmiare il 29%</strong> della spesa annua in bolletta calcolato su un
-                                consumo medio annuale pari a 3.618 kWh/anno<sup>6</sup>.
+                                consumo medio annuale pari a 3.618 kWh/anno.
                             </p>
                             <p style="padding-left: 30px; margin-bottom:24px;"><svg width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -1177,7 +1189,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <h4>Con batteria di accumulo</h4>
                             <p>
                                 Puoi <strong>risparmiare il 93%</strong> della spesa annua in bolletta calcolato su un
-                                consumo medio annuale pari a 3.618 kWh/anno<sup>6</sup>.
+                                consumo medio annuale pari a 3.618 kWh/anno.
                             </p>
                             <p style="padding-left: 30px; margin-bottom:24px;"><svg width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -1208,8 +1220,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="payMethod--content">
                     <h2>Metodi di pagamento</h2>
                     <h4>
-                        Offerta Start senza accumulo da 3 kWp. Questa è la nostra l’offerta base, per avere più vantaggi scegli Plus o Prime. 
-                        Tutte le offerte sono disponibili con e senza accumulo e con potenze da 3, 4, 5, 6, 10 kWp: per conoscerle tutte chiedi di essere contattato.
+                        Questa è la nostra l’offerta <b>senza accumulo Plus</b> da 3 kWp, per avere più vantaggi scegli Prime. Tutte le offerte sono disponibili con e senza accumulo e con potenze da 3, 4, 5, 6, 10 kWp: per conoscerle tutte chiedi di essere contattato.
                     </h4>
                     <div class="payMethod--items">
                         <div class="item">
@@ -1217,7 +1228,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 alt="icona unica soluzione">
                             <h5>Unica soluzione</h5>
                             <p>
-                                <b>5.290€</b> IVA inclusa
+                                <del>5.990</del> <b>5.590€</b> IVA inclusa
                             </p>
                         </div>
                         <div class="item">
@@ -1225,11 +1236,11 @@ document.addEventListener("DOMContentLoaded", function () {
                                 alt="icona anticipo più rate">
                             <h5>Anticipo + finanziamento</h5>
                             <p>
-                                Anticipo <b>2.645€ + 30,50€/mese</b> per 120 mesi<br>
-                                <b>TAEG 9,13%</b> TAN fisso 6,59% <br>
-                                tot. dovuto <strong>4.037,94€</strong><sup>6</sup> per un importo del credito di
-                                2.645€.<br>
-                                Tot. anticipo + tot. dovuto finanziamento: 6.682,94€
+                                Anticipo <b>2.795€ + 31,90€/mese</b> per 120 mesi<br>
+                                <b>TAEG 8,79%</b> TAN fisso 6,38% <br>
+                                tot. dovuto <strong>4.207,32€</strong><sup>8</sup> per un importo del credito di
+                                2.795€.<br>
+                                Tot. anticipo + tot. dovuto finanziamento: <strong>7.002,32€</strong>.
                             </p>
                         </div>
                         <div class="item">
@@ -1237,10 +1248,10 @@ document.addEventListener("DOMContentLoaded", function () {
                                 alt="icona rate">
                             <h5>Finanziamento</h5>
                             <p>
-                                <b>60,90€/mese</b> per 120 mesi <br>
-                                <b>TAEG 7,97€</b> TAN fisso 6,56% <br>
+                                <b>63,80€/mese</b> per 120 mesi <br>
+                                <b>TAEG 7,72€</b> TAN fisso 6,38% <br>
                                 Importo tot. dovuto:
-                                7.692,56€<sup>2</sup> <br>
+                                <strong>8.041,31€<sup>4</sup></strong> <br>
                             </p>
                         </div>
                        
