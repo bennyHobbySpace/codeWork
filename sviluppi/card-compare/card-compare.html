@@ -1,0 +1,343 @@
+<script>
+  (function() {
+    // Funzione per inizializzare un singolo elemento card-compare-item
+    function initCardCompareItem(element) {
+        const tabs = element.querySelectorAll('div ul li');
+        const text = element.querySelectorAll('div p');
+        
+        // Imposta lo stato iniziale
+        if (tabs[0]) {
+            tabs[0].classList.add('selected');
+        }
+        if (text[1]) text[1].style.display = 'none';
+        if (text[2]) text[2].style.display = 'none';
+        
+        // Aggiungi event listener ai tab
+        tabs.forEach((tab, index) => {
+            tab.setAttribute('cardCompareTab', `tab${index}`);
+            
+            tab.addEventListener('click', function(event) {
+                // Rimuovi la classe selected da tutti i tab
+                tabs.forEach(t => t.classList.remove('selected'));
+                
+                // Aggiungi selected al tab cliccato
+                event.currentTarget.classList.add('selected');
+                
+                // Ottieni il valore dell'attributo
+                const sel = event.currentTarget.getAttribute('cardCompareTab');
+                
+                // Mostra/nascondi il contenuto appropriato
+                switch (sel) {
+                    case 'tab0':
+                        if (text[0]) text[0].style.display = '';
+                        if (text[1]) text[1].style.display = 'none';
+                        if (text[2]) text[2].style.display = 'none';
+                        break;
+                    case 'tab1':
+                        if (text[0]) text[0].style.display = 'none';
+                        if (text[1]) text[1].style.display = '';
+                        if (text[2]) text[2].style.display = 'none';
+                        break;
+                    case 'tab2':
+                        if (text[0]) text[0].style.display = 'none';
+                        if (text[1]) text[1].style.display = 'none';
+                        if (text[2]) text[2].style.display = '';
+                        break;
+                }
+            });
+        });
+    }
+    
+    // Funzione per inizializzare tutti gli elementi
+    function initAllCardCompareItems() {
+        const elements = document.querySelectorAll('[data-pln-organism="card-compare-item"][data-pln-version="2.0"]:not([data-pln-active="true"])');
+        
+        elements.forEach(element => {
+            element.setAttribute('data-pln-active', 'true');
+            initCardCompareItem(element);
+        });
+    }
+    
+    // Esegui l'inizializzazione quando il DOM è pronto
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            let n = 3;
+            const interval = setInterval(() => {
+                if (--n < 1) {
+                    clearInterval(interval);
+                }
+                initAllCardCompareItems();
+            }, 1000);
+        });
+    } else {
+        // DOM già pronto
+        let n = 3;
+        const interval = setInterval(() => {
+            if (--n < 1) {
+                clearInterval(interval);
+            }
+            initAllCardCompareItems();
+        }, 1000);
+    }
+})();
+</script>
+<style>
+  /* stile correttivo per bottone modale card-list-service*/
+  [data-pln-molecule="card-list-service"][data-pln-version="1.0"] .card-list-service--container button[data-pln-atom="button"] {
+    right: 8px;
+  }
+
+  /**/
+</style>
+<div data-pln-component="card-compare" data-pln-version="2.0" class="gap-bottom-1 gap-top-2" componentid=""
+  componentclass="" componenttemplate="">
+  <div class="wrapper">
+    <ul class="CardCompareCards">
+
+
+      <li class="CardCompareCardsItem">
+        <div data-pln-active="true">
+          <h3 class="l1"><b>Senza accumulo</b></h3>
+          <div class="l4">Produci energia da fonti rinnovabili.</div>
+        </div>
+        <div>
+          <div>
+            <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/03-icons-sky-qfibra-TC.svg" loading="lazy">
+            <div>
+              <div class="l1">25 %</div>
+              <div class="c1">di autonomia energetica⁵</div>
+            </div>
+          </div>
+
+          <div>
+            <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/monetine.svg" loading="lazy">
+            <div>
+              <div class="l1">50 %</div>
+              <div class="c1">di detrazioni fiscali</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+
+
+          <div>
+            <div class="l4">Fasce di consumo</div>
+            <div>
+              <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/Sun.svg" loading="lazy">
+              <div class="c1">I consumi si concentrano durante tutto il giorno.</div>
+            </div>
+            <span></span>
+          </div>
+
+          <div>
+            <div class="l4">Accumulo</div>
+            <div>
+              <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/Prohibition.svg"
+                loading="lazy">
+              <div class="c1">No, consuma l’energia durante il giorno e ne cede gli interessi alla rete.</div>
+            </div>
+            <span></span>
+          </div>
+
+
+
+        </div>
+
+
+
+        <div style="background-color: #f1f5f4;">
+          <div data-pln-organism="card-compare-item" data-pln-version="2.0" class="">
+            <div>
+              <h4 class="l2">Modalità di pagamento</h4>
+              <ul class="CardCompareTab">
+                <li class="selected CardCompareTabItems">
+                  <button type="button">
+                    <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/One_Solution.svg">
+                    <div>UNICA SOLUZIONE</div>
+                  </button>
+                </li>
+                <li class="CardCompareTabItems">
+                  <button type="button">
+                    <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/Advance_Loan.svg">
+                    <div>ANTICIPO + FINANZIAMENTO</div>
+                  </button>
+                </li>
+                <li class="CardCompareTabItems">
+                  <button type="button">
+                    <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/Loan.svg">
+                    <div>FINANZIAMENTO</div>
+                  </button>
+                </li>
+
+              </ul>
+              <p>
+                Offerta Start senza accumulo 3 kWp.</b><br><br>
+                <b>5.290€</b> IVA inclusa
+              </p>
+              <p style="display: none;">
+                Offerta Start senza accumulo 3 kWp.</b><br><br>
+                Anticipo <b>2.645€ + 30,20€/mese</b> per 120 mesi
+                <b>TAEG 8.92%</b> TAN fisso 6,38%<br>
+                Prezzo del bene <b>5.290€</b><br>
+                tot. dovuto <b>4.001,94€⁶</b> per un importo del credito di 2.645€.<br>
+                Tot. anticipo + tot. dovuto finanziamento:<br>
+                <b>6.646,94€</b>
+              </p>
+              <p style="display: none;">Offerta Start senza accumulo 3 kWp.</b><br><br>
+                <b>60,30€/mese</b> per 120 mesi<br>
+                <b>TAEG 7,75%</b> TAN fisso 6,35%<br>
+                Prezzo del bene <b>5.290€</b><br>
+                Importo totale dovuto: <b>7.620,56€⁷</b>
+              </p>
+            </div>
+          </div>
+          <div data-pln-molecule="tooltip" data-pln-version="1.0" class="">
+            <button>i</button>
+            <div role="tooltip" data-popper-placement="bottom">
+              Prezzo del bene Impianto Start TUO 5.290€
+              <div data-popper-arrow=""></div>
+            </div>
+          </div>
+          <div>
+            <a id="listing-fv_card-compare_cta-no-acc" class="primary default" data-pln-atom="button"
+              href="https://eniplenitude.com/offerta/casa/fotovoltaico" target="_self" tabindex="0">
+              Vedi dettagli
+            </a>
+
+          </div>
+          <!-- <div data-sly-test="" class="footnote"></div> -->
+        </div>
+
+        <div></div>
+
+      </li>
+
+
+
+
+
+
+
+      <li class="CardCompareCardsItem">
+        <div data-pln-active="true">
+          <h3 class="l1"><b>Con accumulo</b></h3>
+          <div class="l4">Produci e accumuli energia da fonti rinnovabili.</div>
+        </div>
+        <div>
+          <div>
+            <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/03-icons-sky-qfibra-TC.svg" loading="lazy">
+            <div>
+              <div class="l1">81 %</div>
+              <div class="c1">di autonomia energetica⁸</div>
+            </div>
+          </div>
+
+          <div>
+            <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/monetine.svg" loading="lazy">
+            <div>
+              <div class="l1">50 %</div>
+              <div class="c1">di detrazioni fiscali</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+
+
+          <div style="border-bottom: 1px solid #eaeaea">
+            <div class="l4">Fasce di consumo</div>
+            <div>
+              <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/noun-day-and-night.svg"
+                loading="lazy">
+              <div class="c1">I consumi sono distribuiti tra il <b>giorno e la notte.</b></div>
+            </div>
+
+          </div>
+
+          <div style="border-bottom: 1px solid transparent">
+            <div class="l4">Accumulo</div>
+            <div>
+              <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/Check.svg" loading="lazy">
+              <div class="c1">Sì, consuma l'energia prodotta quando vuoi, sia di giorno che di notte.</div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div style="background-color: #f1f5f4;">
+          <div data-pln-organism="card-compare-item" data-pln-version="2.0" class="">
+            <div>
+              <h4 class="l2">Modalità di pagamento</h4>
+              <ul class="CardCompareTab">
+                <li class="selected CardCompareTabItems">
+                  <button type="button">
+                    <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/One_Solution.svg">
+                    <div>UNICA SOLUZIONE</div>
+                  </button>
+                </li>
+                <li class="CardCompareTabItems">
+                  <button type="button">
+                    <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/Advance_Loan.svg">
+                    <div>ANTICIPO + FINANZIAMENTO</div>
+                  </button>
+                </li>
+                <li class="CardCompareTabItems">
+                  <button type="button">
+                    <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/fotovoltaico/Loan.svg">
+                    <div>FINANZIAMENTO</div>
+                  </button>
+                </li>
+              </ul>
+              <p>
+                Offerta Start con accumulo 3 kWp.</b><br><br>
+                <b>7.290€</b> IVA inclusa
+              </p>
+              <p style="display: none;">
+                Offerta Start con accumulo 3 kWp.</b><br><br>
+                Anticipo <b>3.645€ + 41,60€/mese</b> per 120 mesi<br>
+                <b>TAEG 8,29%</b> TAN fisso 6,37%<br>
+                Prezzo del bene <b>7.290€</b><br>
+                tot. dovuto <b>5.372,44€⁹</b> per un importo del credito di 3.645€.<br>
+                Tot. anticipo + Tot. dovuto finanziamento: <b>9.017,44€</b>
+              </p>
+              <p style="display: none;">Offerta Start con accumulo 3 kWp.</b><br><br>
+                <b>83,10€/mese</b> per 120 mesi<br>
+                <b>TAEG 7,43%</b> TAN fisso 6,35%<br>
+                Prezzo del bene <b>7.290€</b><br>
+                Importo totale dovuto: <b>10.361,56€¹⁰</b>
+              </p>
+            </div>
+          </div>
+          <div data-pln-molecule="tooltip" data-pln-version="1.0" class="">
+            <button>i</button>
+            <div role="tooltip" data-popper-placement="bottom">
+              Prezzo del bene Impianto Start Sempre TUO 7.290€
+              <div data-popper-arrow=""></div>
+            </div>
+          </div>
+          <div>
+            <a id="listing-fv_card-compare_cta-acc" class="primary default" data-pln-atom="button"
+              href="https://eniplenitude.com/offerta/casa/impianto-fotovoltaico-con-accumulo" target="_self"
+              tabindex="0">
+              Vedi dettagli
+            </a>
+
+          </div>
+          <!-- <div data-sly-test="" class="footnote"></div> -->
+        </div>
+
+        <div></div>
+
+      </li>
+
+
+
+
+
+    </ul>
+  </div>
+</div>
