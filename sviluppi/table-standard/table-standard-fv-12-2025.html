@@ -1,0 +1,92 @@
+<style>
+    @media only screen and (max-width: 1023px) {
+        [data-pln-component="table-comparison"][data-pln-version="1.0"] {
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+    }
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr {
+        border-bottom: transparent;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr:first-of-type {
+        background-color: #f1f5f4;
+    }
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr:last-of-type {
+        background-color: #008051;
+        color: #fff;;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr th {
+        min-width: 100%;
+    }
+
+    @media (max-width: 767px) {
+        [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr th {
+            padding: 10px;
+            font-size: 14px;
+            max-width: 100px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr td {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+</style>
+
+<div data-pln-component="" style="padding-top: 60px;padding-bottom: 60px;">
+    <div class="wrapper">
+        <h2 style="padding-bottom: 8px; margin-bottom:0; text-align: center;">Confronta le nostre offerte</h2>
+        <p style="padding-bottom: 32px; margin-bottom:0; text-align: center;">Oltre ai <b>servizi sempre inclusi </b>con tutte le offerte, solo con <b>Prime</b> puoi avere <b>componenti premium</b> e, in omaggio, <b>ulteriori 5 anni di polizza multirischi</b> rispetto a Plus. Confronta ora.<br></p>
+        <div data-pln-component="table-comparison" data-pln-version="1.0" data-pln-template="stripes"
+            id="tableId" class="table-standard-fv">
+
+            <div>
+                <table>
+                    
+                    <tr>
+                        <th scope="row">Offerte</th>
+                        <th scope="col">Plus</th>
+                        <th scope="col">Prime</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Inverter</th>
+                        <td><img src="/content/dam/plenitude-it/images/icons/partner/goodwe.svg" alt=""></td>
+                        <td><img src="/content/dam/plenitude-it/images/icons/partner/sma.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Zurich Impianto Protetto<sup>5</sup></th>
+                        <td>5 anni</td>
+                        <td>10 anni</td>
+                        
+                    </tr>
+                    <tr>
+                        <th scope="row" style="border-right:1px solid #fff !important;">Prezzo impianto 3 kWp</th>
+                        <td style="border-right:1px solid #fff !important;">
+                            <p>
+                                Senza accumulo: <b>5.590€</b> anzichè <del>5.990€</del>
+                                <br>
+                                Con accumulo: <b>7.590€</b> anzichè <del>7.990€</del>
+                            </p> 
+                        </td>
+                        <td style="border-right:1px solid #fff !important;">
+                            <p>
+                                Senza accumulo: <b>8.390€</b> anzichè <del>8.990€</del>
+                                <br>
+                                Con accumulo: <b>11.390€</b> anzichè <del>11.990€</del>
+                            </p>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+
+            <div class="pln-scroll" :data-pln-slider="componentId">
+                <input type="range" min="0" value="0" />
+            </div>
+        </div>
+    </div>
+</div>
