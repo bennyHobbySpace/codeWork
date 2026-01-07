@@ -1,0 +1,195 @@
+<script>
+  // Carica lo script nella head
+  const script = document.createElement('script');
+  script.src = '/etc.clientlibs/plenitude-common/clientlibs/clientlib-main.lc-4494390deb047ebf5560d8e2627f8525-lc.min.js';
+  
+  script.onload = function() {
+    // Dopo che lo script è caricato, applica la personalizzazione
+    if (document.location.pathname == '/landing/test-persex-xtream') {
+      
+      // 1. Distruggi l'istanza Splide esistente
+      const existingSplide = document.querySelector('#splide05');
+      if (existingSplide && existingSplide.splide) {
+        existingSplide.splide.destroy();
+      }
+      
+      // 2. Sostituisci con HTML PULITO (senza classi Splide dinamiche)
+      document.getElementById("personalizzazioneherotest").innerHTML = `
+      <style>
+        ul.pagination.splide__pagination--ltr {
+           display: flex;
+           width: max-content;
+           position: absolute;
+           bottom: 40px;
+           left: calc(50% - 20px);
+        }
+        @media (max-width: 1023px) {
+                ul.pagination.splide__pagination--ltr {
+                    bottom:auto;
+                    top: 270px;
+                    left: calc(50% - 50px);
+                }
+           }
+     </style>
+        <div data-pln-component="herohome" data-pln-version="2.0" data-pln-active="true">
+          <section>
+            <div class="splide" id="splide05">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <!-- experience A -- impianti -->
+                  <li class="splide__slide">
+                    <div class="wrapper">
+                      <div>
+                        <picture data-pln-atom="picture">
+                          <source media="(min-width: 1440px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/3840x3500_Visore-HP_Polizze_Impianti_landingluce:16-9?wid=1404&amp;hei=960">
+                          <source media="(min-width: 1440px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/3840x3500_Visore-HP_Polizze_Impianti_landingluce:16-9?wid=702&amp;hei=480">
+                          <source media="(min-width: 1024px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/3840x3500_Visore-HP_Polizze_Impianti_landingluce:16-9?wid=1404&amp;hei=960">
+                          <source media="(min-width: 1024px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/3840x3500_Visore-HP_Polizze_Impianti_landingluce:16-9?wid=702&amp;hei=480">
+                          <source media="(min-width: 768px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/3840x3500_Visore-HP_Polizze_Impianti_landingluce:5-1M?wid=2000&amp;hei=480">
+                          <source media="(min-width: 768px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/3840x3500_Visore-HP_Polizze_Impianti_landingluce:5-1M?wid=1000&amp;hei=240">
+                          <source media="(min-width: 320px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/3840x3500_Visore-HP_Polizze_Impianti_landingluce:4-1M?wid=1502&amp;hei=480">
+                          <source media="(min-width: 320px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/3840x3500_Visore-HP_Polizze_Impianti_landingluce:4-1M?wid=751&amp;hei=240">
+                          <img fetchpriority="high" src="https://eniplenitude.scene7.com/is/image/enigaseluce/3840x3500_Visore-HP_Polizze_Impianti_landingluce:16-9?wid=1404&amp;hei=960">
+                        </picture>
+                        <picture class="next-item" data-pln-atom="picture">
+                          <source media="(min-width: 1440px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Banner_HP_120x480_Novembre_v2:2-7?wid=240&amp;hei=840">
+                          <source media="(min-width: 1440px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Banner_HP_120x480_Novembre_v2:2-7?wid=120&amp;hei=420">
+                          <source media="(min-width: 1024px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Banner_HP_120x480_Novembre_v2:2-7?wid=240&amp;hei=840">
+                          <source media="(min-width: 1024px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Banner_HP_120x480_Novembre_v2:2-7?wid=120&amp;hei=420">
+                          <source media="(min-width: 768px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Banner_HP_120x480_Novembre_v2:2-7?wid=240&amp;hei=840">
+                          <source media="(min-width: 768px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Banner_HP_120x480_Novembre_v2:2-7?wid=120&amp;hei=420">
+                          <img loading="lazy" src="https://eniplenitude.scene7.com/is/image/enigaseluce/Banner_HP_120x480_Novembre_v2:2-7?wid=240&amp;hei=840">
+                        </picture>
+                        <div aria-hidden="true"><b><span style="color: rgb(255,255,255);">INSIEME</span></b></div>
+                      </div>
+                      <div class="">
+                        <h2 class="h1">
+                          <b>Prenditi cura della sicurezza dei tuoi impianti.</b>
+                        </h2>
+                        <p>Acquista ora <b>NoPensieri Impianti</b>, la soluzione assicurativa contro i guasti all'impianto elettrico o gas <b>pensata per te che sei cliente</b> Plenitude.</p>
+                        <a href="https://eniplenitude.com/offerta/casa/assicurazioni/nopensieri-impianti-gas-luce-zurich?leadchannel=impianti-hp-1" target="_self" class="primary default" aria-label="Impianti-gas-e-luce-zurich" data-pln-atom="button" title="Impianti-gas-e-luce-zurich" data-cs-override-id="Hero-homepage__item-carosello1">
+                          SCOPRI DI PIÙ
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <!-- Experience A -- Insieme -->
+                  <li class="splide__slide">
+                    <div class="wrapper">
+                      <div>
+                        <picture data-pln-atom="picture">
+                          <source media="(min-width: 1440px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visual-generico-HP_1404x960_v1:16-9?wid=1404&amp;hei=960">
+                          <source media="(min-width: 1440px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visual-generico-HP_1404x960_v1:16-9?wid=702&amp;hei=480">
+                          <source media="(min-width: 1024px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visual-generico-HP_1404x960_v1:16-9?wid=1404&amp;hei=960">
+                          <source media="(min-width: 1024px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visual-generico-HP_1404x960_v1:16-9?wid=702&amp;hei=480">
+                          <source media="(min-width: 768px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visual-generico-HP_1404x960_v1:5-1M?wid=2000&amp;hei=480">
+                          <source media="(min-width: 768px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visual-generico-HP_1404x960_v1:5-1M?wid=1000&amp;hei=240">
+                          <source media="(min-width: 320px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visual-generico-HP_1404x960_v1:4-1M?wid=1502&amp;hei=480">
+                          <source media="(min-width: 320px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visual-generico-HP_1404x960_v1:4-1M?wid=751&amp;hei=240">
+                          <img loading="lazy" src="https://eniplenitude.scene7.com/is/image/enigaseluce/Visual-generico-HP_1404x960_v1:16-9?wid=1404&amp;hei=960">
+                        </picture>
+                        <picture class="next-item" data-pln-atom="picture">
+                          <source media="(min-width: 1440px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_ListingHVAC:2-7?wid=240&amp;hei=840">
+                          <source media="(min-width: 1440px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_ListingHVAC:2-7?wid=120&amp;hei=420">
+                          <source media="(min-width: 1024px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_ListingHVAC:2-7?wid=240&amp;hei=840">
+                          <source media="(min-width: 1024px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_ListingHVAC:2-7?wid=120&amp;hei=420">
+                          <source media="(min-width: 768px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_ListingHVAC:2-7?wid=240&amp;hei=840">
+                          <source media="(min-width: 768px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_ListingHVAC:2-7?wid=120&amp;hei=420">
+                          <img loading="lazy" src="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_ListingHVAC:2-7?wid=240&amp;hei=840">
+                        </picture>
+                        <div aria-hidden="true"><b>CALDAIA</b></div>
+                      </div>
+                      <div class="">
+                        <h2 class="h1">
+                          <b>Insieme c'è molto di più.</b>
+                        </h2>
+                        <p class="paragraph">
+                          Con Plenitude Insieme ti aspetta un <b>percorso</b> pieno di emozioni che ti farà vivere un'<b>esperienza unica</b>, ricca di <b>vantaggi, regali</b> e <b>offerte</b> speciali.
+                        </p>
+                        <a href="https://insieme.eniplenitude.com/" target="_self" class="primary default" aria-label="Scopri Insieme Plenitude" data-pln-atom="button" title="Scopri Insieme Plenitude" data-cs-override-id="Hero-homepage__item-carosello2">
+                          APPROFITTANE
+                        </a>
+                        <div class="footnote">
+                          Operazione a premio "Plenitude Insieme" valida fino al 31/12/2025. Regolamento su <a href="#" target="_blank">insieme.plenitude.com</a>.
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <!-- experience A -- caldaia -->
+                  <li class="splide__slide">
+                    <div class="wrapper">
+                      <div>
+                        <picture data-pln-atom="picture">
+                          <source media="(min-width: 1440px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visore-HVAC:16-9?wid=1404&amp;hei=960">
+                          <source media="(min-width: 1440px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visore-HVAC:16-9?wid=702&amp;hei=480">
+                          <source media="(min-width: 1024px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visore-HVAC:16-9?wid=1404&amp;hei=960">
+                          <source media="(min-width: 1024px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visore-HVAC:16-9?wid=702&amp;hei=480">
+                          <source media="(min-width: 768px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visore-HVAC:5-1M?wid=2000&amp;hei=480">
+                          <source media="(min-width: 768px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visore-HVAC:5-1M?wid=1000&amp;hei=240">
+                          <source media="(min-width: 320px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visore-HVAC:4-1M?wid=1502&amp;hei=480">
+                          <source media="(min-width: 320px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/Visore-HVAC:4-1M?wid=751&amp;hei=240">
+                          <img loading="lazy" src="https://eniplenitude.scene7.com/is/image/enigaseluce/Visore-HVAC:16-9?wid=1404&amp;hei=960">
+                        </picture>
+                        <picture class="next-item" data-pln-atom="picture">
+                          <source media="(min-width: 1440px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_Impianti:2-7?wid=240&amp;hei=840">
+                          <source media="(min-width: 1440px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_Impianti:2-7?wid=120&amp;hei=420">
+                          <source media="(min-width: 1024px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_Impianti:2-7?wid=240&amp;hei=840">
+                          <source media="(min-width: 1024px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_Impianti:2-7?wid=120&amp;hei=420">
+                          <source media="(min-width: 768px) and (min-resolution: 150dpi)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_Impianti:2-7?wid=240&amp;hei=840">
+                          <source media="(min-width: 768px)" srcset="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_Impianti:2-7?wid=120&amp;hei=420">
+                          <img loading="lazy" src="https://eniplenitude.scene7.com/is/image/enigaseluce/120x480_Preview_2x_Impianti:2-7?wid=240&amp;hei=840">
+                        </picture>
+                        <div aria-hidden="true"><b>IMPIANTI</b></div>
+                      </div>
+                      <div class="">
+                        <h2 class="h1">
+                          <b>L'efficienza prende forma a casa tua.</b>
+                        </h2>
+                        <p>Scopri tutte le soluzioni per vivere il comfort di casa grazie alle caldaie a condensazione, agli scaldacqua e ai climatizzatori con pompa di calore.</p>
+                        <a href="https://eniplenitude.com/offerta/casa/caldaie-e-clima?leadchannel=hvac-hp-2" target="_self" class="primary default" aria-label="Scopri di più su caldaia e clima" data-pln-atom="button" title="Scopri di più su Caldaia e Clima" data-cs-override-id="Hero-homepage__item-carosello3">
+                          SCOPRI DI PIÙ
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+      
+      // 3. Reinizializza Splide dopo un breve delay
+      setTimeout(function() {
+        if (typeof Splide !== 'undefined') {
+          const newSplide = new Splide('#splide05', {
+            type: 'fade',
+            rewind: true,
+            pagination: true,
+            arrows: true,
+            autoplay: false,
+            classes: {
+              arrows: 'splide_pln__arrows',
+              arrow : 'splide_pln__arrow',
+              prev  : 'splide_pln__arrow--prev',
+              next  : 'splide_pln__arrow--next',
+              pagination: 'pagination'
+            }
+          });
+          newSplide.mount();
+          console.log('Splide reinizializzato con successo');
+        } else {
+          console.error('Splide non è definito');
+        }
+      }, 200);
+    }
+  };
+  
+  script.onerror = function() {
+    console.error('Errore nel caricamento dello script clientlib-main.js');
+  };
+  
+  document.head.appendChild(script);
+</script>
