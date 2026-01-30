@@ -1,0 +1,15 @@
+
+	
+	<script>
+	$(document).ready(function () {
+	 setTimeout(function() {
+        const infoParagraph = document.querySelector('p.information');
+        
+        if (infoParagraph) {
+            infoParagraph.innerHTML = '*Sconto su commercializzazione e vendita dilazionato mensilmente a partire <b>dal 3° mese</b> e valido fino al termine dei primi 12 mesi, 40€ (4€/mese) per singola fornitura.';
+        } else {
+            console.log('Paragrafo information non trovato');
+        }
+    	}, 500);
+	});
+	</script>
