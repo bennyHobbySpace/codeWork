@@ -1,0 +1,127 @@
+<style>
+    @media only screen and (max-width: 1023px) {
+        [data-pln-component="table-comparison"][data-pln-version="1.0"] {
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+    }
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr {
+        border-bottom: transparent;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr:first-of-type {
+        background-color: #f1f5f4;
+    }
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr:last-of-type {
+        background-color: #008051;
+        color: #fff;;
+    }
+
+    [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr th {
+        min-width: 100%;
+    }
+
+    @media (max-width: 767px) {
+        [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr th {
+            padding: 10px;
+            font-size: 14px;
+            max-width: 100px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        [data-pln-component="table-comparison"][data-pln-version="1.0"].table-standard-fv table tbody tr td {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .logoGoodwe {
+        max-width: 75px;
+    }
+</style>
+
+<div data-pln-component="" style="padding:0;" aria-hidden="true">
+    <div class="wrapper">
+        <h2 style="padding-bottom: 8px; margin-bottom:0;">Confronta le offerte e richiedi lo sconto fino a 400€ entro il 15/03</h2>
+    <p style="padding-bottom: 32px; margin-bottom:0;">Oltre ai <b>servizi sempre inclusi </b>con tutte le offerte, solo con Plus o Prime puoi avere componenti premium e, in omaggio, <b>coperture assicurative in più</b> rispetto a Start. Confronta ora.<br></p>
+    <div data-pln-component="table-comparison" data-pln-version="1.0" data-pln-template="stripes"
+        id="tableId" class="table-standard-fv">
+
+        <div>
+            <table>
+                
+                <tr>
+                    <th scope="row">Offerte</th>
+                    <th scope="col">Start</th>
+                    <th scope="col">Plus</th>
+                    <th scope="col">Prime</th>
+                </tr>
+                <tr>
+                    <th scope="row">Impianto</th>
+                    <td colspan="3" scope="col" style="border-right:1px solid #f3f3f3;">Potenza 3kWp, 7 pannelli monocristallini TrinaSolar, batteria da 6,2 kWh</td>
+                </tr>
+                <tr>
+                    <th scope="row">Inverter e batteria</th>
+                    <td><img src="/content/dam/plenitude-it/images/icons/partner/tigo.svg" alt="tigo"></td>
+                    <td><img class="logoGoodwe" src="/content/dam/plenitude-it/images/icons/partner/goodwe2.svg" alt="goodwe"></td>
+                    <td><img src="/content/dam/plenitude-it/images/icons/partner/sma.svg" alt="sma"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Zurich Impianto Protetto<sup>4</sup></th>
+                    <td>5 anni</td>
+                    <td>5 anni</td>
+                    <td>10 anni</td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">Zurich Sole Protetto<sup>8</sup></th>
+                    <td>No</td>
+                    <td>3 anni</td>
+                    <td>3 anni</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sconto</th>
+                    <td><img src="/content/dam/plenitude-it/images/icons/partner/200euro.svg" alt="200 euro"></td>
+                    <td><img src="/content/dam/plenitude-it/images/icons/partner/200euro.svg" alt="200 euro"></td>
+                    <td><img src="/content/dam/plenitude-it/images/icons/partner/400euro.svg" alt="400 euro"></td>
+                </tr>
+                <tr>
+                    <th scope="row" style="border-right:1px solid #fff !important;">Prezzo</th>
+                    <td style="border-right:1px solid #fff !important;">
+                        <del aria-hidden="true">7.290€</del> <b>7.090€</b> <div class="sr-only">invece di 7290 euro</div>
+                    </td>
+                    <td style="border-right:1px solid #fff !important;">
+                        <del aria-hidden="true">7.990€</del> <b>7.790€</b> <div class="sr-only">invece di 7990 euro</div>
+                    </td>
+                    <td>
+                        <del aria-hidden="true">11.990€</del> <b>11.590€</b> <div class="sr-only">invece di 11990 euro</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="pln-scroll" :data-pln-slider="componentId">
+            <input type="range" min="0" value="0" />
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="sr-only">
+    <p>L'offerta Start prevede un impianto da 3kWp di potenza con 7 pannelli monocristallini TrinaSolar,
+        un inverter e batteria della Tigo da 6,2 kWh, 
+        5 anni di Zurich Impianto Protetto, 
+        non comprende la polizza Zurich Sole Protetto, 
+        uno sconto di 200 euro portando il prezzo a 7090 euro invece di 7290 euro.</p>
+    <p>L'offerta Plus prevede un impianto da 3kWp di potenza con 7 pannelli monocristallini TrinaSolar, 
+        un inverter e batteria della Goodwe da 6,2 kWh, 
+        5 anni di Zurich Impianto Protetto, 
+        3 anni Zurich Sole Protetto, 
+        uno sconto di 200 euro portando il prezzo a 7790 euro invece di 7990 euro.</p>
+    <p>L'offerta Prime prevede un impianto da 3kWp di potenza con 7 pannelli monocristallini TrinaSolar, 
+        un inverter e batteria della Sma da 6,2 kWh, 
+        10 anni di Zurich Impianto Protetto, 
+        3 anni Zurich Sole Protetto, 
+        uno sconto di 400 euro portando il prezzo a 11590 euro invece di 11990 euro.</p>
+</div>
