@@ -1,0 +1,31 @@
+<style>
+    #logoWinnerRed {
+        width: 111px;
+        height: 154px;
+        position: absolute;
+        top: 0px;
+        right: 30px;
+        z-index: 50;
+    }
+
+    @media only screen and (max-width: 767px) {
+       #logoWinnerRed {
+            top: auto;
+            bottom: 15px;
+            right: auto;
+            left: 15px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const img = document.createElement('img');
+        img.id = 'logoWinnerRed';
+        img.src = 'https://eniplenitude.scene7.com/is/image/enigaseluce/prodottoAnno';
+        img.alt = 'logo prodotto dell anno';
+        const wrappers = document.querySelectorAll('[data-pln-component="band-standard"] .wrapper .main');
+        const wrapper = wrappers[1]; // cambia l'indice per scegliere quale componente
+        wrapper.parentNode.insertBefore(img, wrapper);
+    });
+</script>
