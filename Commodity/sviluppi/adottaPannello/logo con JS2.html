@@ -1,0 +1,58 @@
+<style>
+    @media only screen and (min-width: 1170px) and (max-width: 2000px) {
+       #logoWinnerRed {
+            width: 111px;
+            height: 154px;
+            position: absolute;
+            z-index: 50;
+            top: 30px;
+            right: calc(50% - 570px);
+        }
+    }
+   
+    @media only screen and (min-width: 1024px) and (max-width: 1169px) {
+         #logoWinnerRed {
+            position: absolute;
+            z-index: 50;
+            right: calc(50% - 490px);
+        }
+    }
+
+    @media only screen and (min-width: 544px) and (max-width: 1023px) {
+       #logoWinnerRed {
+        position: absolute;
+            z-index: 50;
+            top: auto;
+            bottom: 24px;
+            right: auto;
+            left: 24px;
+        }
+    }
+
+    @media only screen and (min-width: 360px) and (max-width: 543px) {
+       #logoWinnerRed {
+            position: absolute;
+            z-index: 50;
+            width: auto;
+            height: 70px;
+            top: auto;
+            bottom: 14px;
+            right: 24px;
+            left: auto;
+        }
+    }
+
+   
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const img = document.createElement('img');
+        img.id = 'logoWinnerRed';
+        img.src = 'https://eniplenitude.scene7.com/is/image/enigaseluce/prodottoAnno';
+        img.alt = 'logo prodotto dell anno';
+        const wrappers = document.querySelectorAll('[data-pln-component="hero-small"] .wrapper ');
+        const wrapper = wrappers[0]; // cambia l'indice per scegliere quale componente
+        wrapper.parentNode.insertBefore(img, wrapper);
+    });
+</script>
