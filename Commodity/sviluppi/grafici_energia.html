@@ -1,0 +1,335 @@
+<div class="pun-widgets">
+  <div class="wrapper">
+
+    <div>
+      <h2>
+        Ecco come potrà essere l'andamento del tuo prezzo all'ingrosso PUN o PSV
+      </h2>
+      <p>
+        L'andamento dei mercati energetici <strong>è influenzato da tanti attori, fattori e scenari</strong> che
+        determinano <strong>la variabilità
+          dei prezzi di luce e gas</strong>. Per renderti più consapevole sulla dinamica dei prezzi
+        all'ingrosso, ti riportiamo l'andamento storico dei
+        valori e l'ultimo valore mensile ufficiale.
+      </p>
+    </div>
+
+    <div class="pun-card" data-chart="luce" style="--pun-accent:#009e62; margin-top: 30px;
+    margin-bottom: 30px;">
+      <div class="pun-top">
+        <div class="pun-title-block">
+          <h2 class="pun-title">Luce - Indice PUN</h2>
+          <p class="pun-desc">il Corrispettivo luce Index, aggiornato mensilmente e pari, per ciascun mese di fornitura,
+            alla media del PUN (Prezzo Unico Nazionale dell'energia elettrica) determinato dal gestore dei mercati
+            energetici.</p>
+        </div>
+        <div class="pun-boxes"></div>
+      </div>
+      <div class="pun-unit">€/KWh</div>
+      <svg class="pun-svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" role="img"
+        aria-label="Andamento mensile Indice PUN"></svg>
+    </div>
+
+    <div class="pun-card" data-chart="gas" style="--pun-accent:#ffcd00;">
+      <div class="pun-top">
+        <div class="pun-title-block">
+          <h2 class="pun-title">Gas - Indice PSV</h2>
+          <p class="pun-desc">il Corrispettivo gas Index, pari all'indice PSV (PSV Day Ahead Heren Mid) che corrisponde
+            al prezzo del gas naturale all'ingrosso al PSV (Punto di Scambio Virtuale). L'indice è calcolato mensilmente
+            come media dei prezzi Bid e Offer da ICIS Heren.</p>
+        </div>
+        <div class="pun-boxes"></div>
+      </div>
+      <div class="pun-unit">€/Smc</div>
+      <svg class="pun-svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" role="img"
+        aria-label="Andamento mensile Indice PSV"></svg>
+    </div>
+
+    <p style="font-size:12px; padding-top: 15px;">I valori sopra indicati corrispondono a quelli assunti dagli
+      indici PUN e PSV nei mesi precedenti.<br>
+      Il valore che tali indici assumeranno dipende invece dall'andamento dei prezzi nei mercati energetici che ad
+      oggi non è possibile prevedere.<br>
+    </p>
+
+  </div>
+</div>
+
+<style>
+  .pun-widgets,
+  .pun-widgets * {
+    box-sizing: border-box;
+  }
+
+  .pun-widgets {
+    --pun-text: #1a1a1a;
+    --pun-desc: #ffcd00;
+    --pun-gray: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: inherit;
+    color: var(--pun-text);
+    background-color: #f4f4f4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+  }
+
+  .pun-card {
+    --pun-accent: #009e62;
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px 20px 32px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .pun-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .pun-title-block {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .pun-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    color: var(--pun-text);
+  }
+
+  .pun-desc {
+    font-size: 13.5px;
+    line-height: 1.45;
+    max-width: 520px;
+    margin: 0;
+  }
+
+  .pun-boxes {
+    display: flex;
+    gap: 14px;
+    max-width: 180px;
+    flex-flow: row;
+  }
+
+  .pun-box {
+    border: 1.5px solid var(--pun-accent);
+    border-radius: 10px;
+    padding: 14px 18px;
+    min-width: 210px;
+  }
+
+  .pun-box-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--pun-text);
+  }
+
+  .pun-box-unit {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--pun-gray);
+    margin-left: 2px;
+  }
+
+  .pun-box-label {
+    font-size: 12px;
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+
+  .pun-unit {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--pun-text);
+    margin: 24px 0 4px 4px;
+  }
+
+  .pun-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .pun-svg text {
+    font-family: inherit;
+  }
+
+  /* Versione mobile: attivata da JS in base alla larghezza del box, non dello schermo */
+  .pun-card.pun-mobile {
+    padding: 20px 20px 20px;
+    border-radius: 16px;
+  }
+
+  .pun-mobile .pun-top {
+    flex-flow: column;
+  }
+
+  .pun-mobile .pun-title {
+    font-size: 19px;
+  }
+
+  .pun-mobile .pun-desc {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .pun-mobile .pun-boxes {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pun-mobile .pun-box {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .pun-mobile .pun-box-value {
+    font-size: 22px;
+  }
+</style>
+
+<script>
+  (function () {
+    // ============================================================
+    // DATI - QUESTA E' L'UNICA PARTE DA AGGIORNARE OGNI MESE
+    // 1) Aggiungi il nuovo valore in FONDO alla lista "values" (punto come
+    //    separatore decimale, es. 0.195). Il mese si calcola da solo partendo
+    //    da "start". Il grafico mostra sempre gli ultimi 12 mesi (6 su mobile).
+    // 2) Aggiorna a mano i due box:
+    //    - effettivo = "Prezzo effettivo incluso il contributo al consumo"
+    //    - medio     = "Prezzo medio dell'indice degli ultimi 12 mesi"
+    //    Se metti null, il box usa in automatico il valore calcolato dal grafico
+    //    (ultimo valore / media degli ultimi 12 mesi).
+    // ============================================================
+    var DATI = {
+      luce: {
+        effettivo: 0.222,
+        medio: 0.111,
+        start: {y: 2025, m: 9},
+        values: [0.109, 0.111, 0.117, 0.115, 0.133, 0.114, 0.143, 0.119, 0.119, 0.133, 0.157, 0.180, 0.200]
+      },
+      gas: {
+        effettivo: 0.888,
+        medio: 0.555,
+        start: {y: 2025, m: 9},
+        values: [0.373, 0.354, 0.348, 0.328, 0.404, 0.377, 0.558, 0.492, 0.499, 0.505, 0.607, 0.686, 0.777]
+      }
+    };
+
+    // Impostazioni grafiche (non serve toccarle)
+    var STILE = {
+      luce: {unit: '€/kWh', indexName: 'PUN', color: '#009e62', textOnLast: '#ffffff'},
+      gas: {unit: '€/Smc', indexName: 'PSV', color: '#f2b705', textOnLast: '#1a1a1a', labelColor: '#333'}
+    };
+
+    var MESI = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+    var MESI_FULL = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
+    var BREAKPOINT = 1023; // larghezza (px) del box sotto la quale scatta la versione mobile
+
+    function fmt(v) {return v.toFixed(3).replace('.', ',');}
+
+    function buildEntries(d) {
+      return d.values.map(function (v, i) {
+        var idx = (d.start.m - 1) + i;
+        return {y: d.start.y + Math.floor(idx / 12), m: (idx % 12) + 1, v: v};
+      });
+    }
+
+    function niceStep(raw) {
+      if (raw <= 0) return 0.05;
+      var exp = Math.floor(Math.log10(raw));
+      var f = raw / Math.pow(10, exp);
+      var n = f <= 1 ? 1 : f <= 1.5 ? 1.5 : f <= 2 ? 2 : f <= 3 ? 3 : f <= 5 ? 5 : f <= 7 ? 7 : 10;
+      return n * Math.pow(10, exp);
+    }
+
+    function initCard(card) {
+      var key = card.getAttribute('data-chart');
+      var d = DATI[key], s = STILE[key];
+      if (!d || !s) return;
+      var data = buildEntries(d);
+      var boxesEl = card.querySelector('.pun-boxes');
+      var svgEl = card.querySelector('.pun-svg');
+      var lastMobile = null;
+
+      function renderBoxes(mobile) {
+        var last = data[data.length - 1];
+        var w = data.slice(-12);
+        var avgAuto = w.reduce(function (a, e) {return a + e.v;}, 0) / w.length;
+        var eff = (typeof d.effettivo === 'number') ? d.effettivo : last.v;
+        var avg = (typeof d.medio === 'number') ? d.medio : avgAuto;
+        var html = '<div class="pun-box"><div><span class="pun-box-value">' + fmt(eff) + '</span><span class="pun-box-unit">' + s.unit + '</span></div>'
+          + '<div class="pun-box-label">Prezzo effettivo incluso il contributo al consumo - ' + MESI_FULL[last.m - 1] + ' ' + last.y + '</div></div>';
+        if (!mobile) {
+          html += '<div class="pun-box"><div><span class="pun-box-value">' + fmt(avg) + '</span><span class="pun-box-unit">' + s.unit + '</span></div>'
+            + '<div class="pun-box-label">Prezzo medio dell\'indice ' + s.indexName + ' degli ultimi ' + w.length + ' mesi</div></div>';
+        }
+        boxesEl.innerHTML = html;
+      }
+
+      function renderChart(mobile) {
+        var shown = data.slice(mobile ? -6 : -12);
+        var W = mobile ? 380 : 1200, H = mobile ? 300 : 420;
+        var padL = mobile ? 42 : 60, padR = mobile ? 46 : 60, padT = mobile ? 46 : 56, padB = mobile ? 40 : 50;
+        var plotW = W - padL - padR, plotH = H - padT - padB;
+
+        var rawMax = Math.max.apply(null, shown.map(function (e) {return e.v;}));
+        var step = niceStep(rawMax / 4 || 0.01);
+        var maxVal = Math.max(Math.ceil(rawMax / step) * step, step * 4);
+        var steps = Math.round(maxVal / step);
+
+        function xFor(i) {return padL + (shown.length === 1 ? plotW / 2 : (plotW / (shown.length - 1)) * i);}
+        function yFor(v) {return padT + plotH - (v / maxVal) * plotH;}
+
+        var fs = mobile ? 10 : 12, out = '';
+        for (var k = 0; k <= steps; k++) {
+          var val = step * k, y = yFor(val);
+          out += '<line x1="' + padL + '" y1="' + y + '" x2="' + (padL + plotW) + '" y2="' + y + '" stroke="#e3e3e3" stroke-width="1" stroke-dasharray="' + (k === 0 ? '0' : '4,4') + '"/>';
+          out += '<text x="' + (padL - 10) + '" y="' + (y + 4) + '" text-anchor="end" font-size="' + fs + '" fill="#333">' + val.toFixed(2).replace('.', ',') + '</text>';
+        }
+        shown.forEach(function (e, i) {
+          var x = xFor(i);
+          out += '<line x1="' + x + '" y1="' + padT + '" x2="' + x + '" y2="' + (padT + plotH) + '" stroke="#eeeeee" stroke-width="1" stroke-dasharray="3,4"/>';
+          out += '<text x="' + x + '" y="' + (padT + plotH + 22) + '" text-anchor="middle" font-size="' + fs + '" fill="#333">' + MESI[e.m - 1] + ' ' + String(e.y).slice(2) + '</text>';
+        });
+        var pathD = shown.map(function (e, i) {return (i === 0 ? 'M' : 'L') + xFor(i) + ',' + yFor(e.v);}).join(' ');
+        out += '<path d="' + pathD + '" fill="none" stroke="' + s.color + '" stroke-width="' + (mobile ? 2 : 3) + '" stroke-linejoin="round" stroke-linecap="round"/>';
+        shown.forEach(function (e, i) {
+          var x = xFor(i), y = yFor(e.v), isLast = i === shown.length - 1;
+          out += '<circle cx="' + x + '" cy="' + y + '" r="' + (mobile ? 5 : 7) + '" fill="' + s.color + '"/>';
+          if (isLast) {
+            var bw = mobile ? 44 : 56, bh = mobile ? 22 : 26, by = y - bh - (mobile ? 16 : 20);
+            out += '<rect x="' + (x - bw / 2) + '" y="' + by + '" width="' + bw + '" height="' + bh + '" rx="' + (bh / 2) + '" fill="' + s.color + '"/>';
+            out += '<text x="' + x + '" y="' + (by + bh / 2 + 4) + '" text-anchor="middle" font-size="' + (mobile ? 11 : 13) + '" font-weight="700" fill="' + s.textOnLast + '">' + fmt(e.v) + '</text>';
+          } else {
+            out += '<text x="' + x + '" y="' + (y - (mobile ? 12 : 16)) + '" text-anchor="middle" font-size="' + (mobile ? 10.5 : 13) + '" font-weight="700" fill="' + (s.labelColor || s.color) + '">' + fmt(e.v) + '</text>';
+          }
+        });
+        svgEl.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+        svgEl.innerHTML = out;
+      }
+
+      function render() {
+        var mobile = card.getBoundingClientRect().width < BREAKPOINT;
+        if (mobile === lastMobile) return;
+        lastMobile = mobile;
+        card.classList.toggle('pun-mobile', mobile);
+        renderBoxes(mobile);
+        renderChart(mobile);
+      }
+
+      render();
+      if (window.ResizeObserver) {new ResizeObserver(render).observe(card);}
+      else {window.addEventListener('resize', render);}
+    }
+
+    var cards = document.querySelectorAll('.pun-widgets .pun-card[data-chart]');
+    Array.prototype.forEach.call(cards, initCard);
+  })();
+</script>

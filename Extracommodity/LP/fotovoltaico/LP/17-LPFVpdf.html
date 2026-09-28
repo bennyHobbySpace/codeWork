@@ -1,0 +1,1292 @@
+<style>
+
+    /* correzione img promoband standard  */
+        [data-pln-component=promo-band-standard][data-pln-version="1.1"]>.wrapper>div:first-child>.circle-background>img {
+            height: auto;
+            width: 267px;
+        }
+    /*  */
+    [data-pln-component="html-box"][data-pln-version="1.0"] {
+        padding: 0 0;
+    }
+
+    .container-html-box-my {
+        background-color: #fff !important;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .adjPadding {
+        padding: 0;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .picture {
+        position: absolute;
+        right: 0;
+        z-index: 90;
+        width: 50%;
+        overflow: hidden;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .picture img {
+        width: 803px;
+        height: 467px;
+    }
+
+    /* hero  */
+    @media (max-width: 1199px) {
+        [pln-component=pag-FV][pln-version="1.0"] .hero .picture {
+            /* display: block; */
+            height: 170px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        [pln-component=pag-FV][pln-version="1.0"] .hero .picture img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        [pln-component=pag-FV][pln-version="1.0"] .hero .picture {
+            margin-left: 0;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .hero {
+        max-width: 1140px;
+        margin: 0 auto;
+        height: 470px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 45px;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component=pag-FV][pln-version="1.0"] .hero {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+            flex-flow: column;
+            width: 48%;
+            height: auto;
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        [pln-component=pag-FV][pln-version="1.0"] .hero {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .hero .text-box {
+        max-width: 550px;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component=pag-FV][pln-version="1.0"] .hero .text-box {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .hero .text-box h2 {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        [pln-component=pag-FV][pln-version="1.0"] .hero .text-box h2 {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .hero .text-box h3 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+
+    @media (max-width: 768px) {
+        [pln-component=pag-FV][pln-version="1.0"] .hero .text-box h3 {
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .hero .text-box h4 {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .hero .text-box .logo {
+        margin: 40px 0 0px 0;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component=pag-FV][pln-version="1.0"] .hero .text-box .logo {
+            margin: 15px 0 0px 0;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .hero p {
+        display: none;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component=pag-FV][pln-version="1.0"] .hero p {
+            /* display: block; */
+            display: none;
+            font-size: 12px;
+            line-height: 20px;
+            padding-left: 15px;
+            padding-top: 15px;
+        }
+    }
+
+    /**/
+
+
+
+
+    /*  cart  */
+    [pln-component=pag-FV][pln-version="1.0"] .cart {
+        position: sticky;
+        width: 364px;
+        top: 45px;
+        margin-left: calc(50% + 183px);
+        margin-top: -220px;
+        z-index: 100;
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.3);
+        box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.3);
+        padding: 24px 16px;
+        background-color: #fff;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart.position {
+        position: relative;
+        top: 1650px;
+    }
+
+    /* [pln-component=pag-FV][pln-version="1.0"] .cart.position2 {
+        position: relative;
+        top: 2390px;
+    } */
+
+    @media (max-width: 1199px) {
+        [pln-component=pag-FV][pln-version="1.0"] .cart {
+            width: 47%;
+            max-width: 100%;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        [pln-component=pag-FV][pln-version="1.0"] .cart {
+            position: relative;
+            width: auto;
+            margin-left: 15px;
+            margin-right: 15px;
+            right: auto;
+            top: 0px;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box h3 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box span,
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box ul {
+        list-style: none;
+        margin-top: 15px;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box ul li {
+        position: relative;
+        margin-bottom: 15px;
+        padding-left: 30px;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box ul li svg {
+        position: absolute;
+        left: 0px;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box .cart-prize-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box .cart-prize-box .prize-box-content {
+        padding-right: 14px;
+        width: 50%;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box .cart-prize-box .prize-box-content img {
+        width: 33px;
+        margin-bottom: 10px;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box .cart-prize-box .prize-box-content:last-child {
+        border-left: 1px solid #333;
+        padding-left: 14px;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box a {
+        margin: 25px auto 30px;
+        display: block;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .cart .cart-box a span {
+        font-size: 18px;
+    }
+
+    /**/
+
+    /*   payMethod */
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod {
+        background-image: linear-gradient(248deg, #95b849, #008354 58%, #008354);
+        color: #fff;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: 768px) {
+        [pln-component=pag-FV][pln-version="1.0"] .payMethod {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content {
+        max-width: 750px;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content {
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content h2 {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content h4 {
+        margin: 0;
+        padding-bottom: 30px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content .payMethod--items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    @media (max-width: 768px) {
+        [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content .payMethod--items {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+            flex-flow: column;
+            gap: 0;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content .payMethod--items .item {
+        width: 33%;
+        position: relative;
+    }
+
+    @media (max-width: 768px) {
+        [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content .payMethod--items .item {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content .payMethod--items .item:after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 80%;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        right: -30px;
+    }
+
+    @media (max-width: 768px) {
+        [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content .payMethod--items .item:after {
+            display: none;
+        }
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content .payMethod--items .item:last-child::after {
+        display: none;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content .payMethod--items .item h5 {
+        margin: 0;
+        padding: 10px 0 10px;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .payMethod .payMethod--content .payMethod--items .item p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /**/
+
+
+    /* table-comparison */
+    [pln-component="table-comparison"][pln-version="1.0"] {
+        margin-top: -460px;
+        padding: 30px 0;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component="table-comparison"][pln-version="1.0"] {
+            margin-top: 0px;
+        }
+    }
+
+    @media (min-width: 1199px) {
+        [pln-component="table-comparison"][pln-version="1.0"] .wrapper {
+            justify-content: left;
+        }
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .table-comparison-titles {
+        max-width: 750px;
+        margin-bottom: 30px;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .table-comparison-titles h3 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component="table-comparison"][pln-version="1.0"] .table-comparison-titles {
+            max-width: 100%;
+        }
+    }
+
+
+
+    [pln-component="table-comparison"][pln-version="1.0"] .table-card-items {
+        display: flex;
+        flex-flow: row;
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        [pln-component="table-comparison"][pln-version="1.0"] .table-card-items {
+            flex-flow: column;
+        }
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .infotext-out {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.57;
+        text-align: right;
+        margin-left: -175px;
+        max-width: 200px;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component="table-comparison"][pln-version="1.0"] .wrapper .infotext-out {
+            margin-left: -80px;
+            max-width: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        [pln-component="table-comparison"][pln-version="1.0"] .wrapper .infotext-out {
+            display: none;
+            margin-left: 0;
+        }
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .infotext-out .text {
+        position: relative;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card {
+        max-width: 360px;
+        min-width: 330px;
+        color: #333;
+        border-radius: 15px;
+        box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.3);
+        background-color: #fff;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card {
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card {
+            width: 100%;
+            max-width: 100% !important;
+        }
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .header {
+        padding: 30px;
+        text-align: center;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .header .title,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .header .title p {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .header .subtitle,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .header .subtitle p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .info {
+        display: flex;
+        gap: 10px;
+        color: #fff;
+        padding: 10px 25px;
+        background-image: linear-gradient(270deg, #95b849 0%, #008354 42%, #008354);
+    }
+
+    @media (max-width: 768px) {
+        [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .info {
+            padding: 10px 20px;
+        }
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .info .content {
+        flex: 1;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .info .content img {
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .info .value {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .info .text,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .info .text p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .explanation {
+        padding: 30px;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .explanation .infotext {
+        display: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.57;
+    }
+
+    @media (max-width: 768px) {
+        [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .explanation .infotext {
+            display: block;
+        }
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .explanation .content {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .explanation .content img {
+        width: 20px;
+        height: 20px;
+        margin-top: 4px;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .explanation .content .text,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .explanation .content .text p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .explanation .divider {
+        height: 1px;
+        width: 100%;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 30px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: #f1f5f4;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .tooltip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffcd00;
+        border-radius: 50%;
+        top: 15px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+        border: none;
+        margin: 0;
+        padding: 0;
+        z-index: 10;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .tooltip:after {
+        content: "i";
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        display: inline-block;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .mainmsg,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .mainmsg p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg {
+        display: flex;
+        gap: 10px;
+        max-width: none;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .vertical-divider {
+        width: 1px;
+        height: auto;
+        background-color: #333;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .content .oldprice,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .content .oldprice p {
+        font-size: 16px;
+        line-height: 10px;
+        margin-bottom: 0;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .content .oldprice del,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .content .oldprice p del {
+        font-size: 14px;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .content .price,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .content .price p {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 2px;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .content .notes,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .doublemsg .content .notes p {
+        font-size: 12px;
+        line-height: 1.33;
+        margin-bottom: 0;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .cta-primary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: none;
+        font-size: 20px;
+        font-weight: 600;
+        max-width: none;
+        height: 50px;
+        width: 100%;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .cta-primary:hover,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .cta-primary:active {
+        font-weight: 700;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .furtherinfo,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .furtherinfo p {
+        font-size: 14px;
+        line-height: 1.57;
+        margin-bottom: 0;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .furtherinfo a,
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .summary-cta .furtherinfo p a {
+        text-decoration: underline;
+    }
+
+    [pln-component="table-comparison"][pln-version="1.0"] .wrapper .table-card .borderbottom {
+        height: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-image: linear-gradient(270deg, #95b849 0%, #008354 42%, #008354);
+    }
+
+    /**/
+
+
+    /*cardCompare v2.0*/
+
+    [data-pln-component='cardCompare'][data-pln-version='2.0'] .cardCompare-container {
+        max-width: 750px;
+    }
+
+    [data-pln-component='cardCompare'][data-pln-version='2.0'] .cardCompare-content {
+        display: flex;
+        flex-flow: row;
+        padding-top: 16px;
+    }
+
+    @media (max-width: 768px) {
+        [data-pln-component='cardCompare'][data-pln-version='2.0'] .cardCompare-content {
+            flex-direction: column;
+        }
+    }
+
+    [data-pln-component='cardCompare'][data-pln-version='2.0'] .cardCompare-content .cardCompare-item {
+        padding: 0 16px;
+    }
+
+    @media (max-width: 768px) {
+        [data-pln-component='cardCompare'][data-pln-version='2.0'] .cardCompare-content .cardCompare-item {
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        [data-pln-component='cardCompare'][data-pln-version='2.0'] .cardCompare-content .cardCompare-item:last-child {
+            margin-top: 30px;
+        }
+    }
+
+    [data-pln-component="cardCompare"][data-pln-version="2.0"] .cardCompare-container .cardCompare-content .cardCompare-item h4 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+    [data-pln-component="cardCompare"][data-pln-version="2.0"] .cardCompare-container .cardCompare-content .cardCompare-item h4.h4paddingAdj {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+        padding-bottom: 32px;
+    }
+
+    @media (max-width: 1199px) {
+        [data-pln-component="cardCompare"][data-pln-version="2.0"] .cardCompare-container .cardCompare-content .cardCompare-item h4.h4paddingAdj {
+        padding-bottom: 0px;
+        }
+    }
+
+    [data-pln-component="cardCompare"][data-pln-version="2.0"] .cardCompare-container .cardCompare-content .cardCompare-item p {
+        position: relative;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    [data-pln-component="cardCompare"][data-pln-version="2.0"] .cardCompare-container .cardCompare-content .cardCompare-item svg {
+        position: absolute;
+        left: 0px;
+        top: 3px;
+    }
+
+    /**/
+
+    /*  CTA-STICKY */
+    [pln-component=pag-FV][pln-version="1.0"] .CTA-sticky-FV {
+        display: none;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .CTA-sticky-FV.show {
+        display: block;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .CTA-sticky-FV.PBottom {
+        bottom: 104px;
+    }
+
+    [pln-component=pag-FV][pln-version="1.0"] .CTA-sticky-FV.PBottom-mobile {
+        bottom: 100px;
+    }
+
+    @media (max-width: 1199px) {
+        [pln-component=pag-FV][pln-version="1.0"] .CTA-sticky-FV {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            z-index: 1000;
+            padding: 15px;
+            background-color: #333;
+            width: 100%;
+        }
+
+        [pln-component=pag-FV][pln-version="1.0"] .CTA-sticky-FV button {
+            width: 100%;
+        }
+    }
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    class PagFV {
+        constructor() {
+            this.scrollFunction();
+        }
+
+        scrollFunction() {
+            window.addEventListener("scroll", () => {
+                const scrollH = window.scrollY;
+                console.log('scrollH', scrollH);
+                const windowWidth = window.innerWidth;
+
+                // Desktop > 1200
+                if (windowWidth > 1200) {
+                    const cart = document.querySelector('.cart');
+                    if (scrollH > 1850) {
+                        cart?.classList.add('position');
+                    } else {
+                        cart?.classList.remove('position');
+                    }
+
+                    // Uncomment if needed
+                    // if (scrollH > 2670) {
+                    //     cart?.classList.add('position2');
+                    // } else {
+                    //     cart?.classList.remove('position2');
+                    // }
+                }
+
+                // Tablet: 768 < width < 1200
+                if (windowWidth < 1200 && windowWidth > 767) {
+                    const ctaSticky = document.querySelector('.CTA-sticky-FV');
+                    if (scrollH > 450) {
+                        ctaSticky?.classList.add('show');
+                    } else {
+                        ctaSticky?.classList.remove('show');
+                    }
+
+                    if (scrollH > 5300) {
+                        ctaSticky?.classList.add('PBottom');
+                    } else {
+                        ctaSticky?.classList.remove('PBottom');
+                    }
+                }
+
+                // Mobile: width < 768
+                if (windowWidth < 768) {
+                    const ctaSticky = document.querySelector('.CTA-sticky-FV');
+                    if (scrollH > 1100) {
+                        ctaSticky?.classList.add('show');
+                    } else {
+                        ctaSticky?.classList.remove('show');
+                    }
+
+                    if (scrollH > 9800) {
+                        ctaSticky?.classList.add('PBottom-mobile');
+                    } else {
+                        ctaSticky?.classList.remove('PBottom-mobile');
+                    }
+                }
+            });
+        }
+    }
+
+    // Inizializza il widget su ogni elemento con attributi specifici
+    document.querySelectorAll('[pln-component="pag-FV"][pln-version="1.0"]:not([data-pln-active="true"])')
+        .forEach(el => {
+            el.setAttribute("data-pln-active", "true");
+            new PagFV();
+        });
+});
+</script>
+
+<div pln-component="pag-FV" pln-version="1.0" class="" id="" pln-template="">
+
+
+    <div class="col-lg-12 adjPadding">
+        <div class="hero">
+            <div class="text-box">
+                <img class="logo" src="/content/dam/plenitude-it/immagini/header/logo-header/logo-plenitude-header.svg"
+                    loading="lazy" alt="Logo Eni Plenitude" width="124px" height="auto">
+                <div style="font-weight: 600;">IMPIANTO FOTOVOLTAICO</div>
+                <h2>Con Plenitude la tua casa riparte con più energia e connessione.</h2>
+                <h3>
+                    Scegli un <b>impianto fotovoltaico con​ installazione inclusa a partire da 3.490€ <span>
+                        <button data-pln-atom="note-button" data-pln-version="1.0" data-pln-template="" data-pln-action-modal-open="#offertaStart" aria-label="Maggiori informazioni"></button>
+                    </span>
+ entro il 18 ottobre</b> e ricevi <b>il 1° anno di Plenitude Fibra*</b> <img style="
+    position: relative;
+    top: 6px;
+    margin-top: -10px;
+" src="/content/dam/plenitude-it/immagini/fibra/icone/Icona_Fibra_24x24.svg" alt=""> per la casa in omaggio <span>
+                        <button data-pln-atom="note-button" data-pln-version="1.0" data-pln-template="" data-pln-action-modal-open="#offertaFibra" aria-label="Maggiori informazioni"></button>
+                    </span>
+.
+                </h3>
+                <h4>
+                    *Previa verifica copertura e sottoscrizione di un nuovo contratto Plenitude Fibra, anche per i già clienti Fibra. Dal 13° mese 21,90€/mese. Servizio voce non incluso.
+Immagine a scopo illustrativo realizzata con il supporto dell’intelligenza artificiale. 
+                </h4>
+            </div>
+            <picture class="picture">
+                <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/Visore_LP_09_2026.jpeg"
+                    alt="pannelli fotovoltaici" aria-hidden="true">
+                <!-- <img src="/content/dam/enigaseluce/immagini/icone/fotovoltaico/gen24/pannelli-tetto.jpg" alt="pannelli fotovoltaici" aria-hidden="true"> -->
+            </picture>
+        </div>
+
+        <div class="cart">
+            <div class="cart-box">
+                <h3>L’offerta include</h3>
+                <ul>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <g id="Other / Bullet">
+                                <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                                <path id="Path" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z"
+                                    fill="white"></path>
+                            </g>
+                            <span>
+                                Impianto <strong>senza accumulo Start</strong> 2 kWp
+                            </span>
+                    </li>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <g id="Other / Bullet">
+                                <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                                <path id="Path" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z"
+                                    fill="white"></path>
+                            </g>
+                            <span>
+                                25 anni di <strong>garanzia</strong> su 5 pannelli monocristallini TrinaSolar e 10 sull'inverter wireless
+                            </span>
+                    </li>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <g id="Other / Bullet">
+                                <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                                <path id="Path" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z"
+                                    fill="white"></path>
+                            </g>
+                            <span>Progetto, <strong>installazione</strong> e avvio</span>
+                    </li>
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <g id="Other / Bullet">
+                                <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                                <path id="Path" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z"
+                                    fill="white"></path>
+                            </g>
+                            <span><strong style="color:#008354;">1 anno di Plenitude Fibra </strong> <img style="
+    position: relative;
+    top: 6px;
+    margin-top: -10px;
+" src="/content/dam/plenitude-it/immagini/fibra/icone/Icona_Fibra_24x24.svg" alt=""> per la casa in omaggio<sup>1</sup>: 
+                                <a style="margin:0 auto; text-align: center; display: inline-block; font-size: 16px;" data-pln-atom="link" data-pln-version="1.2"
+                                    class="" href="#" data-pln-action-modal-open="#annoFibra" target="_self">
+                                    <span style="font-size: 16px;">Scopri di più</span>
+                                </a>
+                            </span>
+                    </li>
+
+                    <li>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.72617 13.6615V17.0318H8.47988V15.8894H8.89519C9.07293 15.8894 9.24042 15.867 9.39766 15.8222C9.55489 15.7774 9.69333 15.7085 9.81296 15.6155C9.9326 15.5224 10.0275 15.4035 10.0975 15.2588C10.1676 15.1141 10.2026 14.9435 10.2026 14.747C10.2026 14.5437 10.1676 14.3723 10.0975 14.2327C10.0275 14.0931 9.9326 13.9811 9.81296 13.8967C9.69333 13.8123 9.55318 13.752 9.39253 13.7158C9.23188 13.6796 9.05926 13.6615 8.87468 13.6615H7.72617ZM8.84942 15.2846H8.48025V14.2663H8.82891C9.034 14.2663 9.19123 14.3025 9.30061 14.3749C9.41 14.4472 9.46469 14.5713 9.46469 14.747C9.46469 15.1054 9.2596 15.2846 8.84942 15.2846Z" fill="#008051"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.7817 13.6615V17.0318H11.7662C12.0123 17.0318 12.2353 16.9974 12.4353 16.9285C12.6352 16.8595 12.807 16.7553 12.9505 16.6157C13.0941 16.4761 13.2052 16.2995 13.2838 16.0859C13.3624 15.8722 13.4017 15.6206 13.4017 15.3312C13.4017 15.0417 13.3624 14.7918 13.2838 14.5816C13.2052 14.3714 13.0924 14.1982 12.9454 14.0621C12.7984 13.926 12.6224 13.8252 12.4173 13.7597C12.2122 13.6942 11.9815 13.6615 11.7251 13.6615H10.7817ZM11.6794 16.4167H11.5358V14.2766H11.6794C11.8229 14.2766 11.9528 14.2939 12.069 14.3283C12.1853 14.3628 12.2844 14.4205 12.3664 14.5015C12.4485 14.5825 12.5125 14.691 12.5587 14.8272C12.6048 14.9633 12.6279 15.1313 12.6279 15.3312C12.6279 15.5345 12.6048 15.7051 12.5587 15.8429C12.5125 15.9808 12.4485 16.0919 12.3664 16.1763C12.2844 16.2608 12.1853 16.3219 12.069 16.3598C11.9528 16.3977 11.8229 16.4167 11.6794 16.4167Z" fill="#008051"/>
+<path d="M14.0378 13.6615V17.0318H14.7915V15.724H15.9502V15.083H14.7915V14.3025H16.1451V13.6615H14.0378Z" fill="#008051"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21.1439 10.1436L22.3037 11.3215C22.4217 11.4069 22.5 11.5458 22.5 11.7036V18.8915C22.5 19.1507 22.2925 19.3611 22.0351 19.3611H21.1439V23.5304C21.1439 23.7896 20.9365 24 20.6803 24H3.31968C3.06355 24 2.85609 23.7896 2.85609 23.5304V19.3611H1.96486C1.70745 19.3611 1.5 19.1507 1.5 18.8915V11.7036C1.5 11.6899 1.50109 11.676 1.50226 11.661L1.50255 11.6574C1.50255 11.6513 1.5037 11.6454 1.50492 11.6393L1.50509 11.6385C1.50577 11.6338 1.50636 11.6292 1.50696 11.6245C1.50747 11.6205 1.508 11.6164 1.50859 11.6122C1.50986 11.6085 1.51082 11.6047 1.51177 11.6009C1.51273 11.5972 1.51368 11.5934 1.51495 11.5897C1.51623 11.582 1.5175 11.5746 1.51973 11.5682L1.52736 11.5458C1.52991 11.5384 1.53245 11.532 1.53595 11.5246C1.5385 11.5182 1.54105 11.5121 1.54486 11.5044C1.54621 11.5016 1.54741 11.4989 1.5486 11.4962C1.5505 11.4919 1.55237 11.4878 1.55473 11.4832L1.56586 11.4643C1.56712 11.4623 1.56834 11.4601 1.56959 11.4579C1.57215 11.4533 1.57485 11.4485 1.57827 11.4444C1.58336 11.4367 1.58814 11.4306 1.59323 11.4242C1.59705 11.4181 1.60055 11.413 1.60564 11.4069C1.60699 11.4053 1.60835 11.4037 1.60972 11.4021C1.61832 11.3919 1.62721 11.3814 1.63682 11.3729L2.85609 10.1423V0.46867C2.85609 0.210436 3.06355 0 3.31968 0H16.0632C16.068 0 16.0743 0 16.0791 0.00128315H16.094C16.1351 0.00384944 16.1736 0.0125107 16.2121 0.0250214C16.2147 0.0256881 16.217 0.0267014 16.2193 0.027701C16.2214 0.0286251 16.2235 0.0295376 16.2258 0.030154C16.2445 0.0375321 16.262 0.045231 16.278 0.0538922C16.278 0.0538922 16.2805 0.0538922 16.2818 0.0551754C16.2993 0.0638366 16.3165 0.0750642 16.3327 0.0875749C16.3356 0.0895327 16.3392 0.0922373 16.3424 0.0945493L16.3451 0.0965569C16.3613 0.109068 16.3775 0.122861 16.3925 0.137938L21.0084 4.79801C21.0233 4.81309 21.0357 4.82817 21.0485 4.84453L21.0502 4.84691C21.0529 4.85065 21.0552 4.85384 21.0583 4.85704C21.0601 4.85975 21.0618 4.86243 21.0635 4.86511C21.0729 4.87951 21.0819 4.89348 21.0892 4.90836L21.0904 4.91013L21.0917 4.91189C21.1006 4.92953 21.108 4.94718 21.1143 4.96482C21.1165 4.96963 21.1178 4.97476 21.1191 4.97958C21.1255 4.9985 21.1315 5.01743 21.1353 5.03732V5.0386C21.1391 5.05753 21.1414 5.07742 21.1426 5.09763C21.1426 5.09989 21.1429 5.10222 21.1432 5.1047C21.1436 5.10748 21.1439 5.11044 21.1439 5.11367V10.1436ZM21.5704 18.4228V12.1736H2.42989V18.4228H21.5704ZM20.1278 23.0852H3.69686V19.3846H20.1278V23.0852ZM15.5978 5.12872V0.938599H3.78403V11.2349H20.2149V5.59739H16.0627C15.8065 5.59739 15.5978 5.38823 15.5978 5.12872ZM19.5582 4.66005L16.5278 1.60135V4.66005H19.5582Z" fill="#008051"/>
+</svg>
+                                <a style="margin:0 auto; text-align: center; display: inline-block; font-size: 16px;" data-pln-atom="link" data-pln-version="1.2"
+                                    class="" href="#" data-pln-action-modal-open="#annoFibra" target="_self">
+                                    <span style="font-size: 16px;">Scarica la Garanzia Legale</span>
+                                </a>
+                            </span>
+                    </li>
+                    
+                </ul>
+                <div class="cart-prize-box">
+                    <div class="prize-box-content">
+                        <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/One_Solution.svg"
+                            alt="icona rate" aria-hidden="true">
+                        <div class="sr-only">pagamento unica soluzione</div>
+                        <p><strong>3.490€</strong><br>
+                            per pagamenti in un'unica soluzione.<br>
+                            IVA Inclusa</p>
+                    </div>
+                    <div class="prize-box-content">
+                        <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/Loan.svg"
+                            alt="icona risparmio" aria-hidden="true">
+                        <div class="sr-only">pagamento a rate</div>
+                        <p><strong>41,20€ al mese per</strong><br>
+                             120 mesi.
+                            <strong>TAEG 9,12%</strong> TAN fisso 7,10% tot. <strong>5.324,06€<sup>2</sup></strong>
+                        </p>
+                    </div>
+                </div>
+                <!-- <a data-pln-atom="link" data-pln-template="cta-link" data-magazine-link="" href="#payMethod" class="primary">METODI DI PAGAMENTO</a> -->
+                <a href="#payMethod" data-pln-atom="link" data-pln-template="cta-link" class="primary   "
+                    data-magazine-link="" aria-label="Viviamo Insieme una stagione di vantaggi"
+                    data-cs-override-id="Card-standard__item1">
+                    <span data-magazine-link-label="">
+
+                        METODI DI PAGAMENTO
+
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.199475 1.12574C0.0721472 1.00433 0 0.835567 0 0.659555C0 0.483109 0.0720637 0.31431 0.192656 0.199589C0.441759 -0.0579143 0.850875 -0.0675723 1.11184 0.178297L1.11368 0.180052L5.62651 4.52392C5.75297 4.65029 5.82418 4.82162 5.82418 5.00048C5.82418 5.17934 5.75297 5.35067 5.62333 5.48017L1.10715 9.82696C0.983216 9.93763 0.823632 9.99868 0.663358 9.9997C0.484775 10.0053 0.312563 9.93285 0.192194 9.80109C0.0693219 9.68016 0 9.51446 0 9.34141C0 9.16539 0.0721472 8.99663 0.198368 8.87628L4.21095 5.00048L0.199475 1.12574Z">
+                        </path>
+                    </svg>
+
+                </a>
+
+                <a style="margin:0 auto; text-align: center;" data-pln-atom="button-ext" data-pln-version="1.2"
+                    class="primary default " href="#" data-pln-action-modal-open="#tichiamiamonoi" target="_self">
+                    <span>Voglio essere contattato</span>
+                </a>
+            </div>
+        </div>
+
+        <div pln-component="table-comparison" pln-version="1.0" pln-template="">
+            <div class="wrapper">
+                <div class="table-comparison-titles">
+                    <h2>La nostra offerta per l'impianto fotovoltaico</h2>
+                    <h3>
+                        <strong>Scegli il tipo di impianto</strong> che fa per te entro il 18 ottobre e ricevi <b>il 1 anno di Plenitude Fibra</b> 
+                        <img style="position: relative; top: 6px; margin-top: -10px;" src="/content/dam/plenitude-it/immagini/fibra/icone/Icona_Fibra_24x24.svg" alt=""> per la casa in omaggio<sup>1</sup>. Per conoscere dettagli e prezzi clicca su "Voglio essere contattato".
+                    </h3>
+                </div>
+                <div class="table-card-items">
+                    <div class="table-card">
+
+                        <div class="header">
+                            <div class="title">Senza accumulo</div>
+                            <div class="subtitle">Consuma l'energia prodotta durante il giorno
+                                e immetti gli eccessi in rete.</div>
+                        </div>
+
+                        <div class="info">
+                            <div class="content">
+                                <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/03-icons-sky-qfibra-TC.svg"
+                                    loading="lazy" alt="icona lampo">
+                                <div>
+                                    <div class="value">25%</div>
+                                    <div class="text">di autonomia energetica<sup>3</sup></div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/Sun-white.svg"
+                                    loading="lazy" alt="icona soldi">
+                                <div>
+                                    <div class="value">Giorno</div>
+                                    <div class="text">consumi durante il giorno</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="explanation">
+                            <div class="content info0">
+                                <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/Bank-green.svg"
+                                    loading="lazy" alt="icona sole">
+                                <div class="text">
+                                    <strong>Detrazioni fiscali</strong><br> 
+                                    Puoi recuperare il <strong>50% del costo</strong> del tuo impianto in 10 anni, grazie
+                                    alle <strong>detrazioni fiscali</strong><sup>4</sup> previste per legge sulla prima casa.
+                                </div>
+                            </div>
+                            <img class="divider"
+                                src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/rectangle-copy-TC.svg"
+                                loading="lazy" alt="divider">
+                            <div class="content info1">
+                                <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/03-icons-navigation-plus-TC.svg"
+                                    loading="lazy" alt="icona piu"
+                                    style="width: 15px; height: 15px; margin-right: 5px;">
+                                <div class="text">
+                                    <strong>Rimborso su energia inutilizzata</strong><br>
+                                    Attivando il Ritiro Dedicato (RID) <strong>vendi al GSE<sup>5</sup> l'energia in eccesso</strong> a un determinato prezzo per kWh e recuperi un'ulteriore parte di costi.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="borderbottom"></div> -->
+                    </div>
+
+                    <div class="table-card">
+
+                        <div class="header">
+                            <div class="title">Con accumulo</div>
+                            <div class="subtitle">Consuma l'energia prodotta quando vuoi, sia di giorno che di
+                                notte grazie alla <strong>batteria</strong>.</div>
+                        </div>
+
+                        <div class="info">
+                            <div class="content">
+                                <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/03-icons-sky-qfibra-TC.svg"
+                                    loading="lazy" alt="icona lampo">
+                                <div>
+                                    <div class="value">81%</div>
+                                    <div class="text">di autonomia energetica<sup>3</sup></div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/Sun_Moon-white.svg"
+                                    loading="lazy" alt="icona sole luna">
+                                <div>
+                                    <div class="value">Giorno e notte</div>
+                                    <div class="text">consumi giorno e notte</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="explanation">
+                            <!-- <div class="infotext">Fasce di consumo</div> -->
+                            <div class="content info0">
+                                <img src="/content/dam/plenitude-it/immagini/casa/extracommodity/Bank-green.svg"
+                                    loading="lazy" alt="icona sole">
+                                <!-- icona da modificare, atteso aggiornamento su Zeplin -->
+                                <div class="text">
+                                    <strong>Detrazioni fiscali</strong><br> 
+                                    Puoi recuperare il <strong>50% del costo</strong> del tuo impianto in 10 anni, 
+                                    grazie alle <strong>detrazioni fiscali</strong><sup>4</sup> previste per legge sulla prima casa.
+                                </div>
+                            </div>
+                            <img class="divider"
+                                src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/rectangle-copy-TC.svg"
+                                loading="lazy" alt="divider">
+                            <!-- <div class="infotext">Accumulo</div> -->
+                            <div class="content info1">
+                                <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/03-icons-navigation-plus-TC.svg"
+                                    loading="lazy" alt="icona piu"
+                                    style="width: 15px; height: 15px; margin-right: 5px;">
+                                <div class="text">
+                                    <strong>Rimborso su energia inutilizzata</strong><br>
+                                    Attivando il Ritiro Dedicato (RID) <strong>vendi al GSE<sup>5</sup> l'energia in eccesso</strong>, 
+                                    quella autoprodotta e quella accumulata con la <strong>batteria,</strong> a un determinato prezzo per kWh e recuperi un'ulteriore parte di costi.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="borderbottom"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-pln-component='cardCompare' data-pln-version='2.0' data-pln-template='' id='' class=''>
+            <div class='wrapper'>
+                <div class="cardCompare-container">
+                    <h2>Quanto può risparmiare una famiglia grazie al fotovoltaico?</h2>
+                    <div class="cardCompare-content">
+                        <div class="cardCompare-item">
+                            <h4>Senza batteria di accumulo</h4>
+                            <p>
+                                Puoi <strong>risparmiare il 29%</strong> della spesa annua in bolletta calcolato su un
+                                consumo medio annuale pari a 3.618 kWh/anno.
+                            </p>
+                            <p style="padding-left: 30px; margin-bottom:24px;"><svg width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <g id="Other / Bullet">
+                                        <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                                        <path id="Path" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z"
+                                            fill="white"></path>
+                                    </g> <b>362,95€</b> risparmiati in un anno</p>
+                            <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/graficoSENZAaccumulo.png"
+                                width="328px" height="auto" alt="Con l'impianto fotovoltaico senza accumulo puoi risparmiare il 29% in bolletta.">
+                        </div>
+                        <div class="cardCompare-item">
+                            <h4>Con batteria di accumulo</h4>
+                            <p>
+                                Puoi <strong>risparmiare il 93%</strong> della spesa annua in bolletta calcolato su un
+                                consumo medio annuale pari a 3.618 kWh/anno.
+                            </p>
+                            <p style="padding-left: 30px; margin-bottom:24px;"><svg width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <g id="Other / Bullet">
+                                        <circle id="Ellipse 1" cx="12" cy="12" r="12" fill="#008051"></circle>
+                                        <path id="Path" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M19.8215 8.67586L10.3074 17L5 12.341L6.81883 10.7961L10.3388 13.886L18.1812 7L20 8.59662L19.8215 8.67586Z"
+                                            fill="white"></path>
+                                    </g> <b>1.178,33€</b> risparmiati in un anno</p>
+                            <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/graficoCONaccumulo.png"
+                                width="328px" height="auto" alt="Con l'impianto fotovoltaico con accumulo puoi risparmiare il 93% in bolletta.">
+                        </div>
+
+                    </div>
+                    <p style="padding-top:40px; font-size:14px;">
+                        <strong>Famiglia tipo</strong>: composta da 3 persone, residente a Torino.<br>
+                        <strong>Spesa annua in bolletta senza fotovoltaico</strong>: 1.266,30€ con consumo annuo di 3.618 kWh.<br>
+                        <strong>Impianto fotovoltaico</strong>: 3 kWp, ben esposto, senza ombreggiamenti, in zona con producibilità teorica di 1.392,71 kWh/kWp.<br>
+                        <strong>Come abbiamo effettuato il calcolo?</strong> Applicando i corrispettivi per la materia energia dell’offerta variabile Placet di Plenitude, attiva al momento della simulazione, sui consumi coperti da autoproduzione. Il risparmio è una stima indicativa e non tiene conto delle possibili variazioni future del mercato energetico.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="payMethod" id="payMethod">
+            <div class="wrapper">
+                <div class="payMethod--content">
+                    <h2>Metodi di pagamento</h2>
+                    <h4>
+                        Offerta Start senza accumulo da 3 kWp. Questa è la nostra l’offerta base, per avere più vantaggi scegli Plus o Prime. 
+                        Tutte le offerte sono disponibili con e senza accumulo e con potenze da 2, 3, 4, 5, 6, 10 kWp: per conoscerle tutte chiedi di essere contattato.
+                    </h4>
+                    <div class="payMethod--items">
+                        <div class="item">
+                            <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/unicaSoluzione.png"
+                                alt="icona unica soluzione">
+                            <h5>Unica soluzione</h5>
+                            <p>
+                                <b>3.490€</b> IVA inclusa
+                            </p>
+                        </div>
+                        <div class="item">
+                            <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/03-icons-paga-bolletta-TC.svg"
+                                alt="icona anticipo più rate">
+                            <h5>Anticipo + finanziamento</h5>
+                            <p>
+                                Anticipo <b>1.745€ + 30,20€/mese</b> per 72 mesi<br>
+                                <b>TAEG 11,06%</b> TAN fisso 7,11% <br>
+                                tot. dovuto <strong>2.401,97€</strong><sup>5</sup> per un importo del credito di
+                                1.745€.<br>
+                                Tot. anticipo + tot. dovuto finanziamento:  <strong>4.146,97€</strong>
+                            </p>
+                        </div>
+                        <div class="item">
+                            <img src="/content/dam/plenitude-it/immagini/landing/fotovoltaico/icone/rate.png"
+                                alt="icona rate">
+                            <h5>Finanziamento</h5>
+                            <p>
+                                <b>41,20€/mese</b> per 120 mesi <br>
+                                <b>TAEG 9,12%</b> TAN fisso 7,10% <br>
+                                Importo tot. dovuto:
+                                <strong>5.324,06€<sup>2</sup></strong> <br>
+                            </p>
+                        </div>
+                       
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="CTA-sticky-FV">
+            <a style="margin:0 auto; text-align: center;" data-pln-atom="button-ext" data-pln-version="1.2"
+                class="primary default " href="#" data-pln-action-modal-open="#tichiamiamonoi" target="_self">
+                <span>Voglio essere contattato</span>
+            </a>
+        </div>
+
+    </div>
+
+
+</div>
