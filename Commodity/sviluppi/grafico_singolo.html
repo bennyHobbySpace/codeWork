@@ -3,18 +3,18 @@
 
     <div>
       <h2>
-        Ecco come potrà essere l'andamento del tuo prezzo all'ingrosso PUN o PSV
+        Ecco come potrà essere l'andamento del tuo prezzo all'ingrosso PUN
       </h2>
       <p>
         L'andamento dei mercati energetici <strong>è influenzato da tanti attori, fattori e scenari</strong> che
         determinano <strong>la variabilità
-          dei prezzi di luce e gas</strong>. Per renderti più consapevole sulla dinamica dei prezzi
+          del prezzo della luce</strong>. Per renderti più consapevole sulla dinamica dei prezzi
         all'ingrosso, ti riportiamo l'andamento storico dei
         valori e l'ultimo valore mensile ufficiale.
       </p>
     </div>
 
-    <div class="pun-card" data-chart="luce" style="--pun-accent:#009e62; margin-top: 30px;
+        <div class="pun-card" data-chart="luce" style="--pun-accent:#009e62; margin-top: 30px;
     margin-bottom: 30px;">
       <div class="pun-top">
         <div class="pun-title-block">
@@ -24,10 +24,10 @@
             energetici.</p>
         </div>
         <div class="pun-boxes">
-          <div class="pun-box">
+          <!-- <div class="pun-box">
             <div><span class="pun-box-value">0,222</span><span class="pun-box-unit">€/kWh</span></div>
-            <div class="pun-box-label">Prezzo effettivo incluso il contributo al consumo - <br>Ottobre 2026</div>
-          </div>
+            <div class="pun-box-label">Prezzo effettivo incluso il contributo al consumo - <br>Agosto 2026</div>
+          </div> -->
           <div class="pun-box">
             <div><span class="pun-box-value">0,111</span><span class="pun-box-unit">€/kWh</span></div>
             <div class="pun-box-label">Prezzo medio dell'indice PUN degli ultimi 12 mesi</div>
@@ -39,33 +39,9 @@
         aria-label="Andamento mensile Indice PUN"></svg>
     </div>
 
-    <div class="pun-card" data-chart="gas" style="--pun-accent:#ffcd00;">
-      <div class="pun-top">
-        <div class="pun-title-block">
-          <h3 class="pun-title">Gas - Indice PSV</h3>
-          <p class="pun-desc">il Corrispettivo gas Index, pari all'indice PSV (PSV Day Ahead Heren Mid) che corrisponde
-            al prezzo del gas naturale all'ingrosso al PSV (Punto di Scambio Virtuale). L'indice è calcolato mensilmente
-            come media dei prezzi Bid e Offer da ICIS Heren.</p>
-        </div>
-        <div class="pun-boxes">
-          <div class="pun-box">
-            <div><span class="pun-box-value">0,888</span><span class="pun-box-unit">€/Smc</span></div>
-            <div class="pun-box-label">Prezzo effettivo incluso il contributo al consumo - <br>Settembre 2026</div>
-          </div>
-          <div class="pun-box">
-            <div><span class="pun-box-value">0,555</span><span class="pun-box-unit">€/Smc</span></div>
-            <div class="pun-box-label">Prezzo medio dell'indice PSV degli ultimi 12 mesi</div>
-          </div>
-        </div>
-      </div>
-      <div class="pun-unit">€/Smc</div>
-      <svg class="pun-svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" role="img"
-        aria-label="Andamento mensile Indice PSV"></svg>
-    </div>
-
-    <p style="font-size:12px; padding-top: 15px;">I valori sopra indicati corrispondono a quelli assunti dagli
-      indici PUN e PSV nei mesi precedenti.<br>
-      Il valore che tali indici assumeranno dipende invece dall'andamento dei prezzi nei mercati energetici che ad
+    <p style="font-size:12px; padding-top: 15px;">I valori sopra indicati corrispondono a quelli assunti dall'indice
+      PUN nei mesi precedenti.<br>
+      Il valore che tale indice assumerà dipende invece dall'andamento dei prezzi nei mercati energetici che ad
       oggi non è possibile prevedere.<br>
     </p>
 
@@ -97,7 +73,7 @@
     --pun-accent: #009e62;
     background: #fff;
     border-radius: 18px;
-    padding: 28px 20px 32px;
+    padding: 32px;
     width: 100%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   }
@@ -106,6 +82,7 @@
     display: flex;
     align-items: flex-start;
     gap: 24px;
+    justify-content: space-between;
   }
 
   .pun-title-block {
@@ -227,25 +204,20 @@
     // sull'asse x.
     // Il grafico mostra sempre gli ultimi 12 mesi e 6 su mobile.
     //
-    // I due box "Prezzo effettivo" e "Prezzo medio" NON sono piu' collegati
+    // Il box "Prezzo effettivo" e "Prezzo medio" NON sono piu' collegati
     // a questi dati: sono testo statico nell'HTML (classi .pun-box-value e
     // .pun-box-label dentro .pun-boxes). Vanno aggiornati a mano li'.
     // ============================================================
     var DATI = {
       luce: {
-        start: {y: 2025, m: 10},
+        start: {y: 2025, m: 9},
         values: [0.109, 0.111, 0.117, 0.115, 0.133, 0.114, 0.143, 0.119, 0.119, 0.133, 0.157, 0.180, 0.200]
-      },
-      gas: {
-        start: {y: 2025, m: 10},
-        values: [0.373, 0.354, 0.348, 0.328, 0.404, 0.377, 0.558, 0.492, 0.499, 0.505, 0.607, 0.686, 0.777]
       }
     };
 
     // Impostazioni grafiche (non serve toccarle)
     var STILE = {
-      luce: {unit: '€/kWh', indexName: 'PUN', color: '#009e62', textOnLast: '#ffffff'},
-      gas: {unit: '€/Smc', indexName: 'PSV', color: '#f2b705', textOnLast: '#1a1a1a', labelColor: '#333'}
+      luce: {unit: '€/kWh', indexName: 'PUN', color: '#009e62', textOnLast: '#ffffff'}
     };
 
     var MESI = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
