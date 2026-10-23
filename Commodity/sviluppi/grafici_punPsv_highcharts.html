@@ -1,0 +1,444 @@
+<div class="pun-widgets">
+  <div class="wrapper">
+
+    <div>
+
+      <!-- titolo -->
+      <h2>
+        Ecco come potrà essere l'andamento del tuo prezzo all'ingrosso PUN o PSV
+      </h2>
+      <!-- sottotitolo -->
+      <p>
+        L'andamento dei mercati energetici <strong>è influenzato da tanti attori, fattori e scenari</strong> che
+        determinano <strong>la variabilità
+          dei prezzi di luce e gas</strong>. Per renderti più consapevole sulla dinamica dei prezzi
+        all'ingrosso, ti riportiamo l'andamento storico dei
+        valori e l'ultimo valore mensile ufficiale.
+      </p>
+    </div>
+
+    <!-- Card per il prezzo della luce (da eliminare se serve solo gas)-->
+    <div class="pun-card" data-chart="luce" style="--pun-accent:#009e62; margin-top: 30px;
+    margin-bottom: 30px;">
+      <div class="pun-top">
+        <div class="pun-title-block">
+          <h3 class="pun-title">Luce - Indice PUN</h3>
+          <p class="pun-desc">il Corrispettivo luce Index, aggiornato mensilmente e pari, per ciascun mese di fornitura,
+            alla media del PUN (Prezzo Unico Nazionale dell'energia elettrica) determinato dal gestore dei mercati
+            energetici.</p>
+        </div>
+        <div class="pun-boxes">
+          <div class="pun-box">
+            <div><span class="pun-box-value">0,222</span><span class="pun-box-unit">€/kWh</span></div>
+            <div class="pun-box-label">Prezzo effettivo incluso il contributo al consumo - <br>Agosto 2026</div>
+          </div>
+          <div class="pun-box">
+            <div><span class="pun-box-value">0,111</span><span class="pun-box-unit">€/kWh</span></div>
+            <div class="pun-box-label">Prezzo medio dell'indice PUN degli ultimi 12 mesi</div>
+          </div>
+        </div>
+      </div>
+      <div class="pun-unit">€/KWh</div>
+      <div class="pun-chart" role="img" aria-label="Andamento mensile Indice PUN"></div>
+    </div>
+
+    <!-- Card per il prezzo del gas (da eliminare se serve solo luce) -->
+    <div class="pun-card" data-chart="gas" style="--pun-accent:#ffcd00;">
+      <div class="pun-top">
+        <div class="pun-title-block">
+          <h3 class="pun-title">Gas - Indice PSV</h3>
+          <p class="pun-desc">il Corrispettivo gas Index, pari all'indice PSV (PSV Day Ahead Heren Mid) che corrisponde
+            al prezzo del gas naturale all'ingrosso al PSV (Punto di Scambio Virtuale). L'indice è calcolato mensilmente
+            come media dei prezzi Bid e Offer da ICIS Heren.</p>
+        </div>
+        <div class="pun-boxes">
+          <div class="pun-box">
+            <div><span class="pun-box-value">0,888</span><span class="pun-box-unit">€/Smc</span></div>
+            <div class="pun-box-label">Prezzo effettivo incluso il contributo al consumo - <br>Agosto 2026</div>
+          </div>
+          <div class="pun-box">
+            <div><span class="pun-box-value">0,555</span><span class="pun-box-unit">€/Smc</span></div>
+            <div class="pun-box-label">Prezzo medio dell'indice PSV degli ultimi 12 mesi</div>
+          </div>
+        </div>
+      </div>
+      <div class="pun-unit">€/Smc</div>
+      <div class="pun-chart" role="img" aria-label="Andamento mensile Indice PSV"></div>
+    </div>
+
+    <!-- nota in fondo al componente (facoltativa)  -->
+    <p style="font-size:12px; padding-top: 15px;">I valori sopra indicati corrispondono a quelli assunti dagli
+      indici PUN e PSV nei mesi precedenti.<br>
+      Il valore che tali indici assumeranno dipende invece dall'andamento dei prezzi nei mercati energetici che ad
+      oggi non è possibile prevedere.<br>
+    </p>
+
+  </div>
+</div>
+
+<style>
+  .pun-widgets,
+  .pun-widgets * {
+    box-sizing: border-box;
+  }
+
+  .pun-widgets {
+    --pun-text: #000;
+    --pun-desc: #ffcd00;
+    --pun-gray: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: inherit;
+    color: var(--pun-text);
+    background-color: #f4f4f4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+  }
+
+  .pun-card {
+    --pun-accent: #009e62;
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px 20px 32px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .pun-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .pun-title-block {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .pun-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 10px 0;
+    color: var(--pun-text);
+  }
+
+  .pun-desc {
+    font-size: 13.5px;
+    line-height: 1.45;
+    max-width: 520px;
+    margin: 0;
+  }
+
+  .pun-boxes {
+    display: flex;
+    gap: 14px;
+    /* max-width: 180px; */
+    flex-flow: row;
+  }
+
+  .pun-box {
+    border: 1.5px solid var(--pun-accent);
+    border-radius: 10px;
+    padding: 14px 18px;
+    min-width: 210px;
+  }
+
+  .pun-box-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--pun-text);
+  }
+
+  .pun-box-unit {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--pun-gray);
+    margin-left: 2px;
+  }
+
+  .pun-box-label {
+    font-size: 12px;
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+
+  .pun-unit {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--pun-text);
+    margin: 24px 0 4px 4px;
+  }
+
+  /* contenitore del grafico Highcharts (l'altezza la imposta Highcharts in base alla larghezza) */
+  .pun-chart {
+    display: block;
+    width: 100%;
+  }
+
+  /* Versione mobile: attivata da JS in base alla larghezza del box, non dello schermo */
+  .pun-card.pun-mobile {
+    padding: 20px 20px 20px;
+    border-radius: 16px;
+  }
+
+  .pun-mobile .pun-top {
+    flex-flow: column;
+  }
+
+  .pun-mobile .pun-title {
+    font-size: 19px;
+  }
+
+  .pun-mobile .pun-desc {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .pun-mobile .pun-boxes {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pun-mobile .pun-box {
+    min-width: 0;
+    width: max-content;
+  }
+
+  /* su mobile si mostra solo il primo box (prezzo effettivo) */
+  .pun-mobile .pun-boxes .pun-box:nth-of-type(2) {
+    display: none;
+  }
+
+  .pun-mobile .pun-box-value {
+    font-size: 22px;
+  }
+</style>
+
+<script>
+  (function () {
+    // ============================================================
+    // LIBRERIA HIGHCHARTS
+    // chiedere a Dario di ospitare highcharts.js in una clientlib AEM o nel DAM e mettere qui il suo percorso.
+    // ============================================================
+    var HC_URL = 'https://code.highcharts.com/13.1.1/highcharts.js';
+
+    // ============================================================
+    // DATI - QUESTA E' L'UNICA PARTE DA AGGIORNARE OGNI MESE (per il grafico)
+    // Aggiungi il nuovo valore in FONDO alla lista "values" (punto come
+    // separatore decimale, es. 0.195). Il mese si calcola da solo partendo
+    // da "start". Variare il valore m a seconda del primo mese da visulizzare 
+    // sull'asse x.
+    // Il grafico mostra sempre gli ultimi 12 mesi e 6 su mobile.
+    //
+    // Il box "Prezzo effettivo" e "Prezzo medio" NON sono piu' collegati
+    // a questi dati: sono testo statico nell'HTML (classi .pun-box-value e
+    // .pun-box-label dentro .pun-boxes). Vanno aggiornati a mano li'.
+    // ============================================================
+    var DATI = {
+      luce: {
+        start: {y: 2025, m: 9},
+        values: [0.109, 0.111, 0.117, 0.115, 0.133, 0.114, 0.143, 0.119, 0.119, 0.133, 0.157, 0.180, 0.200]
+      },
+      gas: {
+        start: {y: 2025, m: 9},
+        values: [0.373, 0.354, 0.348, 0.328, 0.404, 0.377, 0.558, 0.492, 0.499, 0.505, 0.607, 0.686, 0.777]
+      }
+    };
+
+    // Impostazioni grafiche (non serve toccarle)
+    var STILE = {
+      luce: {unit: '€/kWh', indexName: 'PUN', color: '#009e62', textOnLast: '#ffffff'},
+      gas: {unit: '€/Smc', indexName: 'PSV', color: '#f2b705', textOnLast: '#1a1a1a', labelColor: '#333'}
+    };
+
+    var MESI = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+    // distanza (px) tra pallino e numero / pillola sopra di esso
+    var LABEL_Y_DESKTOP = 9, LABEL_Y_MOBILE = 7.5, PILL_Y_DESKTOP = 14, PILL_Y_MOBILE = 10.5;
+    var BREAKPOINT = 1023; // larghezza (px) del box sotto la quale scatta la versione mobile
+
+    function fmt(v) {return v.toFixed(3).replace('.', ',');}
+
+    function buildEntries(d) {
+      return d.values.map(function (v, i) {
+        var idx = (d.start.m - 1) + i;
+        return {y: d.start.y + Math.floor(idx / 12), m: (idx % 12) + 1, v: v};
+      });
+    }
+
+    // Passo dell'asse Y: solo valori "tondi" (0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1 ...).
+    // Sceglie il passo piu' piccolo che richiede al massimo 5 intervalli.
+    function niceStep(maxVal) {
+      if (maxVal <= 0) return 0.05;
+      var base = Math.floor(Math.log10(maxVal)) - 2;
+      var mult = [1, 2, 5];
+      for (var e = base; e < base + 6; e++) {
+        for (var i = 0; i < mult.length; i++) {
+          var step = mult[i] * Math.pow(10, e);
+          if (Math.ceil(maxVal / step - 1e-9) <= 5) return step;
+        }
+      }
+      return 1;
+    }
+
+    function loadHighcharts(cb) {
+      if (window.Highcharts) {cb(); return;}
+      var existing = document.querySelector('script[data-pun-hc]');
+      if (existing) {existing.addEventListener('load', cb); return;}
+      var sc = document.createElement('script');
+      sc.src = HC_URL;
+      sc.async = true;
+      sc.setAttribute('data-pun-hc', '1');
+      sc.onload = cb;
+      document.head.appendChild(sc);
+    }
+
+    function initCard(card) {
+      var key = card.getAttribute('data-chart');
+      var d = DATI[key], s = STILE[key];
+      if (!d || !s) return;
+      var data = buildEntries(d);
+      var el = card.querySelector('.pun-chart');
+      if (!el) {
+        // contenitore mancante (tolto dall'editor AEM, oppure markup vecchio con <svg>): lo ricrea da solo
+        var oldSvg = card.querySelector('.pun-svg');
+        el = document.createElement('div');
+        el.className = 'pun-chart';
+        if (oldSvg) {oldSvg.parentNode.replaceChild(el, oldSvg);} else {card.appendChild(el);}
+      }
+      var chart = null, lastMobile = null, lastW = 0;
+
+      // "sc" = fattore di scala: il grafico originale si ridimensionava in blocco
+      // (testi, pallini, spessori) con la larghezza; qui si replica lo stesso comportamento.
+      function buildOptions(mobile, sc) {
+        var shown = data.slice(mobile ? -6 : -12);
+        var n = shown.length;
+        var W = mobile ? 380 : 1200, H = mobile ? 300 : 420;
+        // margini del grafico (sinistra, destra, alto, basso)
+        var mL = (mobile ? 42 : 60) * sc, mR = (mobile ? 46 : 60) * sc, mT = (mobile ? 46 : 56) * sc, mB = (mobile ? 40 : 50) * sc;
+        var fs = (mobile ? 10 : 12) * sc + 'px';
+        var lblColor = s.labelColor || s.color;
+
+        var rawMax = Math.max.apply(null, shown.map(function (e) {return e.v;}));
+        var step = niceStep(rawMax);
+        var maxVal = Math.max(Math.ceil(rawMax / step - 1e-9) * step, step * 4);
+        var steps = Math.round(maxVal / step);
+        var yTicks = [], xTicks = [];
+        for (var k = 0; k <= steps; k++) yTicks.push(step * k);
+        for (var j = 0; j < n; j++) xTicks.push(j);
+
+        var points = shown.map(function (e, i) {
+          var p = {x: i, y: e.v};
+          if (i === n - 1) {
+            // pallino con il valore piu' recente
+            var bw = (mobile ? 44 : 56) * sc, bh = (mobile ? 22 : 26) * sc;
+            p.dataLabels = {
+              useHTML: true,
+              y: -(mobile ? PILL_Y_MOBILE : PILL_Y_DESKTOP) * sc,
+              formatter: function () {
+                return '<div style="width:' + bw + 'px;height:' + bh + 'px;line-height:' + bh + 'px;border-radius:' + (bh / 2) + 'px;'
+                  + 'background:' + s.color + ';color:' + s.textOnLast + ';font-size:' + (mobile ? 11 : 13) * sc + 'px;font-weight:700;text-align:center;">'
+                  + fmt(this.y) + '</div>';
+              }
+            };
+          }
+          return p;
+        });
+
+        return {
+          chart: {
+            type: 'line',
+            height: H * sc,
+            marginLeft: mL, marginRight: mR, marginTop: mT, marginBottom: mB,
+            spacing: [0, 0, 0, 0],
+            backgroundColor: 'transparent',
+            animation: false,
+            style: {fontFamily: 'inherit'}
+          },
+          title: {text: null},
+          credits: {enabled: false},
+          legend: {enabled: false},
+          tooltip: {enabled: false},
+          xAxis: {
+            min: 0, max: n - 1,
+            tickPositions: xTicks,
+            tickLength: 0,
+            lineWidth: sc, lineColor: '#e3e3e3',
+            gridLineWidth: sc, gridLineColor: '#eeeeee', gridLineDashStyle: '3,4',
+            labels: {
+              y: 22 * sc,
+              style: {fontSize: fs, color: '#333', textOutline: 'none'},
+              formatter: function () {
+                var e = shown[this.value];
+                return e ? MESI[e.m - 1] + ' ' + String(e.y).slice(2) : '';
+              }
+            }
+          },
+          yAxis: {
+            min: 0, max: maxVal,
+            tickPositions: yTicks,
+            title: {text: null},
+            gridLineWidth: sc, gridLineColor: '#e3e3e3', gridLineDashStyle: '4,4',
+            labels: {
+              align: 'left',          // etichette allineate a sinistra, come "€/kWh" / "€/Smc"
+              x: -(mL - 4 * sc), y: 4 * sc,
+              style: {fontSize: fs, color: '#333', textOutline: 'none'},
+              formatter: function () {return this.value.toFixed(2).replace('.', ',');}
+            }
+          },
+          plotOptions: {
+            series: {
+              animation: false,
+              clip: false,
+              enableMouseTracking: false,
+              color: s.color,
+              lineWidth: (mobile ? 2 : 3) * sc,
+              marker: {enabled: true, symbol: 'circle', radius: (mobile ? 5 : 7) * sc, fillColor: s.color, lineWidth: 0},
+              states: {hover: {enabled: false}, inactive: {enabled: false}},
+              dataLabels: {
+                enabled: true,
+                allowOverlap: true,
+                crop: false,
+                overflow: 'allow',
+                defer: false,
+                align: 'center',
+                verticalAlign: 'bottom',
+                y: -(mobile ? LABEL_Y_MOBILE : LABEL_Y_DESKTOP) * sc,
+                style: {fontSize: (mobile ? 10.5 : 13) * sc + 'px', fontWeight: '700', color: lblColor, textOutline: 'none'},
+                formatter: function () {return fmt(this.y);}
+              }
+            }
+          },
+          series: [{name: key, data: points}]
+        };
+      }
+
+      function render() {
+        var mobile = card.getBoundingClientRect().width < BREAKPOINT;
+        if (mobile !== lastMobile) {
+          lastMobile = mobile;
+          card.classList.toggle('pun-mobile', mobile);
+          lastW = 0;
+        }
+        var w = el.clientWidth;
+        if (w <= 0 || w === lastW) return;
+        lastW = w;
+        if (chart) chart.destroy();
+        chart = Highcharts.chart(el, buildOptions(mobile, w / (mobile ? 380 : 1200)));
+      }
+
+      render();
+      if (window.ResizeObserver) {new ResizeObserver(render).observe(card);}
+      else {window.addEventListener('resize', render);}
+    }
+
+    var cards = document.querySelectorAll('.pun-widgets .pun-card[data-chart]');
+    loadHighcharts(function () {
+      Array.prototype.forEach.call(cards, function (c) {
+        try {initCard(c);} catch (err) {if (window.console) console.error('Grafico non disegnato:', err);}
+      });
+    });
+  })();
+</script>
